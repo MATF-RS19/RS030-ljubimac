@@ -30,7 +30,7 @@
      <string notr="true">background-color: rgb(191, 64, 64);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -46,38 +46,44 @@
        </rect>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QPushButton" name="pushButton_kuh_1">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>16</y>
-        <width>411</width>
-        <height>31</height>
+        <x>141</x>
+        <y>19</y>
+        <width>80</width>
+        <height>25</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="pushButton_kuh_1">
-         <property name="text">
-          <string>&lt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>           Kuhinja</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_kuh_2">
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_kuh">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>20</y>
+        <width>89</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kuhinja</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_kuh_2">
+      <property name="geometry">
+       <rect>
+        <x>418</x>
+        <y>19</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_kupatilo">
@@ -86,46 +92,49 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>671</width>
+        <width>681</width>
         <height>391</height>
        </rect>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QPushButton" name="pushButton_kup_1">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>20</y>
-        <width>391</width>
-        <height>27</height>
+        <x>141</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="pushButton_kup_1">
-         <property name="text">
-          <string>&lt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>        Kupatilo</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_kup_2">
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-      <zorder>label_2</zorder>
-      <zorder>pushButton_kup_2</zorder>
-      <zorder>pushButton_kup_1</zorder>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_kup">
+      <property name="geometry">
+       <rect>
+        <x>279</x>
+        <y>21</y>
+        <width>85</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kupatilo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_kup_2">
+      <property name="geometry">
+       <rect>
+        <x>418</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_igraonica">
@@ -134,43 +143,49 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>671</width>
+        <width>681</width>
         <height>391</height>
        </rect>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QPushButton" name="pushButton_igraon_1">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>20</y>
-        <width>371</width>
-        <height>27</height>
+        <x>161</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QPushButton" name="pushButton_igraon_1">
-         <property name="text">
-          <string>&lt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>    Soba za igru</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_igraon_2">
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_igraon">
+      <property name="geometry">
+       <rect>
+        <x>289</x>
+        <y>21</y>
+        <width>96</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Igraonica</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_igraon_2">
+      <property name="geometry">
+       <rect>
+        <x>418</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page_spavaca">
@@ -179,43 +194,49 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>671</width>
+        <width>681</width>
         <height>391</height>
        </rect>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QPushButton" name="pushButton_spav_1">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>20</y>
-        <width>341</width>
-        <height>27</height>
+        <x>161</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QPushButton" name="pushButton_spav_1">
-         <property name="text">
-          <string>&lt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>  Spavaca soba</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_spav_2">
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_spav">
+      <property name="geometry">
+       <rect>
+        <x>276</x>
+        <y>21</y>
+        <width>98</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Spavaca soba</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_spav_2">
+      <property name="geometry">
+       <rect>
+        <x>391</x>
+        <y>21</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&gt;</string>
+      </property>
      </widget>
     </widget>
    </widget>
