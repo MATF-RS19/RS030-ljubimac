@@ -60,7 +60,7 @@ public:
         stackedWidget = new QStackedWidget(centralWidget);
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
         stackedWidget->setGeometry(QRect(0, 50, 671, 391));
-        stackedWidget->setStyleSheet(QStringLiteral("background-color: rgb(191, 64, 64);"));
+        stackedWidget->setStyleSheet(QStringLiteral(""));
         page_kuhinja = new QWidget();
         page_kuhinja->setObjectName(QStringLiteral("page_kuhinja"));
         page_kuhinja->setStyleSheet(QStringLiteral(""));
@@ -70,12 +70,20 @@ public:
         pushButton_kuh_1 = new QPushButton(page_kuhinja);
         pushButton_kuh_1->setObjectName(QStringLiteral("pushButton_kuh_1"));
         pushButton_kuh_1->setGeometry(QRect(141, 19, 80, 25));
+        pushButton_kuh_1->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         label_kuh = new QLabel(page_kuhinja);
         label_kuh->setObjectName(QStringLiteral("label_kuh"));
-        label_kuh->setGeometry(QRect(290, 20, 89, 17));
+        label_kuh->setGeometry(QRect(290, 20, 61, 17));
+        label_kuh->setAutoFillBackground(false);
+        label_kuh->setStyleSheet(QLatin1String("background-color: rgb(252, 175, 62);\n"
+"font: 16pt \"Ubuntu\";"));
+        label_kuh->setAlignment(Qt::AlignCenter);
+        label_kuh->setWordWrap(true);
+        label_kuh->setIndent(-1);
         pushButton_kuh_2 = new QPushButton(page_kuhinja);
         pushButton_kuh_2->setObjectName(QStringLiteral("pushButton_kuh_2"));
         pushButton_kuh_2->setGeometry(QRect(418, 19, 80, 25));
+        pushButton_kuh_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         stackedWidget->addWidget(page_kuhinja);
         page_kupatilo = new QWidget();
         page_kupatilo->setObjectName(QStringLiteral("page_kupatilo"));
@@ -85,12 +93,18 @@ public:
         pushButton_kup_1 = new QPushButton(page_kupatilo);
         pushButton_kup_1->setObjectName(QStringLiteral("pushButton_kup_1"));
         pushButton_kup_1->setGeometry(QRect(141, 21, 80, 25));
+        pushButton_kup_1->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         label_kup = new QLabel(page_kupatilo);
         label_kup->setObjectName(QStringLiteral("label_kup"));
         label_kup->setGeometry(QRect(279, 21, 85, 17));
+        label_kup->setStyleSheet(QLatin1String("background-color: rgb(233, 185, 110);\n"
+"font: 16pt \"Ubuntu\";"));
+        label_kup->setAlignment(Qt::AlignCenter);
+        label_kup->setWordWrap(true);
         pushButton_kup_2 = new QPushButton(page_kupatilo);
         pushButton_kup_2->setObjectName(QStringLiteral("pushButton_kup_2"));
         pushButton_kup_2->setGeometry(QRect(418, 21, 80, 25));
+        pushButton_kup_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         stackedWidget->addWidget(page_kupatilo);
         page_igraonica = new QWidget();
         page_igraonica->setObjectName(QStringLiteral("page_igraonica"));
@@ -100,12 +114,25 @@ public:
         pushButton_igraon_1 = new QPushButton(page_igraonica);
         pushButton_igraon_1->setObjectName(QStringLiteral("pushButton_igraon_1"));
         pushButton_igraon_1->setGeometry(QRect(161, 21, 80, 25));
+        pushButton_igraon_1->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         label_igraon = new QLabel(page_igraonica);
         label_igraon->setObjectName(QStringLiteral("label_igraon"));
         label_igraon->setGeometry(QRect(289, 21, 96, 17));
+        QFont font;
+        font.setFamily(QStringLiteral("Ubuntu"));
+        font.setPointSize(16);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        label_igraon->setFont(font);
+        label_igraon->setStyleSheet(QLatin1String("background-color: rgb(237, 212, 0);\n"
+"font: 16pt \"Ubuntu\";"));
+        label_igraon->setAlignment(Qt::AlignCenter);
+        label_igraon->setWordWrap(true);
         pushButton_igraon_2 = new QPushButton(page_igraonica);
         pushButton_igraon_2->setObjectName(QStringLiteral("pushButton_igraon_2"));
         pushButton_igraon_2->setGeometry(QRect(418, 21, 80, 25));
+        pushButton_igraon_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         stackedWidget->addWidget(page_igraonica);
         page_spavaca = new QWidget();
         page_spavaca->setObjectName(QStringLiteral("page_spavaca"));
@@ -115,18 +142,25 @@ public:
         pushButton_spav_1 = new QPushButton(page_spavaca);
         pushButton_spav_1->setObjectName(QStringLiteral("pushButton_spav_1"));
         pushButton_spav_1->setGeometry(QRect(161, 21, 80, 25));
+        pushButton_spav_1->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         label_spav = new QLabel(page_spavaca);
         label_spav->setObjectName(QStringLiteral("label_spav"));
         label_spav->setGeometry(QRect(276, 21, 98, 17));
+        label_spav->setStyleSheet(QLatin1String("background-color: rgb(114, 159, 207);\n"
+"font: 16pt \"Ubuntu\";\n"
+""));
+        label_spav->setAlignment(Qt::AlignCenter);
+        label_spav->setWordWrap(true);
         pushButton_spav_2 = new QPushButton(page_spavaca);
         pushButton_spav_2->setObjectName(QStringLiteral("pushButton_spav_2"));
         pushButton_spav_2->setGeometry(QRect(391, 21, 80, 25));
+        pushButton_spav_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         stackedWidget->addWidget(page_spavaca);
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

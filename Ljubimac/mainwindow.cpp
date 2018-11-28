@@ -4,9 +4,15 @@
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QDebug>
+#include <QImage>
+#include <QBrush>
 
 #define SC_W 678
 #define SC_H 388
+#define BT_L_TOP 15
+#define L_W 130
+#define BT_L_H 25
+#define BT_W 90
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    setWindowTitle("Ljubimac");
     setFixedSize(672,457);
 
     //Postavljanje scena na graphicsView
@@ -38,23 +45,30 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //Podesavanje velicine i polozaja imena sobe i strelica
 
-    QRect lab_velicina=QRect(SC_W/2-50,20,90,20);
+    QRect lab_velicina=QRect(SC_W/2-50,BT_L_TOP,L_W,BT_L_H);
     ui->label_kuh->setGeometry(lab_velicina);
     ui->label_igraon->setGeometry(lab_velicina);
     ui->label_kup->setGeometry(lab_velicina);
     ui->label_spav->setGeometry(lab_velicina);
 
-    QRect button_1_vel=QRect(SC_W/4-50,20,90,25);
+    QRect button_1_vel=QRect(SC_W/4-35,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_1->setGeometry(button_1_vel);
     ui->pushButton_kup_1->setGeometry(button_1_vel);
     ui->pushButton_kuh_1->setGeometry(button_1_vel);
     ui->pushButton_igraon_1->setGeometry(button_1_vel);
 
-    QRect button_2_vel=QRect(3*SC_W/4-50,20,90,25);
+    QRect button_2_vel=QRect(3*SC_W/4-30,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_2->setGeometry(button_2_vel);
     ui->pushButton_kup_2->setGeometry(button_2_vel);
     ui->pushButton_kuh_2->setGeometry(button_2_vel);
     ui->pushButton_igraon_2->setGeometry(button_2_vel);
+
+    //Postavljanje pozadina na sobe
+
+    sc_kuh->setBackgroundBrush(QBrush((QImage(":/images/kitchen_1.jpg")).scaled(SC_W,SC_H)));
+    sc_igr->setBackgroundBrush(QBrush((QImage(":/images/playroom.jpg")).scaled(SC_W,SC_H)));
+    sc_spav->setBackgroundBrush(QBrush((QImage(":/images/bedroom.jpg")).scaled(SC_W,SC_H)));
+    sc_kup->setBackgroundBrush(QBrush((QImage(":/images/bathroom.jpg")).scaled(SC_W,SC_H)));
 }
 
 MainWindow::~MainWindow()
