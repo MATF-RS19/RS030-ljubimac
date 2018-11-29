@@ -351,9 +351,11 @@ compiler_rcc_clean:
 qrc_res.cpp: ../Ljubimac/res.qrc \
 		/usr/lib/qt5/bin/rcc \
 		../Ljubimac/bedroom.jpg \
+		../Ljubimac/fridge_1.jpg \
 		../Ljubimac/kitchen_1.jpg \
 		../Ljubimac/playroom.jpg \
-		../Ljubimac/bathroom.jpg
+		../Ljubimac/bathroom.jpg \
+		../Ljubimac/shop_1.jpg
 	/usr/lib/qt5/bin/rcc -name res ../Ljubimac/res.qrc -o qrc_res.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h

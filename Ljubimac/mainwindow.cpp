@@ -23,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle("Ljubimac");
     setFixedSize(672,457);
 
+    //Pocetna scena kuhinja
+    ui->stackedWidget->setCurrentIndex(0);
+
     //Postavljanje scena na graphicsView
 
     QRectF sc_velicina=QRectF(0,0,SC_W,SC_H);
@@ -50,12 +53,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_igraon->setGeometry(lab_velicina);
     ui->label_kup->setGeometry(lab_velicina);
     ui->label_spav->setGeometry(lab_velicina);
+    ui->label_friz->setGeometry(lab_velicina);
+    ui->label_prodavn->setGeometry(lab_velicina);
 
     QRect button_1_vel=QRect(SC_W/4-35,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_1->setGeometry(button_1_vel);
     ui->pushButton_kup_1->setGeometry(button_1_vel);
     ui->pushButton_kuh_1->setGeometry(button_1_vel);
     ui->pushButton_igraon_1->setGeometry(button_1_vel);
+    ui->pushButton_friz_nazad->setGeometry(button_1_vel);
+    ui->pushButton_prod_nazad->setGeometry(button_1_vel);
 
     QRect button_2_vel=QRect(3*SC_W/4-30,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_2->setGeometry(button_2_vel);
@@ -114,4 +121,24 @@ void MainWindow::on_pushButton_igraon_2_clicked()
 void MainWindow::on_pushButton_igraon_1_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_pro_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_fr_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+void MainWindow::on_pushButton_friz_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pushButton_prod_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }

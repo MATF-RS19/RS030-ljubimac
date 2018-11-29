@@ -4,5 +4,7 @@
         <file>playroom.jpg</file>
         <file>bedroom.jpg</file>
         <file>bathroom.jpg</file>
+        <file>shop_1.jpg</file>
+        <file>fridge_1.jpg</file>
     </qresource>
 </RCC>

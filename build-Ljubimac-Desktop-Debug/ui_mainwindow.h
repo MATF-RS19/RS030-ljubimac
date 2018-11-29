@@ -33,6 +33,8 @@ public:
     QPushButton *pushButton_kuh_1;
     QLabel *label_kuh;
     QPushButton *pushButton_kuh_2;
+    QPushButton *pushButton_fr;
+    QPushButton *pushButton_pro;
     QWidget *page_kupatilo;
     QGraphicsView *graphicsView_kupatilo;
     QPushButton *pushButton_kup_1;
@@ -48,6 +50,14 @@ public:
     QPushButton *pushButton_spav_1;
     QLabel *label_spav;
     QPushButton *pushButton_spav_2;
+    QWidget *page_prodavn;
+    QGraphicsView *graphicsView_prodavn;
+    QPushButton *pushButton_prod_nazad;
+    QLabel *label_prodavn;
+    QWidget *page_friz;
+    QGraphicsView *graphicsView_friz;
+    QPushButton *pushButton_friz_nazad;
+    QLabel *label_friz;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -66,7 +76,7 @@ public:
         page_kuhinja->setStyleSheet(QStringLiteral(""));
         graphicsView_kuhinja = new QGraphicsView(page_kuhinja);
         graphicsView_kuhinja->setObjectName(QStringLiteral("graphicsView_kuhinja"));
-        graphicsView_kuhinja->setGeometry(QRect(0, 0, 681, 391));
+        graphicsView_kuhinja->setGeometry(QRect(10, -10, 681, 391));
         pushButton_kuh_1 = new QPushButton(page_kuhinja);
         pushButton_kuh_1->setObjectName(QStringLiteral("pushButton_kuh_1"));
         pushButton_kuh_1->setGeometry(QRect(141, 19, 80, 25));
@@ -84,6 +94,18 @@ public:
         pushButton_kuh_2->setObjectName(QStringLiteral("pushButton_kuh_2"));
         pushButton_kuh_2->setGeometry(QRect(418, 19, 80, 25));
         pushButton_kuh_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        pushButton_fr = new QPushButton(page_kuhinja);
+        pushButton_fr->setObjectName(QStringLiteral("pushButton_fr"));
+        pushButton_fr->setGeometry(QRect(540, 40, 131, 271));
+        pushButton_fr->setStyleSheet(QLatin1String("border-image: url(:/images/fridge_1.jpg);\n"
+"\n"
+"\n"
+"\n"
+""));
+        pushButton_pro = new QPushButton(page_kuhinja);
+        pushButton_pro->setObjectName(QStringLiteral("pushButton_pro"));
+        pushButton_pro->setGeometry(QRect(30, 280, 81, 81));
+        pushButton_pro->setStyleSheet(QStringLiteral("border-image: url(:/images/shop_1.jpg);"));
         stackedWidget->addWidget(page_kuhinja);
         page_kupatilo = new QWidget();
         page_kupatilo->setObjectName(QStringLiteral("page_kupatilo"));
@@ -156,11 +178,47 @@ public:
         pushButton_spav_2->setGeometry(QRect(391, 21, 80, 25));
         pushButton_spav_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
         stackedWidget->addWidget(page_spavaca);
+        page_prodavn = new QWidget();
+        page_prodavn->setObjectName(QStringLiteral("page_prodavn"));
+        graphicsView_prodavn = new QGraphicsView(page_prodavn);
+        graphicsView_prodavn->setObjectName(QStringLiteral("graphicsView_prodavn"));
+        graphicsView_prodavn->setGeometry(QRect(0, 1, 681, 391));
+        graphicsView_prodavn->setStyleSheet(QStringLiteral("background-color: rgb(233, 185, 110);"));
+        pushButton_prod_nazad = new QPushButton(page_prodavn);
+        pushButton_prod_nazad->setObjectName(QStringLiteral("pushButton_prod_nazad"));
+        pushButton_prod_nazad->setGeometry(QRect(50, 30, 89, 25));
+        pushButton_prod_nazad->setStyleSheet(QStringLiteral("background-color: rgb(186, 189, 182);"));
+        label_prodavn = new QLabel(page_prodavn);
+        label_prodavn->setObjectName(QStringLiteral("label_prodavn"));
+        label_prodavn->setGeometry(QRect(300, 40, 81, 17));
+        label_prodavn->setStyleSheet(QLatin1String("background-color: rgb(252, 233, 79);\n"
+"font: 15pt \"Ubuntu\";"));
+        label_prodavn->setAlignment(Qt::AlignCenter);
+        label_prodavn->setWordWrap(true);
+        stackedWidget->addWidget(page_prodavn);
+        page_friz = new QWidget();
+        page_friz->setObjectName(QStringLiteral("page_friz"));
+        graphicsView_friz = new QGraphicsView(page_friz);
+        graphicsView_friz->setObjectName(QStringLiteral("graphicsView_friz"));
+        graphicsView_friz->setGeometry(QRect(0, 1, 681, 391));
+        graphicsView_friz->setStyleSheet(QStringLiteral("background-color: rgb(233, 185, 110);"));
+        pushButton_friz_nazad = new QPushButton(page_friz);
+        pushButton_friz_nazad->setObjectName(QStringLiteral("pushButton_friz_nazad"));
+        pushButton_friz_nazad->setGeometry(QRect(40, 20, 89, 25));
+        pushButton_friz_nazad->setStyleSheet(QStringLiteral("background-color: rgb(186, 189, 182);"));
+        label_friz = new QLabel(page_friz);
+        label_friz->setObjectName(QStringLiteral("label_friz"));
+        label_friz->setGeometry(QRect(300, 20, 51, 17));
+        label_friz->setStyleSheet(QLatin1String("background-color: rgb(252, 233, 79);\n"
+"font: 15pt \"Ubuntu\";"));
+        label_friz->setAlignment(Qt::AlignCenter);
+        label_friz->setWordWrap(true);
+        stackedWidget->addWidget(page_friz);
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -172,6 +230,8 @@ public:
         pushButton_kuh_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_kuh->setText(QApplication::translate("MainWindow", "Kuhinja", Q_NULLPTR));
         pushButton_kuh_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
+        pushButton_fr->setText(QString());
+        pushButton_pro->setText(QString());
         pushButton_kup_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_kup->setText(QApplication::translate("MainWindow", "Kupatilo", Q_NULLPTR));
         pushButton_kup_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
@@ -181,6 +241,10 @@ public:
         pushButton_spav_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_spav->setText(QApplication::translate("MainWindow", "Spavaca soba", Q_NULLPTR));
         pushButton_spav_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
+        pushButton_prod_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        label_prodavn->setText(QApplication::translate("MainWindow", "Prodavnica", Q_NULLPTR));
+        pushButton_friz_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        label_friz->setText(QApplication::translate("MainWindow", "Frizider", Q_NULLPTR));
     } // retranslateUi
 
 };

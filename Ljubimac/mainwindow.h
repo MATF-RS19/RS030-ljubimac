@@ -32,6 +32,14 @@ private slots:
 
     void on_pushButton_igraon_1_clicked();
 
+    void on_pushButton_pro_clicked();
+
+    void on_pushButton_fr_clicked();
+
+    void on_pushButton_friz_nazad_clicked();
+
+    void on_pushButton_prod_nazad_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
