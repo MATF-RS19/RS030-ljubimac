@@ -40,6 +40,22 @@ private slots:
 
     void on_pushButton_prod_nazad_clicked();
 
+    void on_pushButton_igra_1_clicked();
+
+    void on_pushButton_igra_2_clicked();
+
+    void on_pushButton_igra_3_clicked();
+
+    void on_pushButton_igra_4_clicked();
+
+    void on_pushButton_igra_1_nazad_clicked();
+
+    void on_pushButton_igra_2_nazad_clicked();
+
+    void on_pushButton_igra_3_nazad_clicked();
+
+    void on_pushButton_igra_4_nazad_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

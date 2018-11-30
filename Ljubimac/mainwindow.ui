@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>9</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -286,6 +286,70 @@ font: 16pt &quot;Ubuntu&quot;;</string>
        <string>&gt;</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_igra_1">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>244</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(191, 64, 64);</string>
+      </property>
+      <property name="text">
+       <string>Igra 1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_igra_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>220</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(115, 210, 22);</string>
+      </property>
+      <property name="text">
+       <string>Igra 2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_igra_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>164</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(245, 121, 0);</string>
+      </property>
+      <property name="text">
+       <string>Igra 3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_igra_4">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>190</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(173, 127, 168);</string>
+      </property>
+      <property name="text">
+       <string>Igra 4</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_spavaca">
      <widget class="QGraphicsView" name="graphicsView_spavaca">
@@ -460,6 +524,78 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_igra_1">
+     <widget class="QPushButton" name="pushButton_igra_1_nazad">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(136, 138, 133);</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_igra_2">
+     <widget class="QPushButton" name="pushButton_igra_2_nazad">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(136, 138, 133);</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_igra_3">
+     <widget class="QPushButton" name="pushButton_igra_3_nazad">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(136, 138, 133);</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_igra_4">
+     <widget class="QPushButton" name="pushButton_igra_4_nazad">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(136, 138, 133);</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
       </property>
      </widget>
     </widget>

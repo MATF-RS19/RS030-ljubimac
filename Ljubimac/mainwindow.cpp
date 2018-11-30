@@ -63,6 +63,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_igraon_1->setGeometry(button_1_vel);
     ui->pushButton_friz_nazad->setGeometry(button_1_vel);
     ui->pushButton_prod_nazad->setGeometry(button_1_vel);
+    ui->pushButton_igra_1_nazad->setGeometry(button_1_vel);
+    ui->pushButton_igra_2_nazad->setGeometry(button_1_vel);
+    ui->pushButton_igra_3_nazad->setGeometry(button_1_vel);
+    ui->pushButton_igra_4_nazad->setGeometry(button_1_vel);
 
     QRect button_2_vel=QRect(3*SC_W/4-30,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_2->setGeometry(button_2_vel);
@@ -141,4 +145,45 @@ void MainWindow::on_pushButton_friz_nazad_clicked()
 void MainWindow::on_pushButton_prod_nazad_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pushButton_igra_1_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_pushButton_igra_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_pushButton_igra_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(8);
+}
+
+void MainWindow::on_pushButton_igra_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(9);
+}
+
+void MainWindow::on_pushButton_igra_1_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_igra_2_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_pushButton_igra_3_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_igra_4_nazad_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
 }

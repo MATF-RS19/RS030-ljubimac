@@ -45,6 +45,10 @@ public:
     QPushButton *pushButton_igraon_1;
     QLabel *label_igraon;
     QPushButton *pushButton_igraon_2;
+    QPushButton *pushButton_igra_1;
+    QPushButton *pushButton_igra_2;
+    QPushButton *pushButton_igra_3;
+    QPushButton *pushButton_igra_4;
     QWidget *page_spavaca;
     QGraphicsView *graphicsView_spavaca;
     QPushButton *pushButton_spav_1;
@@ -58,6 +62,14 @@ public:
     QGraphicsView *graphicsView_friz;
     QPushButton *pushButton_friz_nazad;
     QLabel *label_friz;
+    QWidget *page_igra_1;
+    QPushButton *pushButton_igra_1_nazad;
+    QWidget *page_igra_2;
+    QPushButton *pushButton_igra_2_nazad;
+    QWidget *page_igra_3;
+    QPushButton *pushButton_igra_3_nazad;
+    QWidget *page_igra_4;
+    QPushButton *pushButton_igra_4_nazad;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -155,6 +167,22 @@ public:
         pushButton_igraon_2->setObjectName(QStringLiteral("pushButton_igraon_2"));
         pushButton_igraon_2->setGeometry(QRect(418, 21, 80, 25));
         pushButton_igraon_2->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        pushButton_igra_1 = new QPushButton(page_igraonica);
+        pushButton_igra_1->setObjectName(QStringLiteral("pushButton_igra_1"));
+        pushButton_igra_1->setGeometry(QRect(20, 244, 61, 31));
+        pushButton_igra_1->setStyleSheet(QStringLiteral("background-color: rgb(191, 64, 64);"));
+        pushButton_igra_2 = new QPushButton(page_igraonica);
+        pushButton_igra_2->setObjectName(QStringLiteral("pushButton_igra_2"));
+        pushButton_igra_2->setGeometry(QRect(120, 220, 61, 31));
+        pushButton_igra_2->setStyleSheet(QStringLiteral("background-color: rgb(115, 210, 22);"));
+        pushButton_igra_3 = new QPushButton(page_igraonica);
+        pushButton_igra_3->setObjectName(QStringLiteral("pushButton_igra_3"));
+        pushButton_igra_3->setGeometry(QRect(490, 164, 61, 31));
+        pushButton_igra_3->setStyleSheet(QStringLiteral("background-color: rgb(245, 121, 0);"));
+        pushButton_igra_4 = new QPushButton(page_igraonica);
+        pushButton_igra_4->setObjectName(QStringLiteral("pushButton_igra_4"));
+        pushButton_igra_4->setGeometry(QRect(580, 190, 61, 31));
+        pushButton_igra_4->setStyleSheet(QStringLiteral("background-color: rgb(173, 127, 168);"));
         stackedWidget->addWidget(page_igraonica);
         page_spavaca = new QWidget();
         page_spavaca->setObjectName(QStringLiteral("page_spavaca"));
@@ -214,11 +242,39 @@ public:
         label_friz->setAlignment(Qt::AlignCenter);
         label_friz->setWordWrap(true);
         stackedWidget->addWidget(page_friz);
+        page_igra_1 = new QWidget();
+        page_igra_1->setObjectName(QStringLiteral("page_igra_1"));
+        pushButton_igra_1_nazad = new QPushButton(page_igra_1);
+        pushButton_igra_1_nazad->setObjectName(QStringLiteral("pushButton_igra_1_nazad"));
+        pushButton_igra_1_nazad->setGeometry(QRect(50, 20, 89, 25));
+        pushButton_igra_1_nazad->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        stackedWidget->addWidget(page_igra_1);
+        page_igra_2 = new QWidget();
+        page_igra_2->setObjectName(QStringLiteral("page_igra_2"));
+        pushButton_igra_2_nazad = new QPushButton(page_igra_2);
+        pushButton_igra_2_nazad->setObjectName(QStringLiteral("pushButton_igra_2_nazad"));
+        pushButton_igra_2_nazad->setGeometry(QRect(50, 30, 89, 25));
+        pushButton_igra_2_nazad->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        stackedWidget->addWidget(page_igra_2);
+        page_igra_3 = new QWidget();
+        page_igra_3->setObjectName(QStringLiteral("page_igra_3"));
+        pushButton_igra_3_nazad = new QPushButton(page_igra_3);
+        pushButton_igra_3_nazad->setObjectName(QStringLiteral("pushButton_igra_3_nazad"));
+        pushButton_igra_3_nazad->setGeometry(QRect(40, 30, 89, 25));
+        pushButton_igra_3_nazad->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        stackedWidget->addWidget(page_igra_3);
+        page_igra_4 = new QWidget();
+        page_igra_4->setObjectName(QStringLiteral("page_igra_4"));
+        pushButton_igra_4_nazad = new QPushButton(page_igra_4);
+        pushButton_igra_4_nazad->setObjectName(QStringLiteral("pushButton_igra_4_nazad"));
+        pushButton_igra_4_nazad->setGeometry(QRect(50, 40, 89, 25));
+        pushButton_igra_4_nazad->setStyleSheet(QStringLiteral("background-color: rgb(136, 138, 133);"));
+        stackedWidget->addWidget(page_igra_4);
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(9);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -238,6 +294,10 @@ public:
         pushButton_igraon_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_igraon->setText(QApplication::translate("MainWindow", "Igraonica", Q_NULLPTR));
         pushButton_igraon_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
+        pushButton_igra_1->setText(QApplication::translate("MainWindow", "Igra 1", Q_NULLPTR));
+        pushButton_igra_2->setText(QApplication::translate("MainWindow", "Igra 2", Q_NULLPTR));
+        pushButton_igra_3->setText(QApplication::translate("MainWindow", "Igra 3", Q_NULLPTR));
+        pushButton_igra_4->setText(QApplication::translate("MainWindow", "Igra 4", Q_NULLPTR));
         pushButton_spav_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_spav->setText(QApplication::translate("MainWindow", "Spavaca soba", Q_NULLPTR));
         pushButton_spav_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
@@ -245,6 +305,10 @@ public:
         label_prodavn->setText(QApplication::translate("MainWindow", "Prodavnica", Q_NULLPTR));
         pushButton_friz_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_friz->setText(QApplication::translate("MainWindow", "Frizider", Q_NULLPTR));
+        pushButton_igra_1_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        pushButton_igra_2_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        pushButton_igra_3_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        pushButton_igra_4_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
     } // retranslateUi
 
 };
