@@ -13,7 +13,7 @@
 #define L_W 130
 #define BT_L_H 25
 #define BT_W 90
-
+//novi komentar
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
