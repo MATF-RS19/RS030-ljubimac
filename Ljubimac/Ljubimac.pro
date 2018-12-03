@@ -25,10 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        ljubimac.cpp \
+    gamesln.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+        tfj.h \
+        ljubimac.h \
+    gamesln.h \
+    vreme.h
 
 FORMS += \
         mainwindow.ui
