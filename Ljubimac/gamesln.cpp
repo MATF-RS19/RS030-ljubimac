@@ -27,20 +27,37 @@ bool GameSLN::save()const
         std::string pom =typeid(*podaci[i]).name();
         pom = std::string(find_if(pom.begin(), pom.end(),isalpha), pom.end());
         json[QString::fromStdString(pom)] = podaci[i]->toJson();
-        std::cout << typeid(*podaci[i]).name() << std::endl;
     }
-       QJsonDocument saveData(json);
 
+
+    QJsonDocument saveData(json);
     saveFile.write(saveData.toJson());
     saveFile.close();
 
     return true;
 }
 
+void GameSLN::postavi_ime(QString ime)
+{
+    ime_fajla = ime;
+}
+
+void GameSLN::postavi_podatke(TFJ **podaci, int n)
+{
+    this->podaci = podaci;
+    m_n = n;
+}
+
+GameSLN::~GameSLN()
+{
+    for(int i = 0; i < m_n; i++){delete podaci[i];}
+    delete [] podaci;
+}
+
 bool GameSLN::load()
 {
-    QFile saveFile(ime_fajla);
 
+    QFile saveFile(ime_fajla);
     if(!saveFile.open(QIODevice::ReadOnly))
     {
         qWarning("Couldn't open save file");

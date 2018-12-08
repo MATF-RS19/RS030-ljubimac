@@ -1,20 +1,23 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "gamesln.h"
 #include <QMainWindow>
-
+#include <QThread>
 namespace Ui {
 class MainWindow;
 }
-
+class Ljubimac;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
 
+    void povezi(Ljubimac* l);
+    void pokreni_vreme(Ljubimac *l);
+
+
+    ~MainWindow();
 private slots:
     void on_pushButton_kup_2_clicked();
 
@@ -56,8 +59,20 @@ private slots:
 
     void on_pushButton_igra_4_nazad_clicked();
 
+    void on_timer(int x);
+
+
 private:
     Ui::MainWindow *ui;
+
+    class Tajmer : public QThread
+    {
+    public:
+        Ljubimac* ljubimac;
+        Tajmer(Ljubimac* l = nullptr) : ljubimac(l){}
+        void run();
+    };
+    Tajmer* tajmer = new Tajmer;
 };
 
 #endif // MAINWINDOW_H

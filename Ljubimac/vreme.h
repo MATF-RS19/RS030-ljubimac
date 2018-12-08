@@ -6,7 +6,7 @@
 #include "tfj.h"
 
 /*
-    vreme se cuva u proteklim sekundama od 1970
+    ova klasa ne treba.......
 */
 class Vreme : public TFJ
 {

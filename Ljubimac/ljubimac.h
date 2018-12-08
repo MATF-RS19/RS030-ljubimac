@@ -1,12 +1,16 @@
 #ifndef LJUBIMAC_H
 #define LJUBIMAC_H
-#include "tfj.h"
 #include <QString>
 #include <iostream>
-class Ljubimac : public TFJ
+#include <QObject>
+#include "tfj.h"
+
+class Ljubimac : public QObject, public TFJ
 {
+    Q_OBJECT
     int m_sit;
     QString m_ime;
+    int m_sec = 0;
 public:
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
     QJsonObject toJson() const override;
@@ -17,6 +21,15 @@ public:
 
         return out;
     }
+    void set_sit(int x);
+    void dec_sit(){m_sit--;emit value_changed(m_sit);}
+    int get_sec(){return m_sec;}
+    void set_sec(int x){m_sec = x;emit sec_value_changed(m_sec);}
+    int get_sit(){return m_sit;}
+    QString get_ime(){return m_ime;}
+signals:
+    void value_changed(int x);
+    void sec_value_changed(int x);
 };
 
 #endif // LJUBIMAC_H

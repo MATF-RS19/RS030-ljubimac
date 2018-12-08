@@ -16,5 +16,6 @@ class TFJ
 public:
     virtual QJsonObject toJson()const = 0;
     virtual void fromJson(const QJsonObject& json) = 0;
+    virtual ~TFJ(){}
 };
 #endif // TFJ_H

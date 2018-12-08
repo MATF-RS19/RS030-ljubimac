@@ -6,6 +6,11 @@
 #include <QDebug>
 #include <QImage>
 #include <QBrush>
+#include <QProgressBar>
+#include <QTime>
+#include <iostream>
+
+#include "ljubimac.h"
 
 #define SC_W 678
 #define SC_H 388
@@ -80,6 +85,7 @@ MainWindow::MainWindow(QWidget *parent) :
     sc_igr->setBackgroundBrush(QBrush((QImage(":/images/playroom.jpg")).scaled(SC_W,SC_H)));
     sc_spav->setBackgroundBrush(QBrush((QImage(":/images/bedroom.jpg")).scaled(SC_W,SC_H)));
     sc_kup->setBackgroundBrush(QBrush((QImage(":/images/bathroom.jpg")).scaled(SC_W,SC_H)));
+
 }
 
 MainWindow::~MainWindow()
@@ -186,4 +192,45 @@ void MainWindow::on_pushButton_igra_3_nazad_clicked()
 void MainWindow::on_pushButton_igra_4_nazad_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_timer(int x)
+{
+   x = 1800 - x;
+   int min = x / 60;
+   int sec = x % 60;
+
+   ui->tajmer->setText(QString::number(min) + QString::fromStdString(":") + QString::number(sec));
+}
+
+void MainWindow::povezi(Ljubimac *l)
+{
+    connect(l, SIGNAL(value_changed(int)), ui->SnagaBar, SLOT(setValue(int)));
+    ui->ime->setText(l->get_ime());
+}
+
+void MainWindow::pokreni_vreme(Ljubimac *l)
+{
+   tajmer->ljubimac = l;
+   connect(tajmer->ljubimac, SIGNAL(sec_value_changed(int)), this, SLOT(on_timer(int)));
+   tajmer->start();
+    l->set_sit(l->get_sit());
+}
+
+void MainWindow::Tajmer::run()
+{
+    while(1)
+    {
+        int pom = ljubimac->get_sec();
+        QTime dieTime= QTime::currentTime().addSecs(1);
+        while (QTime::currentTime() < dieTime);
+
+        if(pom + 1 > 1800)
+        {
+            ljubimac->dec_sit();
+            ljubimac->set_sec(0);
+        }
+        else
+            ljubimac->set_sec(pom+1);
+    }
 }

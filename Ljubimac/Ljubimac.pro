@@ -9,6 +9,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Ljubimac
+
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -27,17 +28,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
         ljubimac.cpp \
-    gamesln.cpp
+    gamesln.cpp \
+    dialog.cpp
 
 HEADERS += \
         mainwindow.h \
         tfj.h \
         ljubimac.h \
     gamesln.h \
-    vreme.h
+    vreme.h \
+    dialog.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    dialog.ui
 
 RESOURCES += \
     res.qrc
