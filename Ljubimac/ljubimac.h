@@ -4,6 +4,7 @@
 #include <iostream>
 #include <QObject>
 #include "tfj.h"
+#include "hrana.h"
 
 class Ljubimac : public QObject, public TFJ
 {
@@ -13,14 +14,20 @@ class Ljubimac : public QObject, public TFJ
     int m_sec = 0;
 public:
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
+
     QJsonObject toJson() const override;
     void fromJson(const QJsonObject& json)override;
+
     friend std::ostream& operator<<(std::ostream& out, const Ljubimac& l)
     {
         out << l.m_ime.toStdString() << " " << l.m_sit;
 
         return out;
     }
+
+    //metod koji se poziva kad se klikne na jedi
+    void jedi(const Hrana & jelo);
+
     void set_sit(int x);
     void dec_sit(){m_sit--;emit value_changed(m_sit);}
     int get_sec(){return m_sec;}

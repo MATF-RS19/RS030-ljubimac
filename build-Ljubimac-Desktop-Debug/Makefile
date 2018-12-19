@@ -54,7 +54,10 @@ SOURCES       = ../Ljubimac/main.cpp \
 		../Ljubimac/mainwindow.cpp \
 		../Ljubimac/ljubimac.cpp \
 		../Ljubimac/gamesln.cpp \
-		../Ljubimac/dialog.cpp qrc_res.cpp \
+		../Ljubimac/dialog.cpp \
+		../Ljubimac/hrana.cpp \
+		../Ljubimac/frizider.cpp \
+		../Ljubimac/prodavnica.cpp qrc_res.cpp \
 		moc_mainwindow.cpp \
 		moc_ljubimac.cpp \
 		moc_dialog.cpp
@@ -63,6 +66,9 @@ OBJECTS       = main.o \
 		ljubimac.o \
 		gamesln.o \
 		dialog.o \
+		hrana.o \
+		frizider.o \
+		prodavnica.o \
 		qrc_res.o \
 		moc_mainwindow.o \
 		moc_ljubimac.o \
@@ -145,11 +151,17 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../Ljubimac/ljubimac.h \
 		../Ljubimac/gamesln.h \
 		../Ljubimac/vreme.h \
-		../Ljubimac/dialog.h ../Ljubimac/main.cpp \
+		../Ljubimac/dialog.h \
+		../Ljubimac/hrana.h \
+		../Ljubimac/frizider.h \
+		../Ljubimac/prodavnica.h ../Ljubimac/main.cpp \
 		../Ljubimac/mainwindow.cpp \
 		../Ljubimac/ljubimac.cpp \
 		../Ljubimac/gamesln.cpp \
-		../Ljubimac/dialog.cpp
+		../Ljubimac/dialog.cpp \
+		../Ljubimac/hrana.cpp \
+		../Ljubimac/frizider.cpp \
+		../Ljubimac/prodavnica.cpp
 QMAKE_TARGET  = Ljubimac
 DESTDIR       = 
 TARGET        = Ljubimac
@@ -334,8 +346,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Ljubimac/res.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Ljubimac/mainwindow.h ../Ljubimac/tfj.h ../Ljubimac/ljubimac.h ../Ljubimac/gamesln.h ../Ljubimac/vreme.h ../Ljubimac/dialog.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Ljubimac/main.cpp ../Ljubimac/mainwindow.cpp ../Ljubimac/ljubimac.cpp ../Ljubimac/gamesln.cpp ../Ljubimac/dialog.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Ljubimac/mainwindow.h ../Ljubimac/tfj.h ../Ljubimac/ljubimac.h ../Ljubimac/gamesln.h ../Ljubimac/vreme.h ../Ljubimac/dialog.h ../Ljubimac/hrana.h ../Ljubimac/frizider.h ../Ljubimac/prodavnica.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Ljubimac/main.cpp ../Ljubimac/mainwindow.cpp ../Ljubimac/ljubimac.cpp ../Ljubimac/gamesln.cpp ../Ljubimac/dialog.cpp ../Ljubimac/hrana.cpp ../Ljubimac/frizider.cpp ../Ljubimac/prodavnica.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Ljubimac/mainwindow.ui ../Ljubimac/dialog.ui $(DISTDIR)/
 
 
@@ -390,6 +402,7 @@ moc_mainwindow.cpp: ../Ljubimac/gamesln.h \
 	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I'/home/masa/Desktop/moj svet/igrica/RS030-ljubimac/Ljubimac' -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/mainwindow.h -o moc_mainwindow.cpp
 
 moc_ljubimac.cpp: ../Ljubimac/tfj.h \
+		../Ljubimac/hrana.h \
 		../Ljubimac/ljubimac.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
@@ -430,6 +443,7 @@ main.o: ../Ljubimac/main.cpp ../Ljubimac/mainwindow.h \
 		../Ljubimac/gamesln.h \
 		../Ljubimac/tfj.h \
 		../Ljubimac/ljubimac.h \
+		../Ljubimac/hrana.h \
 		../Ljubimac/dialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Ljubimac/main.cpp
 
@@ -437,11 +451,13 @@ mainwindow.o: ../Ljubimac/mainwindow.cpp ../Ljubimac/mainwindow.h \
 		../Ljubimac/gamesln.h \
 		../Ljubimac/tfj.h \
 		ui_mainwindow.h \
-		../Ljubimac/ljubimac.h
+		../Ljubimac/ljubimac.h \
+		../Ljubimac/hrana.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Ljubimac/mainwindow.cpp
 
 ljubimac.o: ../Ljubimac/ljubimac.cpp ../Ljubimac/ljubimac.h \
-		../Ljubimac/tfj.h
+		../Ljubimac/tfj.h \
+		../Ljubimac/hrana.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ljubimac.o ../Ljubimac/ljubimac.cpp
 
 gamesln.o: ../Ljubimac/gamesln.cpp ../Ljubimac/gamesln.h \
@@ -453,8 +469,23 @@ dialog.o: ../Ljubimac/dialog.cpp ../Ljubimac/dialog.h \
 		../Ljubimac/gamesln.h \
 		../Ljubimac/tfj.h \
 		ui_dialog.h \
-		../Ljubimac/ljubimac.h
+		../Ljubimac/ljubimac.h \
+		../Ljubimac/hrana.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dialog.o ../Ljubimac/dialog.cpp
+
+hrana.o: ../Ljubimac/hrana.cpp ../Ljubimac/hrana.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hrana.o ../Ljubimac/hrana.cpp
+
+frizider.o: ../Ljubimac/frizider.cpp ../Ljubimac/frizider.h \
+		../Ljubimac/tfj.h \
+		../Ljubimac/hrana.h \
+		ui_mainwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o frizider.o ../Ljubimac/frizider.cpp
+
+prodavnica.o: ../Ljubimac/prodavnica.cpp ../Ljubimac/prodavnica.h \
+		ui_mainwindow.h \
+		../Ljubimac/hrana.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o prodavnica.o ../Ljubimac/prodavnica.cpp
 
 qrc_res.o: qrc_res.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_res.o qrc_res.cpp

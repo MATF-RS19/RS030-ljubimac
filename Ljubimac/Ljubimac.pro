@@ -29,7 +29,10 @@ SOURCES += \
         mainwindow.cpp \
         ljubimac.cpp \
     gamesln.cpp \
-    dialog.cpp
+    dialog.cpp \
+    hrana.cpp \
+    frizider.cpp \
+    prodavnica.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -37,7 +40,10 @@ HEADERS += \
         ljubimac.h \
     gamesln.h \
     vreme.h \
-    dialog.h
+    dialog.h \
+    hrana.h \
+    frizider.h \
+    prodavnica.h
 
 FORMS += \
         mainwindow.ui \
