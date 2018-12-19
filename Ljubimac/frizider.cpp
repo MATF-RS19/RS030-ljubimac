@@ -1,6 +1,6 @@
 #include "frizider.h"
 
-Frizider::Frizider(const QVector<Hrana*>& friz,Ui::MainWindow * ui):m_ui(ui)
+Frizider::Frizider(const QVector<QPair<Hrana*,unsigned>>& friz,Ui::MainWindow * ui):m_ui(ui)
 {
 
 }

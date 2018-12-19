@@ -1062,7 +1062,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj1_naziv">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>80</y>
         <width>67</width>
         <height>17</height>
@@ -1081,7 +1081,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj2_naziv">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>130</y>
         <width>67</width>
         <height>17</height>
@@ -1100,7 +1100,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj3_naziv">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>180</y>
         <width>67</width>
         <height>17</height>
@@ -1119,7 +1119,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj4_naziv">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>230</y>
         <width>67</width>
         <height>17</height>
@@ -1138,7 +1138,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj5_naziv">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>20</x>
         <y>280</y>
         <width>67</width>
         <height>17</height>
@@ -1157,7 +1157,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fe1_vredn">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>200</x>
         <y>80</y>
         <width>71</width>
         <height>17</height>
@@ -1176,7 +1176,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fe2_vredn">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>200</x>
         <y>130</y>
         <width>71</width>
         <height>17</height>
@@ -1195,7 +1195,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fe3_vredn">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>200</x>
         <y>180</y>
         <width>71</width>
         <height>17</height>
@@ -1214,7 +1214,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fe4_vredn">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>200</x>
         <y>230</y>
         <width>71</width>
         <height>17</height>
@@ -1233,7 +1233,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fe5_vredn">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>200</x>
         <y>280</y>
         <width>71</width>
         <height>17</height>
@@ -1252,7 +1252,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="vr_1">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>310</x>
         <y>80</y>
         <width>51</width>
         <height>17</height>
@@ -1265,7 +1265,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="vr_2">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>310</x>
         <y>130</y>
         <width>51</width>
         <height>17</height>
@@ -1278,7 +1278,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="vr_3">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>310</x>
         <y>180</y>
         <width>51</width>
         <height>17</height>
@@ -1291,7 +1291,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="vr_4">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>310</x>
         <y>230</y>
         <width>51</width>
         <height>17</height>
@@ -1304,7 +1304,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="vr_5">
       <property name="geometry">
        <rect>
-        <x>390</x>
+        <x>310</x>
         <y>280</y>
         <width>51</width>
         <height>17</height>
@@ -1317,7 +1317,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QPushButton" name="jedi_1">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>570</x>
         <y>80</y>
         <width>89</width>
         <height>21</height>
@@ -1333,7 +1333,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QPushButton" name="jedi_2">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>570</x>
         <y>130</y>
         <width>89</width>
         <height>21</height>
@@ -1349,7 +1349,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QPushButton" name="jedi_3">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>570</x>
         <y>180</y>
         <width>89</width>
         <height>21</height>
@@ -1365,7 +1365,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QPushButton" name="jedi_4">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>570</x>
         <y>230</y>
         <width>89</width>
         <height>21</height>
@@ -1381,7 +1381,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QPushButton" name="jedi_5">
       <property name="geometry">
        <rect>
-        <x>500</x>
+        <x>570</x>
         <y>280</y>
         <width>89</width>
         <height>21</height>
@@ -1392,6 +1392,166 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_kol_3">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>180</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_kol_1">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>80</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_kol_4">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>230</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kol_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>180</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);</string>
+      </property>
+      <property name="text">
+       <string>Kolicina</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_kol_5">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>280</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kol_2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>130</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);</string>
+      </property>
+      <property name="text">
+       <string>Kolicina</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kol_4">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>230</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);</string>
+      </property>
+      <property name="text">
+       <string>Kolicina</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kol_1">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>80</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);</string>
+      </property>
+      <property name="text">
+       <string>Kolicina</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="kol_5">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>280</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);</string>
+      </property>
+      <property name="text">
+       <string>Kolicina</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_kol_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>130</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
