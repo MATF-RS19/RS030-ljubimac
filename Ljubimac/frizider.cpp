@@ -1,11 +1,22 @@
 #include "frizider.h"
 
-Frizider::Frizider(const QVector<QPair<Hrana*,unsigned>>& friz,Ui::MainWindow * ui):m_ui(ui)
+Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
+{
+  //fromJson()
+  //ispisi_na_gui()
+}
+
+void Frizider::dodaj_hranu(const Hrana &jelo)
 {
 
 }
 
-void Frizider::dodaj_hranu(const Hrana &jelo)
+void Frizider::uzmi_hranu(const Hrana &jelo)
+{
+
+}
+
+void Frizider::ispisi_na_gui(const Frizider &friz)
 {
 
 }

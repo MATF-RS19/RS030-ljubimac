@@ -5,3 +5,33 @@ Hrana::Hrana(unsigned cena,unsigned en_vred,QString naziv)
 {
 
 }
+
+unsigned Hrana::cena()
+{
+
+}
+
+unsigned Hrana::en_vred()
+{
+
+}
+
+QString Hrana::naziv()
+{
+
+}
+
+void Hrana::setCena(unsigned cena)
+{
+
+}
+
+void Hrana::setEnVred(unsigned en_vred)
+{
+
+}
+
+void Hrana::setNaziv(QString naziv)
+{
+
+}
