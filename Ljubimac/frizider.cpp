@@ -1,5 +1,5 @@
 #include "frizider.h"
-
+//proba commit
 Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
 {
   //fromJson()
