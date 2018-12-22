@@ -32,7 +32,13 @@ SOURCES += \
     dialog.cpp \
     hrana.cpp \
     frizider.cpp \
-    prodavnica.cpp
+    prodavnica.cpp \
+    pica.cpp \
+    kobasica.cpp \
+    sunka.cpp \
+    sladoled.cpp \
+    kolac.cpp \
+    hamburger.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +49,13 @@ HEADERS += \
     dialog.h \
     hrana.h \
     frizider.h \
-    prodavnica.h
+    prodavnica.h \
+    pica.h \
+    kobasica.h \
+    sunka.h \
+    sladoled.h \
+    kolac.h \
+    hamburger.h
 
 FORMS += \
         mainwindow.ui \
