@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "gamesln.h"
+#include "frizider.h"
 #include <QMainWindow>
 #include <QThread>
 namespace Ui {
@@ -64,7 +65,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
+    Frizider friz;
     class Tajmer : public QThread
     {
     public:

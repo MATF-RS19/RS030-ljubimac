@@ -2,7 +2,7 @@
 #define HAMBURGER_H
 #include "hrana.h"
 
-class hamburger: Hrana
+class hamburger: public Hrana
 {
 public:
     hamburger(unsigned cena, unsigned en_vred, QString naziv);

@@ -2,7 +2,7 @@
 #define SLADOLED_H
 #include "hrana.h"
 
-class sladoled: Hrana
+class sladoled: public Hrana
 {
 public:
     sladoled(unsigned cena, unsigned en_vred, QString naziv);

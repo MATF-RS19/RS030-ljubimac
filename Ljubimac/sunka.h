@@ -2,7 +2,7 @@
 #define SUNKA_H
 #include "hrana.h"
 
-class sunka: Hrana
+class sunka: public Hrana
 {
 public:
     sunka(unsigned cena, unsigned en_vred, QString naziv);

@@ -4,7 +4,7 @@
 #include "tfj.h"
 #include "hrana.h"
 #include "ui_mainwindow.h"
-
+#include "kolac.h"
 class Frizider:public TFJ
 {
 public:

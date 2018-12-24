@@ -1,6 +1,6 @@
 #include "hamburger.h"
 
-hamburger::hamburger(unsigned cena=320, unsigned en_vred=502, QString naziv="Hamburger"):
+hamburger::hamburger(unsigned cena, unsigned en_vred, QString naziv):
     Hrana(qMove(cena), qMove(en_vred), qMove(naziv))
 {
 

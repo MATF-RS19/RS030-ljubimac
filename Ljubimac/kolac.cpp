@@ -1,6 +1,6 @@
 #include "kolac.h"
 
-kolac::kolac(unsigned cena=150, unsigned en_vred=438, QString naziv="Kolac"):
+kolac::kolac(unsigned cena, unsigned en_vred, QString naziv):
     Hrana(qMove(cena), qMove(en_vred), qMove(naziv))
 {
 
