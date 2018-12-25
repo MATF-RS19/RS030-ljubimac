@@ -423,14 +423,14 @@ font: 16pt &quot;Ubuntu&quot;;
      <widget class="QGraphicsView" name="graphicsView_prodavn">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>1</y>
+        <x>10</x>
+        <y>0</y>
         <width>681</width>
         <height>391</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(139, 54, 77);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_prod_nazad">
@@ -452,15 +452,15 @@ font: 16pt &quot;Ubuntu&quot;;
      <widget class="QLabel" name="label_prodavn">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>290</x>
         <y>40</y>
-        <width>81</width>
-        <height>17</height>
+        <width>121</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(252, 233, 79);
-font: 15pt &quot;Ubuntu&quot;;</string>
+font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Prodavnica</string>
@@ -475,17 +475,21 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj1_naziv_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>90</y>
         <width>67</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -501,7 +505,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
@@ -516,8 +521,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="kupi_3">
@@ -530,7 +541,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
@@ -546,7 +558,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
@@ -555,17 +568,21 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj4_naziv_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>240</y>
+        <x>20</x>
+        <y>230</y>
         <width>67</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -574,17 +591,21 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj3_naziv_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>190</y>
-        <width>67</width>
+        <x>20</x>
+        <y>180</y>
+        <width>71</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -595,12 +616,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>190</x>
         <y>90</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -619,7 +641,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
@@ -635,10 +658,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="pe4_vredn_4">
@@ -646,12 +672,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>190</x>
         <y>230</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -669,8 +696,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="kupi_5">
@@ -683,7 +716,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
@@ -694,12 +728,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>190</x>
         <y>130</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -717,8 +752,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="pe3_vredn_3">
@@ -726,12 +767,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>190</x>
         <y>180</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -749,8 +791,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="pe5_vredn_5">
@@ -758,12 +806,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>190</x>
         <y>280</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -775,17 +824,21 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj5_naziv_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>290</y>
-        <width>67</width>
+        <x>20</x>
+        <y>280</y>
+        <width>71</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -794,18 +847,22 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <widget class="QLabel" name="fj2_naziv_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>140</y>
-        <width>67</width>
+        <x>20</x>
+        <y>130</y>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;
 </string>
       </property>
       <property name="text">
        <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -821,10 +878,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -841,10 +902,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(233, 185, 110);
-</string>
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -860,10 +924,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -879,10 +947,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -897,8 +969,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="cena_3">
@@ -910,8 +988,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="cena_4">
@@ -923,8 +1007,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="cena_5">
@@ -936,8 +1026,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="p4_cena_4">
@@ -950,10 +1046,14 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -968,8 +1068,135 @@ font: 15pt &quot;Ubuntu&quot;;</string>
         <height>17</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fj6_naziv_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Naziv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="pe6_vredn_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>330</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Energ. vr.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vr_e_6">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>330</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="p6_cena_6">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>330</y>
+        <width>71</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Cena</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cena_6">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>330</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(252, 233, 79);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="kupi_6">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>330</y>
+        <width>89</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Kupi</string>
       </property>
      </widget>
      <zorder>graphicsView_prodavn</zorder>
@@ -1005,6 +1232,12 @@ font: 15pt &quot;Ubuntu&quot;;</string>
      <zorder>p1_cena_1</zorder>
      <zorder>kupi_5</zorder>
      <zorder>pe4_vredn_4</zorder>
+     <zorder>fj6_naziv_2</zorder>
+     <zorder>pe6_vredn_6</zorder>
+     <zorder>vr_e_6</zorder>
+     <zorder>p6_cena_6</zorder>
+     <zorder>cena_6</zorder>
+     <zorder>kupi_6</zorder>
     </widget>
     <widget class="QWidget" name="page_friz">
      <widget class="QGraphicsView" name="graphicsView_friz">
@@ -1017,7 +1250,7 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(193, 125, 17);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_friz_nazad">
@@ -1041,13 +1274,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>300</x>
         <y>20</y>
-        <width>51</width>
-        <height>17</height>
+        <width>101</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(252, 233, 79);
-font: 15pt &quot;Ubuntu&quot;;</string>
+font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Frizider</string>
@@ -1069,7 +1302,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1088,7 +1322,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1107,7 +1342,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1126,7 +1362,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1145,7 +1382,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1159,12 +1397,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>80</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1178,12 +1417,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>130</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1197,12 +1437,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>180</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1216,12 +1457,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>230</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1235,12 +1477,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>280</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1436,6 +1679,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="vr_2">
       <property name="geometry">
@@ -1451,6 +1697,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="vr_3">
@@ -1468,6 +1717,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="vr_4">
       <property name="geometry">
@@ -1483,6 +1735,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="vr_5">
@@ -1500,6 +1755,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="jedi_1">
       <property name="geometry">
@@ -1511,7 +1769,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
@@ -1527,7 +1786,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
@@ -1543,7 +1803,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
@@ -1559,7 +1820,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
@@ -1575,7 +1837,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
@@ -1596,6 +1859,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="vr_kol_1">
       <property name="geometry">
@@ -1611,6 +1877,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="vr_kol_4">
@@ -1628,6 +1897,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="kol_3">
       <property name="geometry">
@@ -1639,7 +1911,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1663,6 +1936,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="kol_2">
       <property name="geometry">
@@ -1674,7 +1950,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1693,7 +1970,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1712,7 +1990,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1731,7 +2010,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1755,6 +2035,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="fj6_naziv">
       <property name="geometry">
@@ -1766,7 +2049,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Naziv</string>
@@ -1780,12 +2064,13 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        <rect>
         <x>230</x>
         <y>320</y>
-        <width>71</width>
+        <width>81</width>
         <height>17</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Energ. vr.</string>
@@ -1809,6 +2094,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="kol_6">
       <property name="geometry">
@@ -1820,7 +2108,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);</string>
+       <string notr="true">background-color: rgb(233, 185, 110);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kolicina</string>
@@ -1844,6 +2133,9 @@ font: 15pt &quot;Ubuntu&quot;;</string>
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="jedi_6">
       <property name="geometry">
@@ -1855,7 +2147,8 @@ font: 15pt &quot;Ubuntu&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>

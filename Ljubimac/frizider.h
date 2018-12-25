@@ -4,7 +4,7 @@
 #include "tfj.h"
 #include "hrana.h"
 #include "ui_mainwindow.h"
-#include "kolac.h"
+
 class Frizider:public TFJ
 {
 public:
@@ -24,7 +24,8 @@ public:
 
     ~Frizider();
 private:
-    QMap<Hrana*,unsigned> m_frizider;
+
+    QMap<Hrana*, unsigned> m_frizider;
     Ui::MainWindow* m_ui;
 };
 

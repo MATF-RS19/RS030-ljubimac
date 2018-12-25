@@ -17,12 +17,13 @@ Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
   pica * pic= new pica(120, 266, "Pica");
   sladoled * slad= new sladoled(90, 216, "Sladoled");
   sunka * sun= new sunka(432, 511, "Sunka");
-  this->m_frizider.insert(kol,10);
-  this->m_frizider.insert(ham, 4);
-  this->m_frizider.insert(kob, 12);
-  this->m_frizider.insert(pic, 6);
-  this->m_frizider.insert(slad, 3);
-  this->m_frizider.insert(sun,7);
+
+  m_frizider.insert(kol,10);
+  m_frizider.insert(ham, 4);
+  m_frizider.insert(kob, 12);
+  m_frizider.insert(pic, 6);
+  m_frizider.insert(slad, 3);
+  m_frizider.insert(sun,7);
 }
 
 void Frizider::dodaj_hranu(const Hrana &jelo)
@@ -37,7 +38,7 @@ void Frizider::uzmi_hranu(const Hrana &jelo)
 
 void Frizider::ispisi_na_gui(const Frizider &friz)
 {
-    auto i=friz.m_frizider.cbegin();
+    auto i=friz.m_frizider.begin();
     m_ui->fj1_naziv->setText(i.key()->naziv());
     m_ui->vr_1->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_1->setText(QString::number(i.value()));
@@ -61,6 +62,7 @@ void Frizider::ispisi_na_gui(const Frizider &friz)
     m_ui->fj6_naziv->setText(i.key()->naziv());
     m_ui->vr_6->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_6->setText(QString::number(i.value()));
+
     }
 
 

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(139, 54, 77);</string>
+  </property>
   <widget class="QPushButton" name="newPB">
    <property name="geometry">
     <rect>
@@ -22,6 +25,10 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(123, 7, 39);
+font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
+   </property>
    <property name="text">
     <string>ok</string>
    </property>
@@ -29,11 +36,15 @@
   <widget class="QPushButton" name="loadPB">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>270</x>
      <y>50</y>
      <width>99</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(123, 7, 39);
+font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
    </property>
    <property name="text">
     <string>load</string>
@@ -48,8 +59,15 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+   </property>
    <property name="text">
     <string>New Game</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineIme">
@@ -61,8 +79,15 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+   </property>
    <property name="text">
     <string>Ime Ljubimca</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineSave">
@@ -70,25 +95,39 @@
     <rect>
      <x>20</x>
      <y>240</y>
-     <width>281</width>
+     <width>301</width>
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+   </property>
    <property name="text">
     <string>Ime fajla gde se sejvuju novi podaci</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineLoad">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>50</y>
-     <width>201</width>
+     <width>231</width>
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(186, 189, 182);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+   </property>
    <property name="text">
     <string>Ime fajla odakle da loadujem</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

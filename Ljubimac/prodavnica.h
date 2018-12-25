@@ -6,10 +6,10 @@
 class Prodavnica
 {
 public:
-    Prodavnica(const QVector<Hrana *>& prodavnica,Ui::MainWindow * ui);
+    Prodavnica(Ui::MainWindow * ui);
 
     void dodaj_proizvod(const Hrana & jelo);
-
+    void ispisi_na_gui(const Prodavnica& prod);
     ~Prodavnica();
 private:
     QVector<Hrana *> m_prodavnica;

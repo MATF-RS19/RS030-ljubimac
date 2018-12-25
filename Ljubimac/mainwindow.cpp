@@ -21,7 +21,7 @@
 //novi komentar
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),friz(ui)
+    ui(new Ui::MainWindow),friz(ui), prod(ui)
 {
     ui->setupUi(this);
 
@@ -86,8 +86,9 @@ MainWindow::MainWindow(QWidget *parent) :
     sc_spav->setBackgroundBrush(QBrush((QImage(":/images/bedroom.jpg")).scaled(SC_W,SC_H)));
     sc_kup->setBackgroundBrush(QBrush((QImage(":/images/bathroom.jpg")).scaled(SC_W,SC_H)));
 
-    //Frizider friz_1=new Frizider(ui);
+
     friz.ispisi_na_gui(friz);
+    prod.ispisi_na_gui(prod);
 }
 
 MainWindow::~MainWindow()
