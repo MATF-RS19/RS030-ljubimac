@@ -1250,7 +1250,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(193, 125, 17);</string>
+       <string notr="true">background-color: rgb(114, 159, 207);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_friz_nazad">
@@ -1274,12 +1274,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>300</x>
         <y>20</y>
-        <width>101</width>
+        <width>111</width>
         <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1302,7 +1302,7 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1322,7 +1322,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1342,7 +1342,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1362,7 +1362,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1382,7 +1382,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1402,7 +1402,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1422,7 +1422,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1442,7 +1442,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1462,7 +1462,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1482,7 +1482,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1516,9 +1516,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1543,18 +1543,18 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1572,9 +1572,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1599,18 +1599,18 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1628,9 +1628,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1655,18 +1655,18 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>252</red>
-            <green>233</green>
-            <blue>79</blue>
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
            </color>
           </brush>
          </colorrole>
@@ -1674,7 +1674,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </palette>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1693,7 +1693,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1712,7 +1712,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1731,7 +1731,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1750,7 +1750,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1854,7 +1854,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1873,7 +1873,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1892,7 +1892,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1911,7 +1911,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1931,7 +1931,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -1950,7 +1950,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1970,7 +1970,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1990,7 +1990,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2010,7 +2010,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2030,7 +2030,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -2049,7 +2049,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2069,7 +2069,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2089,7 +2089,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
@@ -2108,7 +2108,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(233, 185, 110);
+       <string notr="true">background-color: rgb(52, 101, 164);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2128,7 +2128,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);</string>
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
       </property>
       <property name="text">
        <string/>
