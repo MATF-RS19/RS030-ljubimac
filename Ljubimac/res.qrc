@@ -6,5 +6,11 @@
         <file>bathroom.jpg</file>
         <file>shop_1.jpg</file>
         <file>fridge_1.jpg</file>
+        <file>pizza.png</file>
+        <file>sladoled.png</file>
+        <file>sunka.png</file>
+        <file>kolac.png</file>
+        <file>hamburger.png</file>
+        <file>kobasica.png</file>
     </qresource>
 </RCC>

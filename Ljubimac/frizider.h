@@ -17,6 +17,8 @@ public:
 
     void ispisi_na_gui(const Frizider& friz);
 
+    QMap<Hrana*, unsigned> mapa_frizider();
+
     // TFJ interface
     QJsonObject toJson() const;
     void fromJson(const QJsonObject &json);

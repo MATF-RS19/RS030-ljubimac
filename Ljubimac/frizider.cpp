@@ -63,8 +63,12 @@ void Frizider::ispisi_na_gui(const Frizider &friz)
     m_ui->vr_6->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_6->setText(QString::number(i.value()));
 
-    }
+}
 
+QMap<Hrana *, unsigned> Frizider::mapa_frizider()
+{
+    return m_frizider;
+}
 
 QJsonObject Frizider::toJson() const
 {

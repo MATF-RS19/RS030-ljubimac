@@ -18,6 +18,10 @@
 #define L_W 130
 #define BT_L_H 25
 #define BT_W 90
+#define HR_XP 130
+#define HR_YP 60
+#define RAZ 50
+#define KOEF 0.11
 //novi komentar
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -51,6 +55,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView_igraonica->setScene(sc_igr);
     sc_igr->setSceneRect(sc_velicina);
 
+    QGraphicsScene *sc_friz =new QGraphicsScene();
+    ui->graphicsView_friz->setScene(sc_friz);
+    sc_friz->setSceneRect(sc_velicina);
+
+    QGraphicsScene *sc_prod =new QGraphicsScene();
+    ui->graphicsView_prodavn->setScene(sc_prod);
+    sc_prod->setSceneRect(sc_velicina);
     //Podesavanje velicine i polozaja imena sobe i strelica
 
     QRect lab_velicina=QRect(SC_W/2-50,BT_L_TOP,L_W,BT_L_H);
@@ -87,8 +98,8 @@ MainWindow::MainWindow(QWidget *parent) :
     sc_kup->setBackgroundBrush(QBrush((QImage(":/images/bathroom.jpg")).scaled(SC_W,SC_H)));
 
 
-    friz.ispisi_na_gui(friz);
-    prod.ispisi_na_gui(prod);
+    iscrtaj_friz(sc_friz);
+    iscrtaj_prodavnicu(sc_prod);
 }
 
 MainWindow::~MainWindow()
@@ -96,6 +107,58 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::iscrtaj_friz(QGraphicsScene * scena){
+    friz.ispisi_na_gui(friz);
+    auto mapa=friz.mapa_frizider();
+
+    auto i=mapa.begin();
+    double prethodni=HR_YP;
+
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,HR_YP);
+    scena->addItem(i.key());
+    i++;prethodni=HR_YP;
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,prethodni+RAZ);
+    scena->addItem(i.key());
+    ++i;prethodni+=RAZ;
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,prethodni+RAZ);
+    scena->addItem(i.key());
+    ++i;prethodni+=RAZ;
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,prethodni+RAZ);
+    scena->addItem(i.key());
+    ++i;prethodni+=RAZ;
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,prethodni+RAZ);
+    scena->addItem(i.key());
+    ++i;prethodni+=RAZ;
+
+    i.key()->setScale(KOEF);
+    i.key()->setPos(HR_XP,prethodni+RAZ);
+    scena->addItem(i.key());
+
+}
+
+void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){
+    prod.ispisi_na_gui(prod);
+    auto vector=prod.vector_prod();
+    double trenutni=HR_YP;
+    double x=HR_XP-20;
+    for(auto i: vector){
+        i->setScale(KOEF);
+        i->setPos(x,trenutni);
+        scena->addItem(i);
+        trenutni+=RAZ;
+    }
+}
 void MainWindow::on_pushButton_kup_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);

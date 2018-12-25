@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -39,9 +39,9 @@
      <widget class="QGraphicsView" name="graphicsView_kuhinja">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>-10</y>
-        <width>681</width>
+        <width>691</width>
         <height>391</height>
        </rect>
       </property>
@@ -423,9 +423,9 @@ font: 16pt &quot;Ubuntu&quot;;
      <widget class="QGraphicsView" name="graphicsView_prodavn">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>0</x>
         <y>0</y>
-        <width>681</width>
+        <width>691</width>
         <height>391</height>
        </rect>
       </property>

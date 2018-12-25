@@ -17,7 +17,8 @@ public:
 
     void povezi(Ljubimac* l);
     void pokreni_vreme(Ljubimac *l);
-
+    void iscrtaj_friz(QGraphicsScene * scena);
+    void iscrtaj_prodavnicu(QGraphicsScene* scena);
 
     ~MainWindow();
 private slots:

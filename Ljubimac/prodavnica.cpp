@@ -61,6 +61,12 @@ void Prodavnica::ispisi_na_gui(const Prodavnica& prod){
 
 }
 
+QVector<Hrana *> Prodavnica::vector_prod()
+{
+    return m_prodavnica;
+}
+
+
 Prodavnica::~Prodavnica()
 {
 
