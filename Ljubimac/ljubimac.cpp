@@ -1,5 +1,5 @@
 #include <ctime>
-
+#include <iostream>
 #include "ljubimac.h"
 
 Ljubimac::Ljubimac(int sit, QString ime) : m_sit(sit), m_ime(ime){}
@@ -25,6 +25,7 @@ void Ljubimac::fromJson(const QJsonObject &json)
 
 void Ljubimac::set_sit(int x)
 {
-    m_sit += x;
+    std::cout << "cao"<< std::endl;
+    m_sit = x;
     emit value_changed(m_sit);
 }
