@@ -11,7 +11,7 @@
 #include <iostream>
 
 #include "ljubimac.h"
-
+#include "vreme.h"
 #define SC_W 678
 #define SC_H 388
 #define BT_L_TOP 15
@@ -153,7 +153,7 @@ void MainWindow::on_jedi_1_clicked()
 {
     Hrana prva(ui->cena_1->text().toUInt(),ui->vr_1->text().toUInt(),ui->fj1_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_1->text().toInt());
+    ljub.add_sit(ui->vr_1->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -161,7 +161,7 @@ void MainWindow::on_jedi_2_clicked()
 {
     Hrana prva(ui->cena_2->text().toUInt(),ui->vr_2->text().toUInt(),ui->fj2_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_2->text().toInt());
+    ljub.add_sit(ui->vr_2->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -169,7 +169,7 @@ void MainWindow::on_jedi_3_clicked()
 {
     Hrana prva(ui->cena_3->text().toUInt(),ui->vr_3->text().toUInt(),ui->fj3_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_3->text().toInt());
+    ljub.add_sit(ui->vr_3->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -177,7 +177,7 @@ void MainWindow::on_jedi_4_clicked()
 {
     Hrana prva(ui->cena_4->text().toUInt(),ui->vr_4->text().toUInt(),ui->fj4_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_4->text().toInt());
+    ljub.add_sit(ui->vr_4->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -185,7 +185,7 @@ void MainWindow::on_jedi_5_clicked()
 {
     Hrana prva(ui->cena_5->text().toUInt(),ui->vr_5->text().toUInt(),ui->fj5_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_5->text().toInt());
+    ljub.add_sit(ui->vr_5->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -193,7 +193,7 @@ void MainWindow::on_jedi_6_clicked()
 {
     Hrana prva(ui->cena_6->text().toUInt(),ui->vr_6->text().toUInt(),ui->fj6_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.set_sit(ui->vr_6->text().toInt());
+    ljub.add_sit(ui->vr_6->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -210,9 +210,7 @@ void MainWindow::on_kupi_1_clicked()
     auto trenutno=ljub.get_novac();
 
     ljub.set_novac(trenutno-cena);
-
     ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
-
 }
 
 void MainWindow::on_kupi_2_clicked()
@@ -417,7 +415,7 @@ void MainWindow::on_pushButton_igra_4_nazad_clicked()
 
 void MainWindow::on_timer(int x)
 {
-   x = 1800 - x;
+   x = SEC- x;
    int min = x / 60;
    int sec = x % 60;
 
@@ -446,7 +444,7 @@ void MainWindow::Tajmer::run()
         QTime dieTime= QTime::currentTime().addSecs(1);
         while (QTime::currentTime() < dieTime);
 
-        if(pom + 1 > 1800)
+        if(pom + 1 > SEC)
         {
             ljubimac->dec_sit();
             ljubimac->set_sec(0);

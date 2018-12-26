@@ -12,7 +12,7 @@ class Ljubimac : public QObject, public TFJ
     int m_sit;
     QString m_ime;
     int m_sec = 0;
-    unsigned m_novac=2000;
+    int m_novac=2000;
 public:
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
 
@@ -28,7 +28,7 @@ public:
 
     //metod koji se poziva kad se klikne na jedi
     void jedi(const Hrana & jelo);
-
+    void add_sit(int x){set_sit(x+m_sit);}
     void set_sit(int x);
     void dec_sit(){m_sit--;emit value_changed(m_sit);}
     int get_sec(){return m_sec;}
