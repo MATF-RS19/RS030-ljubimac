@@ -77,6 +77,18 @@ private slots:
 
     void on_jedi_6_clicked();
 
+    void on_kupi_1_clicked();
+
+    void on_kupi_2_clicked();
+
+    void on_kupi_3_clicked();
+
+    void on_kupi_4_clicked();
+
+    void on_kupi_5_clicked();
+
+    void on_kupi_6_clicked();
+
 
 
 

@@ -197,6 +197,50 @@ void MainWindow::on_jedi_6_clicked()
     friz.ispisi_na_gui(friz);
 }
 
+void MainWindow::on_kupi_1_clicked()
+{
+    Hrana prva(ui->cena_1->text().toUInt(),ui->vr_e_1->text().toUInt(),ui->fj1_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_kupi_2_clicked()
+{
+    Hrana prva(ui->cena_2->text().toUInt(),ui->vr_e_2->text().toUInt(),ui->fj2_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+
+}
+
+void MainWindow::on_kupi_3_clicked()
+{
+    Hrana prva(ui->cena_3->text().toUInt(),ui->vr_e_3->text().toUInt(),ui->fj3_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_kupi_4_clicked()
+{
+    Hrana prva(ui->cena_4->text().toUInt(),ui->vr_e_4->text().toUInt(),ui->fj4_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_kupi_5_clicked()
+{
+    Hrana prva(ui->cena_5->text().toUInt(),ui->vr_e_5->text().toUInt(),ui->fj5_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_kupi_6_clicked()
+{
+    Hrana prva(ui->cena_6->text().toUInt(),ui->vr_e_6->text().toUInt(),ui->fj6_naziv_2->text());
+    friz.dodaj_hranu(prva);
+    friz.ispisi_na_gui(friz);
+}
+
+
 void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){
     prod.ispisi_na_gui(prod);
     auto vector=prod.vector_prod();
