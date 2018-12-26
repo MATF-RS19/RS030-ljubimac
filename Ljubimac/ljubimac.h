@@ -12,6 +12,7 @@ class Ljubimac : public QObject, public TFJ
     int m_sit;
     QString m_ime;
     int m_sec = 0;
+    unsigned novac;
 public:
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
 

@@ -25,6 +25,9 @@ public:
 
 
     ~Frizider();
+private slots:
+    void on_jedi_1_clicked();
+
 private:
 
     QMap<Hrana*, unsigned> m_frizider;

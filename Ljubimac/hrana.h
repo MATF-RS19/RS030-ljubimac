@@ -8,9 +8,9 @@ class Hrana:public QGraphicsPixmapItem
 public:
     Hrana(unsigned cena,unsigned en_vred,QString naziv);
 
-    unsigned cena();
-    unsigned en_vred();
-    QString naziv();
+    unsigned cena() const;
+    unsigned en_vred()const;
+    QString naziv()const;
 
     void setCena(unsigned cena);
     void setEnVred(unsigned en_vred);

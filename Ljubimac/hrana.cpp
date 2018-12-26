@@ -6,17 +6,17 @@ Hrana::Hrana(unsigned cena,unsigned en_vred,QString naziv)
 
 }
 
-unsigned Hrana::cena()
+unsigned Hrana::cena() const
 {
     return m_cena;
 }
 
-unsigned Hrana::en_vred()
+unsigned Hrana::en_vred() const
 {
     return m_en_vred;
 }
 
-QString Hrana::naziv()
+QString Hrana::naziv() const
 {
     return m_naziv;
 }

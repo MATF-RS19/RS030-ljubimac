@@ -25,6 +25,6 @@ void Ljubimac::fromJson(const QJsonObject &json)
 
 void Ljubimac::set_sit(int x)
 {
-    m_sit = x;
-    emit value_changed(x);
+    m_sit += x;
+    emit value_changed(m_sit);
 }

@@ -9,7 +9,6 @@ public:
     Prodavnica(Ui::MainWindow * ui);
 
     QVector<Hrana*> vector_prod();
-    void dodaj_proizvod(const Hrana & jelo);
     void ispisi_na_gui(const Prodavnica& prod);
     ~Prodavnica();
 private:

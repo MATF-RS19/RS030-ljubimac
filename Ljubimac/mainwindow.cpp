@@ -100,6 +100,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     iscrtaj_friz(sc_friz);
     iscrtaj_prodavnicu(sc_prod);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -145,6 +147,54 @@ void MainWindow::iscrtaj_friz(QGraphicsScene * scena){
     i.key()->setPos(HR_XP,prethodni+RAZ);
     scena->addItem(i.key());
 
+}
+
+void MainWindow::on_jedi_1_clicked()
+{
+    Hrana prva(ui->cena_1->text().toUInt(),ui->vr_1->text().toUInt(),ui->fj1_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_1->text().toInt());
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_jedi_2_clicked()
+{
+    Hrana prva(ui->cena_2->text().toUInt(),ui->vr_2->text().toUInt(),ui->fj2_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_2->text().toInt());
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_jedi_3_clicked()
+{
+    Hrana prva(ui->cena_3->text().toUInt(),ui->vr_3->text().toUInt(),ui->fj3_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_3->text().toInt());
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_jedi_4_clicked()
+{
+    Hrana prva(ui->cena_4->text().toUInt(),ui->vr_4->text().toUInt(),ui->fj4_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_4->text().toInt());
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_jedi_5_clicked()
+{
+    Hrana prva(ui->cena_5->text().toUInt(),ui->vr_5->text().toUInt(),ui->fj5_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_5->text().toInt());
+    friz.ispisi_na_gui(friz);
+}
+
+void MainWindow::on_jedi_6_clicked()
+{
+    Hrana prva(ui->cena_6->text().toUInt(),ui->vr_6->text().toUInt(),ui->fj6_naziv->text());
+    friz.uzmi_hranu(prva);
+    ljub.set_sit(ui->vr_6->text().toInt());
+    friz.ispisi_na_gui(friz);
 }
 
 void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){

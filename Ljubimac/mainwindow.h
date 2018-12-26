@@ -3,6 +3,7 @@
 #include "gamesln.h"
 #include "frizider.h"
 #include "prodavnica.h"
+#include "ljubimac.h"
 #include <QMainWindow>
 #include <QThread>
 namespace Ui {
@@ -64,11 +65,26 @@ private slots:
 
     void on_timer(int x);
 
+    void on_jedi_1_clicked();
+
+    void on_jedi_2_clicked();
+
+    void on_jedi_3_clicked();
+
+    void on_jedi_4_clicked();
+
+    void on_jedi_5_clicked();
+
+    void on_jedi_6_clicked();
+
+
+
 
 private:
     Ui::MainWindow *ui;
     Frizider friz;
     Prodavnica prod;
+    Ljubimac ljub;
     class Tajmer : public QThread
     {
     public:
