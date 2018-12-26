@@ -26,35 +26,37 @@ Prodavnica::Prodavnica(Ui::MainWindow *ui):m_ui(ui)
 
     }
 
-
 void Prodavnica::ispisi_na_gui(const Prodavnica& prod){
+
 
     int i=0;
     m_ui->fj1_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_1->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_1->setText(QString::number(prod.m_prodavnica.at(i)->cena())+" RSD");
+    m_ui->vr_e_1->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_1->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
     i++;
     m_ui->fj2_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_2->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_2->setText(QString::number(prod.m_prodavnica.at(i)->cena())+" RSD");
+    m_ui->vr_e_2->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_2->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
     i++;
     m_ui->fj3_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_3->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_3->setText(QString::number(prod.m_prodavnica.at(i)->cena())+" RSD");
+    m_ui->vr_e_3->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_3->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
     i++;
     m_ui->fj4_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_4->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_4->setText(QString::number(prod.m_prodavnica.at(i)->cena())+" RSD");
+    m_ui->vr_e_4->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_4->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
     i++;
     m_ui->fj5_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_5->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_5->setText(QString::number(prod.m_prodavnica.at(i)->cena())+" RSD");
+    m_ui->vr_e_5->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_5->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
     i++;
     m_ui->fj6_naziv_2->setText(prod.m_prodavnica.at(i)->naziv());
-    m_ui->vr_e_6->setText(QString::number(prod.m_prodavnica.at(i)->en_vred())+" kcal");
-    m_ui->cena_6->setText(QString::number(prod.m_prodavnica.at(i)->cena())+ " RSD");
+    m_ui->vr_e_6->setText(QString::number(prod.m_prodavnica.at(i)->en_vred()));
+    m_ui->cena_6->setText(QString::number(prod.m_prodavnica.at(i)->cena()));
 
 }
+
+
 
 QVector<Hrana *> Prodavnica::vector_prod()
 {

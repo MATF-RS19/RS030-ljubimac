@@ -8,11 +8,11 @@
 
 class Ljubimac : public QObject, public TFJ
 {
-    Q_OBJECT
+    Q_OBJECT    
     int m_sit;
     QString m_ime;
     int m_sec = 0;
-    unsigned novac;
+    unsigned m_novac=2000;
 public:
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
 
@@ -35,6 +35,8 @@ public:
     void set_sec(int x){m_sec = x;emit sec_value_changed(m_sec);}
     int get_sit(){return m_sit;}
     QString get_ime(){return m_ime;}
+    unsigned get_novac(){return m_novac;}
+    void set_novac(unsigned cena){ m_novac=cena;}//ovde a mozda zato sto sam stavila gore da bude 2000, mozda treba neki konstruktor pa da se tu incijalizuje
 signals:
     void value_changed(int x);
     void sec_value_changed(int x);

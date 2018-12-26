@@ -29,10 +29,9 @@ Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
 void Frizider::dodaj_hranu(const Hrana &jelo)
 {
 
-    for(auto i=m_frizider.begin(); i!=m_frizider.end();i++){
+    for(auto i=m_frizider.begin(); i!=m_frizider.end();i++)
         if(i.key()->naziv()==jelo.naziv())
             i.value()+=1;
-    }
 
 }
 
@@ -54,27 +53,27 @@ void Frizider::ispisi_na_gui(const Frizider &friz)
 {
     auto i=friz.m_frizider.begin();
     m_ui->fj1_naziv->setText(i.key()->naziv());
-    m_ui->vr_1->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_1->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_1->setText(QString::number(i.value()));
     i++;
     m_ui->fj2_naziv->setText(i.key()->naziv());
-    m_ui->vr_2->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_2->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_2->setText(QString::number(i.value()));
     i++;
     m_ui->fj3_naziv->setText(i.key()->naziv());
-    m_ui->vr_3->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_3->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_3->setText(QString::number(i.value()));
     i++;
     m_ui->fj4_naziv->setText(i.key()->naziv());
-    m_ui->vr_4->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_4->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_4->setText(QString::number(i.value()));
     i++;
     m_ui->fj5_naziv->setText(i.key()->naziv());
-    m_ui->vr_5->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_5->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_5->setText(QString::number(i.value()));
     i++;
     m_ui->fj6_naziv->setText(i.key()->naziv());
-    m_ui->vr_6->setText(QString:: number(i.key()->en_vred())+" kcal");
+    m_ui->vr_6->setText(QString:: number(i.key()->en_vred()));
     m_ui->vr_kol_6->setText(QString::number(i.value()));
 
 }

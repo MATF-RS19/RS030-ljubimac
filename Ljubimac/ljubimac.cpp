@@ -1,7 +1,9 @@
 #include <ctime>
 #include "ljubimac.h"
 
-Ljubimac::Ljubimac(int sit, QString ime) : m_sit(sit), m_ime(ime){}
+Ljubimac::Ljubimac(int sit, QString ime) : m_sit(sit), m_ime(ime){
+
+}
 QJsonObject Ljubimac::toJson()const
 {
     QJsonObject json;

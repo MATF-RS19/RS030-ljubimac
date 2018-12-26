@@ -1244,49 +1244,6 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <string>Kupi</string>
       </property>
      </widget>
-     <widget class="QLabel" name="fj1_naziv_3">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>40</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(213, 147, 125);
-font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
-      </property>
-      <property name="text">
-       <string>NOVAC:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="vr_e_7">
-      <property name="geometry">
-       <rect>
-        <x>550</x>
-        <y>40</y>
-        <width>71</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
-font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
      <zorder>graphicsView_prodavn</zorder>
      <zorder>cena_1</zorder>
      <zorder>fj1_naziv_2</zorder>
@@ -1326,8 +1283,6 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
      <zorder>p6_cena_6</zorder>
      <zorder>cena_6</zorder>
      <zorder>kupi_6</zorder>
-     <zorder>fj1_naziv_3</zorder>
-     <zorder>vr_e_7</zorder>
     </widget>
     <widget class="QWidget" name="page_friz">
      <widget class="QGraphicsView" name="graphicsView_friz">
@@ -2421,7 +2376,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
-     <string>SNAGA</string>
+     <string>Snaga:</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2430,7 +2385,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="tajmer">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>90</x>
       <y>30</y>
       <width>67</width>
       <height>17</height>
@@ -2447,18 +2402,21 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>20</x>
       <y>30</y>
       <width>67</width>
       <height>17</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
-font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+     <string notr="true">background-color: rgb(213, 147, 125);
+font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
-     <string>Tajmer</string>
+     <string>Tajmer:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="ime">
@@ -2476,6 +2434,52 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="l_kol_novca">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(211, 215, 207);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fj1_naziv_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(213, 147, 125);
+font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Novac:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

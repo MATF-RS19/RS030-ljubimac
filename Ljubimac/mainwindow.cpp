@@ -100,8 +100,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     iscrtaj_friz(sc_friz);
     iscrtaj_prodavnicu(sc_prod);
-
-
+    ui->l_kol_novca->setText(QString::number(ljub.get_novac()));
+    ui->ime->setText(ljub.get_ime());
 }
 
 MainWindow::~MainWindow()
@@ -199,45 +199,106 @@ void MainWindow::on_jedi_6_clicked()
 
 void MainWindow::on_kupi_1_clicked()
 {
-    Hrana prva(ui->cena_1->text().toUInt(),ui->vr_e_1->text().toUInt(),ui->fj1_naziv_2->text());
+    auto cena=ui->cena_1->text().toUInt();
+    auto en_vr=ui->vr_e_1->text().toUInt();
+    auto naziv=ui->fj1_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+
 }
 
 void MainWindow::on_kupi_2_clicked()
 {
-    Hrana prva(ui->cena_2->text().toUInt(),ui->vr_e_2->text().toUInt(),ui->fj2_naziv_2->text());
+    auto cena=ui->cena_2->text().toUInt();
+    auto en_vr=ui->vr_e_2->text().toUInt();
+    auto naziv=ui->fj2_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
 
 }
 
 void MainWindow::on_kupi_3_clicked()
 {
-    Hrana prva(ui->cena_3->text().toUInt(),ui->vr_e_3->text().toUInt(),ui->fj3_naziv_2->text());
+    auto cena=ui->cena_3->text().toUInt();
+    auto en_vr=ui->vr_e_3->text().toUInt();
+    auto naziv=ui->fj3_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
 }
 
 void MainWindow::on_kupi_4_clicked()
 {
-    Hrana prva(ui->cena_4->text().toUInt(),ui->vr_e_4->text().toUInt(),ui->fj4_naziv_2->text());
+    auto cena=ui->cena_4->text().toUInt();
+    auto en_vr=ui->vr_e_4->text().toUInt();
+    auto naziv=ui->fj4_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
 }
 
 void MainWindow::on_kupi_5_clicked()
 {
-    Hrana prva(ui->cena_5->text().toUInt(),ui->vr_e_5->text().toUInt(),ui->fj5_naziv_2->text());
+    auto cena=ui->cena_5->text().toUInt();
+    auto en_vr=ui->vr_e_5->text().toUInt();
+    auto naziv=ui->fj5_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
 }
 
 void MainWindow::on_kupi_6_clicked()
 {
-    Hrana prva(ui->cena_6->text().toUInt(),ui->vr_e_6->text().toUInt(),ui->fj6_naziv_2->text());
+    auto cena=ui->cena_6->text().toUInt();
+    auto en_vr=ui->vr_e_6->text().toUInt();
+    auto naziv=ui->fj6_naziv_2->text();
+    Hrana prva(cena,en_vr,naziv);
     friz.dodaj_hranu(prva);
     friz.ispisi_na_gui(friz);
+
+
+    auto trenutno=ljub.get_novac();
+
+    ljub.set_novac(trenutno-cena);
+
+    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
 }
 
 
