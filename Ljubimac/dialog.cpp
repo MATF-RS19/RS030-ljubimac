@@ -12,8 +12,7 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->loadPB, SIGNAL(clicked(bool)), this, SLOT(on_load()));
-
-    connect(ui->newPB, SIGNAL(clicked(bool)), this, SLOT(on_new_game()));
+    connect(ui->newPB, SIGNAL(clicked(bool)), this, SLOT(on_new()));
 }
 
 Dialog::~Dialog()
@@ -31,14 +30,14 @@ void Dialog::on_load()
     igra->postavi_ime(ui->lineLoad->text());
 
     igra->load();
-
+    main = new MainWindow(l);
     main->povezi(l);
     main->pokreni_vreme(l);
 
     main->show();
     this->close();
 }
-void Dialog::on_new_game()
+void Dialog::on_new()
 {
     QString ime = ui->lineIme->text();
     Ljubimac *l = new Ljubimac(100, ime);
@@ -47,7 +46,7 @@ void Dialog::on_new_game()
     niz[0] = l;
     igra->postavi_podatke(niz, 1);
     igra->postavi_ime(ui->lineSave->text());
-
+    main = new MainWindow(l);
     main->povezi(l);
     main->pokreni_vreme(l);
 

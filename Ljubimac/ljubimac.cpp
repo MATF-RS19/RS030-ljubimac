@@ -1,8 +1,8 @@
 #include <ctime>
+#include <QDebug>
 #include "ljubimac.h"
 #include "vreme.h"
 Ljubimac::Ljubimac(int sit, QString ime) : m_sit(sit), m_ime(ime){
-
 }
 QJsonObject Ljubimac::toJson()const
 {
@@ -29,5 +29,5 @@ void Ljubimac::fromJson(const QJsonObject &json)
 void Ljubimac::set_sit(int x)
 {
     m_sit = x > 100 ? 100 : x;
-    emit value_changed(x);
+    emit value_changed(m_sit);
 }

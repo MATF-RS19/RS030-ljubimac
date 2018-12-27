@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(Ljubimac *ljub, QWidget *parent = 0);
 
     void povezi(Ljubimac* l);
     void pokreni_vreme(Ljubimac *l);
@@ -96,7 +96,7 @@ private:
     Ui::MainWindow *ui;
     Frizider friz;
     Prodavnica prod;
-    Ljubimac ljub;
+    Ljubimac* ljub;
     class Tajmer : public QThread
     {
     public:

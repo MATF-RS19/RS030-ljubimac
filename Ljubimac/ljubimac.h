@@ -18,14 +18,12 @@ public:
 
     QJsonObject toJson() const override;
     void fromJson(const QJsonObject& json)override;
-
     friend std::ostream& operator<<(std::ostream& out, const Ljubimac& l)
     {
         out << l.m_ime.toStdString() << " " << l.m_sit;
 
         return out;
     }
-
     //metod koji se poziva kad se klikne na jedi
     void jedi(const Hrana & jelo);
     void add_sit(int x){set_sit(x+m_sit);}

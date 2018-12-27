@@ -16,11 +16,11 @@ class Dialog : public QDialog
 public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
-    void postavi_main(MainWindow* w){main = w;}
+    MainWindow* postavi_main(){return main;}
     void postavi_game(GameSLN* l){igra = l;}
 private slots:
     void on_load();
-    void on_new_game();
+    void on_new();
 private:
     Ui::Dialog *ui;
 };

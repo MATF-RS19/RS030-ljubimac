@@ -23,10 +23,12 @@
 #define RAZ 50
 #define KOEF 0.11
 //novi komentar
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(Ljubimac *l, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),friz(ui), prod(ui)
 {
+
+    ljub = l;
     ui->setupUi(this);
 
     setWindowTitle("Ljubimac");
@@ -91,7 +93,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_igraon_2->setGeometry(button_2_vel);
 
     //Postavljanje pozadina na sobe
-
     sc_kuh->setBackgroundBrush(QBrush((QImage(":/images/kitchen_1.jpg")).scaled(SC_W,SC_H)));
     sc_igr->setBackgroundBrush(QBrush((QImage(":/images/playroom.jpg")).scaled(SC_W,SC_H)));
     sc_spav->setBackgroundBrush(QBrush((QImage(":/images/bedroom.jpg")).scaled(SC_W,SC_H)));
@@ -100,8 +101,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     iscrtaj_friz(sc_friz);
     iscrtaj_prodavnicu(sc_prod);
-    ui->l_kol_novca->setText(QString::number(ljub.get_novac()));
-    ui->ime->setText(ljub.get_ime());
+
+    ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
+    ui->ime->setText(ljub->get_ime());
 }
 
 MainWindow::~MainWindow()
@@ -153,7 +155,8 @@ void MainWindow::on_jedi_1_clicked()
 {
     Hrana prva(ui->cena_1->text().toUInt(),ui->vr_1->text().toUInt(),ui->fj1_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_1->text().toInt()/100);
+    qDebug() << ui->vr_1->text().toInt();
+    ljub->add_sit(ui->vr_1->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -161,7 +164,7 @@ void MainWindow::on_jedi_2_clicked()
 {
     Hrana prva(ui->cena_2->text().toUInt(),ui->vr_2->text().toUInt(),ui->fj2_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_2->text().toInt()/100);
+    ljub->add_sit(ui->vr_2->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -169,7 +172,7 @@ void MainWindow::on_jedi_3_clicked()
 {
     Hrana prva(ui->cena_3->text().toUInt(),ui->vr_3->text().toUInt(),ui->fj3_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_3->text().toInt()/100);
+    ljub->add_sit(ui->vr_3->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -177,7 +180,7 @@ void MainWindow::on_jedi_4_clicked()
 {
     Hrana prva(ui->cena_4->text().toUInt(),ui->vr_4->text().toUInt(),ui->fj4_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_4->text().toInt()/100);
+    ljub->add_sit(ui->vr_4->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -185,7 +188,7 @@ void MainWindow::on_jedi_5_clicked()
 {
     Hrana prva(ui->cena_5->text().toUInt(),ui->vr_5->text().toUInt(),ui->fj5_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_5->text().toInt()/100);
+    ljub->add_sit(ui->vr_5->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -193,7 +196,7 @@ void MainWindow::on_jedi_6_clicked()
 {
     Hrana prva(ui->cena_6->text().toUInt(),ui->vr_6->text().toUInt(),ui->fj6_naziv->text());
     friz.uzmi_hranu(prva);
-    ljub.add_sit(ui->vr_6->text().toInt()/100);
+    ljub->add_sit(ui->vr_6->text().toInt()/100);
     friz.ispisi_na_gui(friz);
 }
 
@@ -207,10 +210,10 @@ void MainWindow::on_kupi_1_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ljub->set_novac(trenutno-cena);
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 }
 
 void MainWindow::on_kupi_2_clicked()
@@ -223,11 +226,11 @@ void MainWindow::on_kupi_2_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
+    ljub->set_novac(trenutno-cena);
 
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 
 }
 
@@ -241,11 +244,11 @@ void MainWindow::on_kupi_3_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
+    ljub->set_novac(trenutno-cena);
 
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 }
 
 void MainWindow::on_kupi_4_clicked()
@@ -258,11 +261,11 @@ void MainWindow::on_kupi_4_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
+    ljub->set_novac(trenutno-cena);
 
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 }
 
 void MainWindow::on_kupi_5_clicked()
@@ -275,11 +278,11 @@ void MainWindow::on_kupi_5_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
+    ljub->set_novac(trenutno-cena);
 
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 }
 
 void MainWindow::on_kupi_6_clicked()
@@ -292,11 +295,11 @@ void MainWindow::on_kupi_6_clicked()
     friz.ispisi_na_gui(friz);
 
 
-    auto trenutno=ljub.get_novac();
+    auto trenutno=ljub->get_novac();
 
-    ljub.set_novac(trenutno-cena);
+    ljub->set_novac(trenutno-cena);
 
-    ui->l_kol_novca->setText(QString:: number(ljub.get_novac()));
+    ui->l_kol_novca->setText(QString:: number(ljub->get_novac()));
 }
 
 

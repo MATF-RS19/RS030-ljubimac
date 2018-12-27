@@ -44,7 +44,7 @@ HEADERS += \
         mainwindow.h \
         tfj.h \
         ljubimac.h \
-    gamesln.h \
+        gamesln.h \
     vreme.h \
     dialog.h \
     hrana.h \
