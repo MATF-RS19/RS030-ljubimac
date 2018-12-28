@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -405,7 +405,7 @@ font: 75 italic 15pt &quot;Ubuntu Mono&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Spavaca soba</string>
+       <string>Spavaća soba</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -444,7 +444,7 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(139, 54, 77);</string>
+       <string notr="true">background-color: rgb(148, 78, 93);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_prod_nazad">
@@ -474,7 +474,7 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -493,7 +493,7 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>90</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -532,12 +532,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>230</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -587,7 +587,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>230</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -610,7 +610,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>180</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -633,7 +633,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>90</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -672,12 +672,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>90</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -693,7 +693,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>230</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -715,12 +715,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>280</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -753,7 +753,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>130</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -775,12 +775,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>130</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -796,7 +796,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>180</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -818,12 +818,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>180</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -839,7 +839,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>280</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -862,7 +862,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>280</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -885,7 +885,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>130</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -909,7 +909,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;
         <x>370</x>
         <y>280</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -932,7 +932,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>370</x>
         <y>90</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -955,7 +955,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>370</x>
         <y>130</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -978,7 +978,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>370</x>
         <y>180</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1001,11 +1001,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>130</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1021,11 +1021,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>180</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1041,11 +1041,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>230</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1061,11 +1061,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>280</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1081,7 +1081,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>370</x>
         <y>230</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1104,11 +1104,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>90</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1124,7 +1124,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>330</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1147,7 +1147,7 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>190</x>
         <y>330</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1169,12 +1169,12 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>280</x>
         <y>330</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1190,7 +1190,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>370</x>
         <y>330</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1213,11 +1213,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>460</x>
         <y>330</y>
         <width>61</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(252, 233, 79);
+       <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1242,6 +1242,46 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupi</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lab_kcal">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>70</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(148, 78, 93);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>kcal</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lab_cena">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>70</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(148, 78, 93);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>RDS</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <zorder>graphicsView_prodavn</zorder>
@@ -1283,19 +1323,21 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
      <zorder>p6_cena_6</zorder>
      <zorder>cena_6</zorder>
      <zorder>kupi_6</zorder>
+     <zorder>lab_kcal</zorder>
+     <zorder>lab_cena</zorder>
     </widget>
     <widget class="QWidget" name="page_friz">
      <widget class="QGraphicsView" name="graphicsView_friz">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>1</y>
+        <y>0</y>
         <width>681</width>
         <height>391</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(114, 159, 207);</string>
+       <string notr="true">background-color: rgb(182, 220, 235);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_friz_nazad">
@@ -1325,11 +1367,11 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Frizider</string>
+       <string>Frižider</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1344,11 +1386,11 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>80</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1367,11 +1409,11 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>130</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1390,11 +1432,11 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>180</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1413,11 +1455,11 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>230</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1436,11 +1478,11 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>20</x>
         <y>280</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1459,11 +1501,11 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
         <x>230</x>
         <y>80</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1482,11 +1524,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>230</x>
         <y>130</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1505,11 +1547,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>230</x>
         <y>180</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1528,11 +1570,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>230</x>
         <y>230</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1551,11 +1593,11 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>230</x>
         <y>280</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -1573,8 +1615,8 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>320</x>
         <y>80</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="palette">
@@ -1765,8 +1807,8 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>320</x>
         <y>130</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1785,8 +1827,8 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>320</x>
         <y>180</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1805,8 +1847,8 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>320</x>
         <y>230</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1825,8 +1867,8 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
        <rect>
         <x>320</x>
         <y>280</y>
-        <width>71</width>
-        <height>17</height>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1931,7 +1973,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>490</x>
         <y>180</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1951,7 +1993,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>490</x>
         <y>80</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1971,7 +2013,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>490</x>
         <y>230</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1991,15 +2033,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>400</x>
         <y>180</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2014,7 +2056,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>490</x>
         <y>280</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2034,15 +2076,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>400</x>
         <y>130</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2057,15 +2099,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>400</x>
         <y>230</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2080,15 +2122,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>400</x>
         <y>80</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2103,15 +2145,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>400</x>
         <y>280</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2126,7 +2168,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
         <x>490</x>
         <y>130</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2144,13 +2186,13 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>320</y>
+        <y>330</y>
         <width>91</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2167,13 +2209,13 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>320</y>
+        <y>330</y>
         <width>81</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
@@ -2190,9 +2232,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>320</x>
-        <y>320</y>
-        <width>71</width>
-        <height>17</height>
+        <y>330</y>
+        <width>61</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2210,17 +2252,17 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>320</y>
+        <y>330</y>
         <width>71</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(52, 101, 164);
+       <string notr="true">background-color: rgb(64, 175, 191);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Kolicina</string>
+       <string>Količina</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -2233,9 +2275,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>490</x>
-        <y>320</y>
+        <y>330</y>
         <width>51</width>
-        <height>17</height>
+        <height>21</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2253,7 +2295,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>320</y>
+        <y>330</y>
         <width>89</width>
         <height>21</height>
        </rect>
@@ -2264,6 +2306,26 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Jedi</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lab_kcal2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(182, 220, 235);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>kcal</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -2348,11 +2410,14 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QProgressBar" name="SnagaBar">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>420</x>
       <y>20</y>
-      <width>118</width>
-      <height>23</height>
+      <width>111</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(211, 215, 207);
@@ -2365,15 +2430,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>420</x>
       <y>0</y>
       <width>67</width>
-      <height>17</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 147, 125);
-font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
+     <string notr="true">background-color: rgb(74, 172, 136);
+font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
      <string>Snaga:</string>
@@ -2385,10 +2450,10 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="tajmer">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>30</y>
-      <width>67</width>
-      <height>17</height>
+      <x>80</x>
+      <y>20</y>
+      <width>61</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -2398,18 +2463,21 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     <property name="text">
      <string>00:00</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>30</y>
+      <y>20</y>
       <width>67</width>
-      <height>17</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 147, 125);
+     <string notr="true">background-color: rgb(74, 172, 136);
 font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
@@ -2423,14 +2491,14 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>131</width>
-      <height>17</height>
+      <y>0</y>
+      <width>121</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
-font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+     <string notr="true">background-color: rgb(74, 172, 136);
+font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -2442,10 +2510,10 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="l_kol_novca">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>30</y>
-      <width>67</width>
-      <height>17</height>
+      <x>610</x>
+      <y>20</y>
+      <width>51</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -2462,15 +2530,15 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="fj1_naziv_3">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>10</y>
-      <width>81</width>
-      <height>17</height>
+      <x>540</x>
+      <y>20</y>
+      <width>61</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(213, 147, 125);
-font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
+     <string notr="true">background-color: rgb(74, 172, 136);
+font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
      <string>Novac:</string>
@@ -2480,6 +2548,43 @@ font: 75 italic 14pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="CistocaBar">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>20</y>
+      <width>118</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(211, 215, 207);
+font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>0</y>
+      <width>67</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(74, 172, 136);
+font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Čistoća:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

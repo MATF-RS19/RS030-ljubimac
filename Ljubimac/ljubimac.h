@@ -34,7 +34,7 @@ public:
     int get_sit(){return m_sit;}
     QString get_ime(){return m_ime;}
     unsigned get_novac(){return m_novac;}
-    void set_novac(unsigned cena){ m_novac=cena;}//ovde a mozda zato sto sam stavila gore da bude 2000, mozda treba neki konstruktor pa da se tu incijalizuje
+    void set_novac(unsigned cena){ m_novac=cena;}
 signals:
     void value_changed(int x);
     void sec_value_changed(int x);

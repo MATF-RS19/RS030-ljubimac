@@ -9,12 +9,12 @@
 
 Prodavnica::Prodavnica(Ui::MainWindow *ui):m_ui(ui)
 {
-    kolac * kol=new kolac(150,438,"Kolac");
+    kolac * kol=new kolac(150,438,"Kolač");
     hamburger * ham= new hamburger(320, 502, "Hamburger");
     kobasica * kob= new kobasica(265, 321, "Kobasica");
     pica * pic= new pica(120, 266, "Pica");
     sladoled * slad= new sladoled(90, 216, "Sladoled");
-    sunka * sun= new sunka(432, 511, "Sunka");
+    sunka * sun= new sunka(432, 511, "Šunka");
 
     m_prodavnica.push_back(kol);
     m_prodavnica.push_back(ham);
@@ -66,5 +66,6 @@ QVector<Hrana *> Prodavnica::vector_prod()
 
 Prodavnica::~Prodavnica()
 {
-
+    delete m_ui;
+    m_prodavnica.QVector::~QVector();
 }

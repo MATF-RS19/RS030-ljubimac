@@ -11,12 +11,12 @@ Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
 {
   //fromJson()
   //ispisi_na_gui()
-  kolac * kol=new kolac(150,438,"Kolac");
+  kolac * kol=new kolac(150,438,"Kolač");
   hamburger * ham= new hamburger(320, 502, "Hamburger");
   kobasica * kob= new kobasica(265, 321, "Kobasica");
   pica * pic= new pica(120, 266, "Pica");
   sladoled * slad= new sladoled(90, 216, "Sladoled");
-  sunka * sun= new sunka(432, 511, "Sunka");
+  sunka * sun= new sunka(432, 511, "Šunka");
 
   m_frizider.insert(kol,10);
   m_frizider.insert(ham, 4);
@@ -95,6 +95,7 @@ void Frizider::fromJson(const QJsonObject &json)
 
 Frizider::~Frizider()
 {
-
+    delete m_ui;
+    m_frizider.QMap::~QMap();
 }
 
