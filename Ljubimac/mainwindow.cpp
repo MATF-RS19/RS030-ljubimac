@@ -163,7 +163,7 @@ void MainWindow::on_jedi_1_clicked()
 
 void MainWindow::on_jedi_2_clicked()
 {
-    if(ui->vr_kol_2->text().toInt()>0>0){
+    if(ui->vr_kol_2->text().toInt()>0){
     Hrana prva(ui->cena_2->text().toUInt(),ui->vr_2->text().toUInt(),ui->fj2_naziv->text());
     friz.uzmi_hranu(prva);
     ljub->add_sit(ui->vr_2->text().toInt()/100);
