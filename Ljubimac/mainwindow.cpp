@@ -25,7 +25,7 @@
 //novi komentar
 MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),friz(ui), prod(ui)
+    ui(new Ui::MainWindow),friz(ui), prod(ui),ljub_spava(ui),ljub_kupanje(ui)
 {
 
     ljub = Ljubimac::singleton();
@@ -105,7 +105,10 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
     ui->ime->setText(ljub->get_ime());
 
-
+    ui->bt_budjenje->setDisabled(true);
+    connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_spavaj_clicked()));
+    connect(ui->bt_kupanje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_kupanje_clicked()));
+    connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_budjenje_clicked()));
 }
 
 MainWindow::~MainWindow()
@@ -494,6 +497,23 @@ void MainWindow::on_pushButton_igra_3_nazad_clicked()
 void MainWindow::on_pushButton_igra_4_nazad_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_spavaj_clicked()
+{
+   ljub_spava.spavaj();
+}
+
+void MainWindow::on_pushButton_kupanje_clicked()
+{
+    ljub_kupanje.kupanje();
+    ljub->set_cist(ui->CistocaBar->value());
+}
+
+void MainWindow::on_pushButton_budjenje_clicked()
+{
+    ljub_spava.budjenje();
+    ljub->set_naspavanost(ui->naspavanostBar->value());
 }
 
 void MainWindow::on_timer(int x)

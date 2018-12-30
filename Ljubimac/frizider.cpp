@@ -110,4 +110,3 @@ Frizider::~Frizider()
     i++;
     delete i.key();
 }
-

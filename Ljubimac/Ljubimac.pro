@@ -38,7 +38,9 @@ SOURCES += \
     sunka.cpp \
     sladoled.cpp \
     kolac.cpp \
-    hamburger.cpp
+    hamburger.cpp \
+    ljubimac_spava.cpp \
+    ljubimac_kupanje.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -55,7 +57,9 @@ HEADERS += \
     sunka.h \
     sladoled.h \
     kolac.h \
-    hamburger.h
+    hamburger.h \
+    ljubimac_spava.h \
+    ljubimac_kupanje.h
 
 FORMS += \
         mainwindow.ui \

@@ -4,6 +4,8 @@
 #include "frizider.h"
 #include "prodavnica.h"
 #include "ljubimac.h"
+#include "ljubimac_spava.h"
+#include "ljubimac_kupanje.h"
 #include <QMainWindow>
 #include <QThread>
 namespace Ui {
@@ -64,6 +66,12 @@ private slots:
 
     void on_pushButton_igra_4_nazad_clicked();
 
+    void on_pushButton_spavaj_clicked();
+
+    void on_pushButton_kupanje_clicked();
+
+    void on_pushButton_budjenje_clicked();
+
     void on_timer(int x);
 
     void on_jedi_1_clicked();
@@ -90,14 +98,13 @@ private slots:
 
     void on_kupi_6_clicked();
 
-
-
-
 private:
     Ui::MainWindow *ui;
     Frizider friz;
     Prodavnica prod;
     Ljubimac* ljub;
+    Ljubimac_spava ljub_spava;
+    Ljubimac_kupanje ljub_kupanje;
     GameSLN *igra;
     class Tajmer : public QThread
     {
