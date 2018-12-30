@@ -39,9 +39,9 @@ public:
     unsigned get_novac(){return m_novac;}
     void set_novac(unsigned cena){ m_novac=cena;}
     void set_ime(QString ime){m_ime = ime;}
-    void set_naspavanost(int x){m_naspavan = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_naspavanost(m_sit));}
+    void set_naspavanost(int x){m_naspavan = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_naspavanost(m_naspavan));}
     int get_naspavanost()const{return m_naspavan;}
-    void set_cist(int x){m_cist = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_cist(m_sit));}
+    void set_cist(int x){m_cist = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_cist(m_cist));}
     int get_cist()const{return m_cist;}
 
     void add_cist(int x){set_cist(x+m_cist);}
