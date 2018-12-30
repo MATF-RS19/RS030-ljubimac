@@ -13,9 +13,12 @@ class Ljubimac : public QObject, public TFJ
     QString m_ime;
     int m_sec = 0;
     int m_novac=2000;
-public:
+    int m_cist = 100;
+    int m_naspavan = 100;
+    static Ljubimac* unique;
     Ljubimac(int sit = 0, QString ime = QString::fromStdString(""));
-
+public:
+    static Ljubimac* singleton();
     QJsonObject toJson() const override;
     void fromJson(const QJsonObject& json)override;
     friend std::ostream& operator<<(std::ostream& out, const Ljubimac& l)
@@ -35,9 +38,22 @@ public:
     QString get_ime(){return m_ime;}
     unsigned get_novac(){return m_novac;}
     void set_novac(unsigned cena){ m_novac=cena;}
+    void set_ime(QString ime){m_ime = ime;}
+    void set_naspavanost(int x){m_naspavan = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_naspavanost(m_sit));}
+    int get_naspavanost()const{return m_naspavan;}
+    void set_cist(int x){m_cist = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_cist(m_sit));}
+    int get_cist()const{return m_cist;}
+
+    void add_cist(int x){set_cist(x+m_cist);}
+    void add_naspavanost(int x){set_naspavanost(x+m_naspavan);}
+    void dec_cist(){set_cist(m_cist-1);}
+    void dec_naspavanost(){set_naspavanost(m_naspavan-1);}
 signals:
     void value_changed(int x);
+    void value_changed_cist(int x);
+    void value_changed_naspavanost(int x);
     void sec_value_changed(int x);
 };
+
 
 #endif // LJUBIMAC_H

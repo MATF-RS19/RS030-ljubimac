@@ -5,7 +5,6 @@
 #include "ui_dialog.h"
 #include "ljubimac.h"
 
-
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -22,7 +21,7 @@ Dialog::~Dialog()
 
 void Dialog::on_load()
 {
-    Ljubimac *l = new Ljubimac(0, "");
+    Ljubimac *l = Ljubimac::singleton();
 
     TFJ ** niz = new TFJ*[1];
     niz[0] = l;
@@ -30,26 +29,29 @@ void Dialog::on_load()
     igra->postavi_ime(ui->lineLoad->text());
 
     igra->load();
-    main = new MainWindow(l);
-    main->povezi(l);
-    main->pokreni_vreme(l);
-
+   // main = new MainWindow();
+    //main->povezi(l);
+    main->postavi_igru(igra);
+    main->pokreni_vreme();
     main->show();
     this->close();
 }
 void Dialog::on_new()
 {
     QString ime = ui->lineIme->text();
-    Ljubimac *l = new Ljubimac(100, ime);
 
+    Ljubimac *l = Ljubimac::singleton();
+    l->set_sit(100);
+    l->set_ime(ime);
     TFJ ** niz = new TFJ*[1];
     niz[0] = l;
     igra->postavi_podatke(niz, 1);
     igra->postavi_ime(ui->lineSave->text());
-    main = new MainWindow(l);
-    main->povezi(l);
-    main->pokreni_vreme(l);
-
+    //main = new MainWindow();
+    //main->povezi(l);
+    //main->pokreni_vreme(l);
+    main->postavi_igru(igra);
+    main->pokreni_vreme();
     main->show();
     this->close();
 }

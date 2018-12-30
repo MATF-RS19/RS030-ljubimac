@@ -23,12 +23,12 @@
 #define RAZ 50
 #define KOEF 0.11
 //novi komentar
-MainWindow::MainWindow(Ljubimac *l, QWidget *parent) :
+MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),friz(ui), prod(ui)
 {
 
-    ljub = l;
+    ljub = Ljubimac::singleton();
     ui->setupUi(this);
 
     setWindowTitle("Ljubimac");
@@ -104,11 +104,37 @@ MainWindow::MainWindow(Ljubimac *l, QWidget *parent) :
 
     ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
     ui->ime->setText(ljub->get_ime());
+
+
 }
 
 MainWindow::~MainWindow()
 {
+   // tajmer->quit();
+    //delete tajmer;
+    tajmer->terminate();
+    while(!tajmer->isFinished())
+        tajmer->sleep(1);
+    delete tajmer;
+    igra->save();
     delete ui;
+    delete igra;
+}
+
+void MainWindow::pokreni_vreme()
+{
+    connect(ljub, SIGNAL(value_changed(int)), ui->SnagaBar, SLOT(setValue(int)));
+    connect(ljub, SIGNAL(value_changed_cist(int)), ui->CistocaBar, SLOT(setValue(int)));
+    connect(ljub, SIGNAL(value_changed_naspavanost(int)), ui->naspavanostBar, SLOT(setValue(int)));
+
+    tajmer->ljubimac = ljub;
+    connect(tajmer->ljubimac, SIGNAL(sec_value_changed(int)), this, SLOT(on_timer(int)));
+    tajmer->start();
+    ljub->set_sit(ljub->get_sit());
+    ljub->set_cist(ljub->get_cist());
+    ljub->set_naspavanost(ljub->get_naspavanost());
+    ui->ime->setText(ljub->get_ime());
+    ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
 }
 
 
@@ -478,21 +504,15 @@ void MainWindow::on_timer(int x)
 
    ui->tajmer->setText(QString::number(min) + QString::fromStdString(":") + QString::number(sec));
 }
-
+/*
 void MainWindow::povezi(Ljubimac *l)
 {
-    connect(l, SIGNAL(value_changed(int)), ui->SnagaBar, SLOT(setValue(int)));
-    ui->ime->setText(l->get_ime());
 }
 
 void MainWindow::pokreni_vreme(Ljubimac *l)
 {
-   tajmer->ljubimac = l;
-   connect(tajmer->ljubimac, SIGNAL(sec_value_changed(int)), this, SLOT(on_timer(int)));
-   tajmer->start();
-    l->set_sit(l->get_sit());
 }
-
+*/
 void MainWindow::Tajmer::run()
 {
     while(1)
@@ -504,6 +524,8 @@ void MainWindow::Tajmer::run()
         if(pom + 1 > SEC)
         {
             ljubimac->dec_sit();
+            ljubimac->dec_naspavanost();
+            ljubimac->dec_cist();
             ljubimac->set_sec(0);
         }
         else

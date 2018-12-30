@@ -9,18 +9,19 @@
 namespace Ui {
 class MainWindow;
 }
-class Ljubimac;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit MainWindow(Ljubimac *ljub, QWidget *parent = 0);
+    explicit MainWindow(/*Ljubimac *ljub,*/ QWidget *parent = 0);
 
-    void povezi(Ljubimac* l);
-    void pokreni_vreme(Ljubimac *l);
+  //  void povezi(Ljubimac* l);
+  //  void pokreni_vreme(Ljubimac *l);
     void iscrtaj_friz(QGraphicsScene * scena);
     void iscrtaj_prodavnicu(QGraphicsScene* scena);
-
+    void postavi_igru(GameSLN *i){igra = i;}
+    void pokreni_vreme();
+    void save(){igra->save();}
     ~MainWindow();
 private slots:
     void on_pushButton_kup_2_clicked();
@@ -97,6 +98,7 @@ private:
     Frizider friz;
     Prodavnica prod;
     Ljubimac* ljub;
+    GameSLN *igra;
     class Tajmer : public QThread
     {
     public:

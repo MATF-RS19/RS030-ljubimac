@@ -12,12 +12,11 @@ class Dialog : public QDialog
 {
     Q_OBJECT
     MainWindow *main;
-    GameSLN *igra;
+    GameSLN *igra = new GameSLN("", nullptr, 0);
 public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
-    MainWindow* postavi_main(){return main;}
-    void postavi_game(GameSLN* l){igra = l;}
+    void postavi_main(MainWindow* w){main = w;}
 private slots:
     void on_load();
     void on_new();

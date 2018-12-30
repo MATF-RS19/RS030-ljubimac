@@ -66,6 +66,6 @@ QVector<Hrana *> Prodavnica::vector_prod()
 
 Prodavnica::~Prodavnica()
 {
-    delete m_ui;
-    m_prodavnica.QVector::~QVector();
+  //  delete m_ui;//greska
+   //m_prodavnica.QVector::~QVector();//ne znam zasto je greska
 }

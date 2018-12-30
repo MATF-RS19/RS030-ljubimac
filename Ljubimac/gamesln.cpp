@@ -4,6 +4,7 @@
 #include <QJsonDocument>
 #include <iostream>
 #include <algorithm>
+#include <QDebug>
 #include <string>
 #include "gamesln.h"
 
@@ -18,6 +19,7 @@ bool GameSLN::save()const
     if(!saveFile.open(QIODevice::WriteOnly))
     {
         qWarning("Couldn't open save file");
+        qDebug() << ime_fajla;
         return false;
     }
 

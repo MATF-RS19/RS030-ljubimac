@@ -95,7 +95,7 @@ void Frizider::fromJson(const QJsonObject &json)
 
 Frizider::~Frizider()
 {
-    delete m_ui;
-    m_frizider.QMap::~QMap();
+   // delete m_ui;//greska
+    //m_frizider.QMap::~QMap();//ne znam zasto je greska
 }
 

@@ -8,20 +8,12 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-
-    GameSLN igra("", nullptr, 0);
-    //dialog u svojim metodama
-    //koristi GameSLN da pokrene new game ili
-    //loaduje i onda pokrene main
-    //window
+    MainWindow w;
     Dialog d;
-    MainWindow* w = d.postavi_main();
-    d.postavi_game(&igra);
+
+
+    d.postavi_main(&w);
     d.show();
-    int ret = a.exec();
-    //sejvuju se podaci
-    igra.save();
-//    delete w;
-    return ret;
+
+    return a.exec();
 }
