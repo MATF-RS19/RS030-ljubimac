@@ -24,6 +24,7 @@ public:
     void postavi_igru(GameSLN *i){igra = i;}
     void pokreni_vreme();
     void save(){igra->save();}
+    Frizider* fizider();
     ~MainWindow();
 private slots:
     void on_pushButton_kup_2_clicked();

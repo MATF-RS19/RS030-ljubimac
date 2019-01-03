@@ -18,12 +18,12 @@ Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
   sladoled * slad= new sladoled(90, 216, "Sladoled");
   sunka * sun= new sunka(432, 511, "Šunka");
 
-  m_frizider.insert(kol,10);
-  m_frizider.insert(ham, 4);
-  m_frizider.insert(kob, 12);
-  m_frizider.insert(pic, 6);
-  m_frizider.insert(slad, 3);
-  m_frizider.insert(sun,7);
+  m_frizider.insert(kol,0);
+  m_frizider.insert(ham, 0);
+  m_frizider.insert(kob, 0);
+  m_frizider.insert(pic, 0);
+  m_frizider.insert(slad,0);
+  m_frizider.insert(sun,0);
 }
 
 void Frizider::dodaj_hranu(const Hrana &jelo)
@@ -86,10 +86,48 @@ QMap<Hrana *, unsigned> Frizider::mapa_frizider()
 QJsonObject Frizider::toJson() const
 {
 
+    QJsonObject json;
+    for(auto i = m_frizider.cbegin(); i != m_frizider.cend(); ++i)
+    {
+        if(i.key()->naziv() == "Hamburger")
+            json["hamburger"] = (double)i.value();
+        else if(i.key()->naziv() == "Kobasica")
+            json["kobasica"] = (double)i.value();
+        else if(i.key()->naziv() == "Kolač")
+            json["kolac"] = (double)i.value();
+        else if(i.key()->naziv() == "Pica")
+            json["pica"] = (double)i.value();
+        else if(i.key()->naziv() == "Sladoled")
+            json["sladoled"] = (double)i.value();
+        else if(i.key()->naziv() == "Šunka")
+            json["sunka"] = (double)i.value();
+
+
+    }
+
+    return json;
+
 }
 
 void Frizider::fromJson(const QJsonObject &json)
 {
+    for(auto i = m_frizider.begin(); i != m_frizider.end(); ++i)
+    {
+        if(i.key()->naziv() == "Hamburger")
+            i.value() = qRound(json["hamburger"].toDouble());
+        else if(i.key()->naziv() == "Kobasica")
+            i.value() = qRound(json["kobasica"].toDouble());
+        else if(i.key()->naziv() == "Kolač")
+            i.value() = qRound(json["kolac"].toDouble());
+        else if(i.key()->naziv() == "Pica")
+            i.value() = qRound(json["pica"].toDouble());
+        else if(i.key()->naziv() == "Sladoled")
+            i.value() = qRound(json["sladoled"].toDouble());
+        else if(i.key()->naziv() == "Šunka")
+            i.value() = qRound(json["sunka"].toDouble());
+    }
+
+       ispisi_na_gui(*this);
 
 }
 

@@ -7,7 +7,7 @@
 /*
     abstraktna klasa za objekte koje ce ici u json
     i koji ce se vaditi iz jsona, svaki objekat
-    kojem ocemo da sacuvamo stanja treba da nasledi
+    kojem hocemo da sacuvamo stanja treba da nasledi
     ovu klasu
     TFJ - ToFromJson
 */

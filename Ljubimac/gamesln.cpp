@@ -52,8 +52,8 @@ void GameSLN::postavi_podatke(TFJ **podaci, int n)
 
 GameSLN::~GameSLN()
 {
-    for(int i = 0; i < m_n; i++){delete podaci[i];}
-    delete [] podaci;
+   // for(int i = 0; i < m_n; i++){delete podaci[i];}
+   //delete [] podaci;
 }
 
 bool GameSLN::load()

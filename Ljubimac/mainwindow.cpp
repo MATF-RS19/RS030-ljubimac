@@ -8,6 +8,8 @@
 #include <QBrush>
 #include <QProgressBar>
 #include <QTime>
+#include <QLabel>
+#include <QPushButton>
 #include <iostream>
 
 #include "ljubimac.h"
@@ -139,6 +141,14 @@ void MainWindow::pokreni_vreme()
     ui->ime->setText(ljub->get_ime());
     ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
 }
+
+
+Frizider *MainWindow::fizider()
+{
+    return &friz;
+}
+
+
 
 
 void MainWindow::iscrtaj_friz(QGraphicsScene * scena){

@@ -22,10 +22,10 @@ Dialog::~Dialog()
 void Dialog::on_load()
 {
     Ljubimac *l = Ljubimac::singleton();
-
-    TFJ ** niz = new TFJ*[1];
+    TFJ ** niz = new TFJ*[2];
     niz[0] = l;
-    igra->postavi_podatke(niz, 1);
+    niz[1] = main->fizider();
+    igra->postavi_podatke(niz, 2);
     igra->postavi_ime(ui->lineLoad->text());
 
     igra->load();
@@ -43,9 +43,10 @@ void Dialog::on_new()
     Ljubimac *l = Ljubimac::singleton();
     l->set_sit(100);
     l->set_ime(ime);
-    TFJ ** niz = new TFJ*[1];
+    TFJ ** niz = new TFJ*[2];
     niz[0] = l;
-    igra->postavi_podatke(niz, 1);
+    niz[1] = main->fizider();
+    igra->postavi_podatke(niz, 2);
     igra->postavi_ime(ui->lineSave->text());
     //main = new MainWindow();
     //main->povezi(l);
