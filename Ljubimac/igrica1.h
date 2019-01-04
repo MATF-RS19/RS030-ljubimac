@@ -3,6 +3,7 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include "ui_mainwindow.h"
+#include "ljubimac_skijas.h"
 
 class Igrica1:public QGraphicsView
 {
@@ -11,7 +12,7 @@ public:
     Igrica1(Ui::MainWindow *ui);
 
     QGraphicsScene *scene;
-
+    Ljubimac_skijas *igrac;
     ~Igrica1(){
         delete scene;
     }
@@ -20,8 +21,11 @@ private:
     Ui::MainWindow *m_ui;
 private slots:
     void end_game();
+    void napravi_grudvu();
+    void bar_smanji();
 signals:
     void end();
+    void nema_energije();
 };
 
 #endif // IGRICA1_H

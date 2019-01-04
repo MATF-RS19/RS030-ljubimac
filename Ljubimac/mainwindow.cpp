@@ -87,6 +87,7 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     ui->pushButton_igra_2_nazad->setGeometry(button_1_vel);
     ui->pushButton_igra_3_nazad->setGeometry(button_1_vel);
     ui->pushButton_igra_4_nazad->setGeometry(button_1_vel);
+    ui->bt_nazad_igra1_ulaz->setGeometry(button_1_vel);
 
     QRect button_2_vel=QRect(3*SC_W/4-30,BT_L_TOP,BT_W,BT_L_H);
     ui->pushButton_spav_2->setGeometry(button_2_vel);
@@ -401,7 +402,7 @@ void MainWindow::on_kupi_6_clicked()
 
 }
 
-void MainWindow::on_bt_igra1_ulaz_clicked()
+void MainWindow::on_bt_igra1_ulaz_clicked() //pre igre deo <
 {
     ui->stackedWidget->setCurrentIndex(2);
 }
@@ -410,15 +411,18 @@ void MainWindow::bt_igra_1_clicked()
 {
     Igrica1 *igra=new Igrica1(ui);
     igra->setParent(ui->widget);
+    //u igri1 nazad kad se klikne
     connect(ui->pushButton_igra_1_nazad,SIGNAL(clicked(bool)),igra,SLOT(end_game()));
+   // connect(igra,SIGNAL(nema_energije()),this,SLOT(on_pushButton_igra_1_clicked()));
     connect(igra,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
     ui->stackedWidget->setCurrentIndex(6);
 }
 
 void MainWindow::uzmi_vrednosti_sa_bar()
 {
-    qDebug()<<"Usli iz signala";
-    //TO DO uzmi vrednost sa bar i novca
+    ljub->set_novac(ui->l_kol_novca->text().toInt());
+    ljub->set_sit(ui->SnagaBar->value());
+    ljub->set_naspavanost(ui->naspavanostBar->value());
 }
 
 void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){
@@ -499,13 +503,23 @@ void MainWindow::on_pushButton_igra_1_clicked()
     sc_igra_1_ulaz->setBackgroundBrush(QBrush(QColor(Qt::yellow)));
     ui->grView_tekst->setScene(sc_igra_1_ulaz);
     //provera pre pokretanja igre
-    qDebug()<<ui->naspavanostBar->value();
     if(ui->naspavanostBar->value() < 20){
-        QGraphicsTextItem * text=new QGraphicsTextItem("Nema energije dovoljno");
+        QGraphicsTextItem * text=new QGraphicsTextItem("Nema dovoljno energije\nza pocetak igre!!\nLjubimac mora da spava!!");
+        text->setDefaultTextColor(Qt::red);
+        text->setFont(QFont("times",16));
         sc_igra_1_ulaz->addItem(text);
+        ui->bt_igraj_1->setDisabled(true);        
+    }else if(ui->SnagaBar->value() <20){
+        QGraphicsTextItem * text_2=new QGraphicsTextItem("Nema dovoljno energije\nza pocetak igre!!\nLjubimac mora da jede!!");
+        text_2->setDefaultTextColor(Qt::red);
+        text_2->setFont(QFont("times",16));
+        sc_igra_1_ulaz->addItem(text_2);
         ui->bt_igraj_1->setDisabled(true);
-    }else{
+    }
+    else{
         QGraphicsTextItem * text_1=new QGraphicsTextItem("Lavina krece!!!\nPomeraj se gore dole\nkako bi izbegao\ngrudve koje nadolaze!!!");
+        text_1->setDefaultTextColor(Qt::red);
+        text_1->setFont(QFont("times",16));
         sc_igra_1_ulaz->addItem(text_1);
         ui->bt_igraj_1->setDisabled(false);
     }
@@ -527,7 +541,7 @@ void MainWindow::on_pushButton_igra_4_clicked()
     ui->stackedWidget->setCurrentIndex(9);
 }
 
-void MainWindow::on_pushButton_igra_1_nazad_clicked()
+void MainWindow::on_pushButton_igra_1_nazad_clicked() //u igri 1 <
 {
     ui->stackedWidget->setCurrentIndex(2);
 }
