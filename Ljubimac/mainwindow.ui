@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>10</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -2397,6 +2397,18 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;
        <string>&lt;</string>
       </property>
      </widget>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>671</width>
+        <height>391</height>
+       </rect>
+      </property>
+     </widget>
+     <zorder>widget</zorder>
+     <zorder>pushButton_igra_1_nazad</zorder>
     </widget>
     <widget class="QWidget" name="page_igra_2">
      <widget class="QPushButton" name="pushButton_igra_2_nazad">
@@ -2452,6 +2464,50 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>&lt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_igra1_ulaz">
+     <widget class="QPushButton" name="bt_nazad_igra1_ulaz">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_igraj_1">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>280</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(186, 189, 182);</string>
+      </property>
+      <property name="text">
+       <string>IGRAJ</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="grView_tekst">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
       </property>
      </widget>
     </widget>

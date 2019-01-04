@@ -99,6 +99,12 @@ private slots:
 
     void on_kupi_6_clicked();
 
+    void on_bt_igra1_ulaz_clicked();
+
+    void bt_igra_1_clicked();
+
+    void uzmi_vrednosti_sa_bar();
+
 private:
     Ui::MainWindow *ui;
     Frizider friz;

@@ -11,7 +11,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <iostream>
-
+#include "igrica1.h"
 #include "ljubimac.h"
 #include "vreme.h"
 #define SC_W 678
@@ -111,6 +111,11 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_spavaj_clicked()));
     connect(ui->bt_kupanje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_kupanje_clicked()));
     connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_budjenje_clicked()));
+    connect(ui->bt_nazad_igra1_ulaz,SIGNAL(clicked(bool)),this,SLOT(on_bt_igra1_ulaz_clicked()));
+    connect(ui->bt_igraj_1,SIGNAL(clicked(bool)),this,SLOT(bt_igra_1_clicked()));
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -396,6 +401,26 @@ void MainWindow::on_kupi_6_clicked()
 
 }
 
+void MainWindow::on_bt_igra1_ulaz_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::bt_igra_1_clicked()
+{
+    Igrica1 *igra=new Igrica1(ui);
+    igra->setParent(ui->widget);
+    connect(ui->pushButton_igra_1_nazad,SIGNAL(clicked(bool)),igra,SLOT(end_game()));
+    connect(igra,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
+    ui->stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::uzmi_vrednosti_sa_bar()
+{
+    qDebug()<<"Usli iz signala";
+    //TO DO uzmi vrednost sa bar i novca
+}
+
 void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){
     prod.ispisi_na_gui(prod);
     auto vector=prod.vector_prod();
@@ -470,7 +495,21 @@ void MainWindow::on_pushButton_prod_nazad_clicked()
 
 void MainWindow::on_pushButton_igra_1_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(6);
+    QGraphicsScene *sc_igra_1_ulaz=new QGraphicsScene();
+    sc_igra_1_ulaz->setBackgroundBrush(QBrush(QColor(Qt::yellow)));
+    ui->grView_tekst->setScene(sc_igra_1_ulaz);
+    //provera pre pokretanja igre
+    qDebug()<<ui->naspavanostBar->value();
+    if(ui->naspavanostBar->value() < 20){
+        QGraphicsTextItem * text=new QGraphicsTextItem("Nema energije dovoljno");
+        sc_igra_1_ulaz->addItem(text);
+        ui->bt_igraj_1->setDisabled(true);
+    }else{
+        QGraphicsTextItem * text_1=new QGraphicsTextItem("Lavina krece!!!\nPomeraj se gore dole\nkako bi izbegao\ngrudve koje nadolaze!!!");
+        sc_igra_1_ulaz->addItem(text_1);
+        ui->bt_igraj_1->setDisabled(false);
+    }
+    ui->stackedWidget->setCurrentIndex(10);
 }
 
 void MainWindow::on_pushButton_igra_2_clicked()

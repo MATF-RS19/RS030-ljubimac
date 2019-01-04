@@ -40,7 +40,8 @@ SOURCES += \
     kolac.cpp \
     hamburger.cpp \
     ljubimac_spava.cpp \
-    ljubimac_kupanje.cpp
+    ljubimac_kupanje.cpp \
+    igrica1.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -59,7 +60,8 @@ HEADERS += \
     kolac.h \
     hamburger.h \
     ljubimac_spava.h \
-    ljubimac_kupanje.h
+    ljubimac_kupanje.h \
+    igrica1.h
 
 FORMS += \
         mainwindow.ui \

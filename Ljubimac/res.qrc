@@ -12,5 +12,7 @@
         <file>kolac.png</file>
         <file>hamburger.png</file>
         <file>kobasica.png</file>
+        <file>grudvica.png</file>
+        <file>mount.png</file>
     </qresource>
 </RCC>
