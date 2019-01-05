@@ -2,6 +2,8 @@
 #define IGRICA1_H
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
 #include "ui_mainwindow.h"
 #include "ljubimac_skijas.h"
 
@@ -15,9 +17,12 @@ public:
     Ljubimac_skijas *igrac;
     ~Igrica1(){
         delete scene;
+        delete muzika_poz;
     }
 
 private:
+    QMediaPlayer *muzika_poz;
+    QMediaPlaylist *playlist;
     Ui::MainWindow *m_ui;
 private slots:
     void end_game();

@@ -6,9 +6,10 @@
 #define W 671
 #define H 391
 #define T_GRUDVA 1500
-#define T_ADD 6000
+#define T_ADD 9000
 #define T_WAIT 1300
 #define VR_IGRE 10
+
 Igrica1::Igrica1(Ui::MainWindow *ui):m_ui(ui)
 {
     qDebug()<<"Nova igra1";
@@ -47,11 +48,23 @@ Igrica1::Igrica1(Ui::MainWindow *ui):m_ui(ui)
 
     connect(this,SIGNAL(nema_energije()),this,SLOT(end_game_energ()));
 
+    //muzika
+    QMediaPlaylist *playlist = new QMediaPlaylist();
+    playlist->addMedia(QUrl("qrc:/sounds/muz_pozadina_1.mp3"));
+    playlist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    muzika_poz = new QMediaPlayer();
+    muzika_poz->setPlaylist(playlist);
+    muzika_poz->setVolume(50);
+    muzika_poz->play();
+
     show();
 }
 
 void Igrica1::end_game(){
     qDebug()<<"Izbrisao igru 1";
+
+    muzika_poz->stop();
 
     QElapsedTimer t;
     t.start();
@@ -72,7 +85,6 @@ void Igrica1::napravi_grudvu()
     Grudva *grudva=new Grudva();
     m_ui->l_kol_novca->setText(QString::number(m_ui->l_kol_novca->text().toInt()+10));
     connect(grudva,SIGNAL(sudar()),this,SLOT(end_game()));
-    //connect(this,SIGNAL(nema_energije()),this,SLOT(end_game()));
     scene->addItem(grudva);
 }
 
@@ -85,6 +97,9 @@ void Igrica1::bar_smanji()
 void Igrica1::end_game_energ()
 {
      qDebug()<<"Izbrisao igru 1,zbog energije";
+
+     muzika_poz->stop();
+
      QElapsedTimer t_1;
      t_1.start();
 
