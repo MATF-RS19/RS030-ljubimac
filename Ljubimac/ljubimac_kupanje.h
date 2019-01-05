@@ -4,7 +4,7 @@
 #include <QGraphicsPixmapItem>
 #include "ui_mainwindow.h"
 
-class Ljubimac_kupanje
+class Ljubimac_kupanje: public QGraphicsPixmapItem
 {
 public:
     Ljubimac_kupanje(Ui::MainWindow *ui);

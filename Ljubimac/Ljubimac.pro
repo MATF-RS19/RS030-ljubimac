@@ -43,7 +43,9 @@ SOURCES += \
     ljubimac_kupanje.cpp \
     igrica1.cpp \
     grudva.cpp \
-    ljubimac_skijas.cpp
+    ljubimac_skijas.cpp \
+    ljubimac_igraonica.cpp \
+    sapunica.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -65,7 +67,9 @@ HEADERS += \
     ljubimac_kupanje.h \
     igrica1.h \
     grudva.h \
-    ljubimac_skijas.h
+    ljubimac_skijas.h \
+    ljubimac_igraonica.h \
+    sapunica.h
 
 FORMS += \
         mainwindow.ui \

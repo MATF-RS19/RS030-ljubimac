@@ -4,6 +4,11 @@
 #include "vreme.h"
 Ljubimac* Ljubimac::unique = nullptr;
 Ljubimac::Ljubimac(int sit, QString ime) : m_sit(sit), m_ime(ime){
+
+    setPixmap(QPixmap(":images/kuce_sa_koskom2.png"));
+    setPos(QPointF(320,200));
+    setScale(0.75);
+
 }
 
 Ljubimac *Ljubimac::singleton()

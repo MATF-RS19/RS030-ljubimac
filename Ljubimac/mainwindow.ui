@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>10</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -229,6 +229,19 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>Kupanje</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sapun">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>340</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
       </property>
      </widget>
     </widget>

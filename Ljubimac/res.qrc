@@ -15,5 +15,21 @@
         <file>grudvica.png</file>
         <file>mount.png</file>
         <file>ljubimac_skijas.png</file>
+        <file>kuce1.png</file>
+        <file>kuce_sa_koskom2.png</file>
+        <file>kuce3.png</file>
+        <file>kuce2.png</file>
+        <file>kuce2_fliped.png</file>
+        <file>kuce_sa_koskom.png</file>
+        <file>zzz.png</file>
+        <file>zzz2.png</file>
+        <file>kuce_spava2.png</file>
+        <file>kuce_spava2_flip.png</file>
+        <file>budilnik2.png</file>
+        <file>mehurici.png</file>
+        <file>sapun.png</file>
+        <file>tus.png</file>
+        <file>sapun2.png</file>
+        <file>tus2.png</file>
     </qresource>
 </RCC>

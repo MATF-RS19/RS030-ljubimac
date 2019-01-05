@@ -2,6 +2,7 @@
 #define HRANA_H
 #include <QString>
 #include <QGraphicsPixmapItem>
+#include "ui_mainwindow.h"
 
 class Hrana:public QGraphicsPixmapItem
 {
@@ -19,6 +20,7 @@ private:
     unsigned m_cena;
     unsigned m_en_vred;
     QString m_naziv;
+
 };
 
 #endif // HRANA_H

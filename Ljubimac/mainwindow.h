@@ -6,6 +6,9 @@
 #include "ljubimac.h"
 #include "ljubimac_spava.h"
 #include "ljubimac_kupanje.h"
+#include "ljubimac_igraonica.h"
+#include "sapunica.h"
+#include <QTimer>
 #include <QMainWindow>
 #include <QThread>
 namespace Ui {
@@ -27,6 +30,13 @@ public:
     Frizider* fizider();
     ~MainWindow();
 private slots:
+
+    void pokreni_tajmer_za_spavanje();
+
+    void zaustavi_tajmer_za_spavanje();
+
+    void azuriraj_naspavanost();
+
     void on_pushButton_kup_2_clicked();
 
     void on_pushButton_kup_1_clicked();
@@ -71,6 +81,8 @@ private slots:
 
     void on_pushButton_kupanje_clicked();
 
+    void on_pushButton_sapunjanje_clicked();
+
     void on_pushButton_budjenje_clicked();
 
     void on_timer(int x);
@@ -112,6 +124,8 @@ private:
     Ljubimac* ljub;
     Ljubimac_spava ljub_spava;
     Ljubimac_kupanje ljub_kupanje;
+    Ljubimac_igraonica ljub_igraonica;
+    Sapunica sap;
     GameSLN *igra;
     class Tajmer : public QThread
     {
@@ -121,6 +135,7 @@ private:
         void run();
     };
     Tajmer* tajmer = new Tajmer;
+    QTimer *tajmer_za_spavanje = new QTimer();
 };
 
 #endif // MAINWINDOW_H

@@ -8,6 +8,7 @@
 #include <QBrush>
 #include <QProgressBar>
 #include <QTime>
+#include <QTimer>
 #include <QLabel>
 #include <QPushButton>
 #include <iostream>
@@ -27,7 +28,7 @@
 //novi komentar
 MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),friz(ui), prod(ui),ljub_spava(ui),ljub_kupanje(ui)
+    ui(new Ui::MainWindow),friz(ui), prod(ui),ljub_spava(ui),ljub_kupanje(ui),ljub_igraonica(ui),sap(ui)
 {
 
     ljub = Ljubimac::singleton();
@@ -46,18 +47,22 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QGraphicsScene *sc_kuh =new QGraphicsScene();
     ui->graphicsView_kuhinja->setScene(sc_kuh);
     sc_kuh->setSceneRect(sc_velicina);
+    sc_kuh->addItem(ljub);
 
     QGraphicsScene *sc_kup =new QGraphicsScene();
     ui->graphicsView_kupatilo->setScene(sc_kup);
     sc_kup->setSceneRect(sc_velicina);
+    sc_kup->addItem(&ljub_kupanje);
 
     QGraphicsScene *sc_spav =new QGraphicsScene();
     ui->graphicsView_spavaca->setScene(sc_spav);
     sc_spav->setSceneRect(sc_velicina);
+    sc_spav->addItem(&ljub_spava);
 
     QGraphicsScene *sc_igr =new QGraphicsScene();
     ui->graphicsView_igraonica->setScene(sc_igr);
     sc_igr->setSceneRect(sc_velicina);
+    sc_igr->addItem(&ljub_igraonica);
 
     QGraphicsScene *sc_friz =new QGraphicsScene();
     ui->graphicsView_friz->setScene(sc_friz);
@@ -67,6 +72,7 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     ui->graphicsView_prodavn->setScene(sc_prod);
     sc_prod->setSceneRect(sc_velicina);
     //Podesavanje velicine i polozaja imena sobe i strelica
+
 
     QRect lab_velicina=QRect(SC_W/2-50,BT_L_TOP,L_W,BT_L_H);
     ui->label_kuh->setGeometry(lab_velicina);
@@ -95,6 +101,27 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     ui->pushButton_kuh_2->setGeometry(button_2_vel);
     ui->pushButton_igraon_2->setGeometry(button_2_vel);
 
+    ui->bt_spavaj->setGeometry(QRect(SC_W/2-70,SC_H-70,65,65));
+    ui->bt_spavaj->setText("");
+    ui->bt_spavaj->setIcon(QPixmap(":images/zzz2.png"));
+    ui->bt_spavaj->setIconSize(QSize(ui->bt_spavaj->width(),ui->bt_spavaj->height()));
+
+    ui->bt_budjenje->setGeometry(QRect(SC_W/2+5,SC_H-70,65,65));
+    ui->bt_budjenje->setText("");
+    ui->bt_budjenje->setIcon(QPixmap(":images/budilnik2.png"));
+    ui->bt_budjenje->setIconSize(QSize(ui->bt_budjenje->width(),ui->bt_budjenje->height()));
+
+    ui->sapun->setGeometry(QRect(SC_W-210,SC_H-100,65,65));
+    ui->sapun->setText("");
+    ui->sapun->setIcon(QPixmap(":images/sapun2.png"));
+    ui->sapun->setIconSize(QSize(ui->sapun->width(),ui->sapun->height()));
+
+    ui->bt_kupanje->setGeometry(QRect(SC_W-210+75,SC_H-100,65,65));
+    ui->bt_kupanje->setText("");
+    ui->bt_kupanje->setIcon(QPixmap(":images/tus2.png"));
+    ui->bt_kupanje->setIconSize(QSize(ui->sapun->width(),ui->sapun->height()));
+
+
     //Postavljanje pozadina na sobe
     sc_kuh->setBackgroundBrush(QBrush((QImage(":/images/kitchen_1.jpg")).scaled(SC_W,SC_H)));
     sc_igr->setBackgroundBrush(QBrush((QImage(":/images/playroom.jpg")).scaled(SC_W,SC_H)));
@@ -109,13 +136,44 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     ui->ime->setText(ljub->get_ime());
 
     ui->bt_budjenje->setDisabled(true);
+    ui->bt_kupanje->setDisabled(true);
     connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_spavaj_clicked()));
     connect(ui->bt_kupanje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_kupanje_clicked()));
+    connect(ui->sapun,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_sapunjanje_clicked()));
     connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_budjenje_clicked()));
     connect(ui->bt_nazad_igra1_ulaz,SIGNAL(clicked(bool)),this,SLOT(on_bt_igra1_ulaz_clicked()));
     connect(ui->bt_igraj_1,SIGNAL(clicked(bool)),this,SLOT(bt_igra_1_clicked()));
+    connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this, SLOT(pokreni_tajmer_za_spavanje()));
+    connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(zaustavi_tajmer_za_spavanje()));
+    connect(tajmer_za_spavanje,SIGNAL(timeout()),this,SLOT(azuriraj_naspavanost()));
 
 
+
+
+}
+
+void MainWindow::on_pushButton_sapunjanje_clicked()
+{
+    ui->sapun->setDisabled(true);
+    ui->bt_kupanje->setEnabled(true);
+    //sap = new Sapunica(ui);
+    ui->graphicsView_kupatilo->scene()->addItem(&sap);
+}
+
+void MainWindow::pokreni_tajmer_za_spavanje()
+{
+    //tajmer_za_spavanje = new QTimer();
+    tajmer_za_spavanje->start(20000);
+}
+
+void MainWindow::zaustavi_tajmer_za_spavanje()
+{
+    tajmer_za_spavanje->stop();
+}
+
+void MainWindow::azuriraj_naspavanost()
+{
+    ljub->add_naspavanost(1);
 
 }
 
@@ -147,6 +205,7 @@ void MainWindow::pokreni_vreme()
     ui->ime->setText(ljub->get_ime());
     ui->l_kol_novca->setText(QString::number(ljub->get_novac()));
 }
+
 
 
 Frizider *MainWindow::fizider()
@@ -409,12 +468,12 @@ void MainWindow::on_bt_igra1_ulaz_clicked() //pre igre deo <
 
 void MainWindow::bt_igra_1_clicked()
 {
-    Igrica1 *igra=new Igrica1(ui);
-    igra->setParent(ui->widget);
+    Igrica1 *igra1=new Igrica1(ui);
+    igra1->setParent(ui->widget);
     //u igri1 nazad kad se klikne
-    connect(ui->pushButton_igra_1_nazad,SIGNAL(clicked(bool)),igra,SLOT(end_game()));
+    connect(ui->pushButton_igra_1_nazad,SIGNAL(clicked(bool)),igra1,SLOT(end_game()));
    // connect(igra,SIGNAL(nema_energije()),this,SLOT(on_pushButton_igra_1_clicked()));
-    connect(igra,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
+    connect(igra1,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
     ui->stackedWidget->setCurrentIndex(6);
 }
 
@@ -569,8 +628,11 @@ void MainWindow::on_pushButton_spavaj_clicked()
 
 void MainWindow::on_pushButton_kupanje_clicked()
 {
+    ui->sapun->setEnabled(true);
+    ui->bt_kupanje->setDisabled(true);
     ljub_kupanje.kupanje();
     ljub->set_cist(ui->CistocaBar->value());
+    ui->graphicsView_kupatilo->scene()->removeItem(&sap);
 }
 
 void MainWindow::on_pushButton_budjenje_clicked()
@@ -596,6 +658,8 @@ void MainWindow::pokreni_vreme(Ljubimac *l)
 {
 }
 */
+
+
 void MainWindow::Tajmer::run()
 {
     while(1)

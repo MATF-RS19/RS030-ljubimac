@@ -1,12 +1,14 @@
 #ifndef LJUBIMAC_H
 #define LJUBIMAC_H
 #include <QString>
+#include <QGraphicsPixmapItem>
+#include <QPointF>
 #include <iostream>
 #include <QObject>
 #include "tfj.h"
 #include "hrana.h"
 
-class Ljubimac : public QObject, public TFJ
+class Ljubimac : public QObject, public TFJ, public QGraphicsPixmapItem
 {
     Q_OBJECT    
     int m_sit;

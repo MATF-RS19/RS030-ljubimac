@@ -42,6 +42,7 @@ public:
     QLabel *label_kup;
     QPushButton *pushButton_kup_2;
     QPushButton *bt_kupanje;
+    QPushButton *sapun;
     QWidget *page_igraonica;
     QGraphicsView *graphicsView_igraonica;
     QPushButton *pushButton_igraon_1;
@@ -143,12 +144,17 @@ public:
     QLabel *lab_kcal2;
     QWidget *page_igra_1;
     QPushButton *pushButton_igra_1_nazad;
+    QWidget *widget;
     QWidget *page_igra_2;
     QPushButton *pushButton_igra_2_nazad;
     QWidget *page_igra_3;
     QPushButton *pushButton_igra_3_nazad;
     QWidget *page_igra_4;
     QPushButton *pushButton_igra_4_nazad;
+    QWidget *page_igra1_ulaz;
+    QPushButton *bt_nazad_igra1_ulaz;
+    QPushButton *bt_igraj_1;
+    QGraphicsView *grView_tekst;
     QProgressBar *SnagaBar;
     QLabel *label;
     QLabel *tajmer;
@@ -238,6 +244,9 @@ public:
         bt_kupanje->setGeometry(QRect(280, 330, 101, 41));
         bt_kupanje->setStyleSheet(QLatin1String("background-color: rgb(37, 164, 134);\n"
 "font: 75 italic 17pt \"Ubuntu Mono\";"));
+        sapun = new QPushButton(page_kupatilo);
+        sapun->setObjectName(QStringLiteral("sapun"));
+        sapun->setGeometry(QRect(410, 340, 89, 25));
         stackedWidget->addWidget(page_kupatilo);
         page_igraonica = new QWidget();
         page_igraonica->setObjectName(QStringLiteral("page_igraonica"));
@@ -909,7 +918,12 @@ public:
         pushButton_igra_1_nazad->setStyleSheet(QLatin1String("background-color: rgb(186, 189, 182);\n"
 "font: 75 italic 17pt \"Ubuntu Mono\";\n"
 ""));
+        widget = new QWidget(page_igra_1);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(0, 10, 671, 391));
         stackedWidget->addWidget(page_igra_1);
+        widget->raise();
+        pushButton_igra_1_nazad->raise();
         page_igra_2 = new QWidget();
         page_igra_2->setObjectName(QStringLiteral("page_igra_2"));
         pushButton_igra_2_nazad = new QPushButton(page_igra_2);
@@ -934,6 +948,20 @@ public:
         pushButton_igra_4_nazad->setStyleSheet(QLatin1String("background-color: rgb(186, 189, 182);\n"
 "font: 75 italic 17pt \"Ubuntu Mono\";"));
         stackedWidget->addWidget(page_igra_4);
+        page_igra1_ulaz = new QWidget();
+        page_igra1_ulaz->setObjectName(QStringLiteral("page_igra1_ulaz"));
+        bt_nazad_igra1_ulaz = new QPushButton(page_igra1_ulaz);
+        bt_nazad_igra1_ulaz->setObjectName(QStringLiteral("bt_nazad_igra1_ulaz"));
+        bt_nazad_igra1_ulaz->setGeometry(QRect(60, 30, 89, 25));
+        bt_nazad_igra1_ulaz->setStyleSheet(QStringLiteral("background-color: rgb(186, 189, 182);"));
+        bt_igraj_1 = new QPushButton(page_igra1_ulaz);
+        bt_igraj_1->setObjectName(QStringLiteral("bt_igraj_1"));
+        bt_igraj_1->setGeometry(QRect(260, 280, 151, 61));
+        bt_igraj_1->setStyleSheet(QStringLiteral("background-color: rgb(186, 189, 182);"));
+        grView_tekst = new QGraphicsView(page_igra1_ulaz);
+        grView_tekst->setObjectName(QStringLiteral("grView_tekst"));
+        grView_tekst->setGeometry(QRect(200, 60, 256, 192));
+        stackedWidget->addWidget(page_igra1_ulaz);
         SnagaBar = new QProgressBar(centralWidget);
         SnagaBar->setObjectName(QStringLiteral("SnagaBar"));
         SnagaBar->setGeometry(QRect(420, 20, 111, 20));
@@ -1005,7 +1033,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1023,6 +1051,7 @@ public:
         label_kup->setText(QApplication::translate("MainWindow", "Kupatilo", Q_NULLPTR));
         pushButton_kup_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
         bt_kupanje->setText(QApplication::translate("MainWindow", "Kupanje", Q_NULLPTR));
+        sapun->setText(QApplication::translate("MainWindow", "PushButton", Q_NULLPTR));
         pushButton_igraon_1->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         label_igraon->setText(QApplication::translate("MainWindow", "Igraonica", Q_NULLPTR));
         pushButton_igraon_2->setText(QApplication::translate("MainWindow", ">", Q_NULLPTR));
@@ -1118,6 +1147,8 @@ public:
         pushButton_igra_2_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         pushButton_igra_3_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
         pushButton_igra_4_nazad->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        bt_nazad_igra1_ulaz->setText(QApplication::translate("MainWindow", "<", Q_NULLPTR));
+        bt_igraj_1->setText(QApplication::translate("MainWindow", "IGRAJ", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Snaga:", Q_NULLPTR));
         tajmer->setText(QApplication::translate("MainWindow", "00:00", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "Tajmer:", Q_NULLPTR));
