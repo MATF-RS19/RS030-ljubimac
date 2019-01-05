@@ -30,7 +30,7 @@
 //novi komentar
 MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),friz(ui), prod(ui),ljub_spava(ui),ljub_kupanje(ui),ljub_igraonica(ui),sap(ui)
+    ui(new Ui::MainWindow),friz(ui), prod(ui),ljub_spava(ui),ljub_kupanje(ui),ljub_igraonica(ui),sap(ui),k(ui)
 {
 
     ljub = Ljubimac::singleton();
@@ -156,21 +156,31 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
 
 void MainWindow::on_pushButton_sapunjanje_clicked()
 {
+    ui->pushButton_kup_1->setDisabled(true);
+    ui->pushButton_kup_2->setDisabled(true);
     ui->sapun->setDisabled(true);
     ui->bt_kupanje->setEnabled(true);
     //sap = new Sapunica(ui);
+    ljub_kupanje.setPos(QPointF(245,130));
+    ui->graphicsView_kupatilo->scene()->addItem(&k);
     ui->graphicsView_kupatilo->scene()->addItem(&sap);
+
 }
 
 void MainWindow::pokreni_tajmer_za_spavanje()
 {
     //tajmer_za_spavanje = new QTimer();
-    tajmer_za_spavanje->start(20000);
+    tajmer->terminate();
+    while(!tajmer->isFinished())
+        tajmer->sleep(1);
+
+    tajmer_za_spavanje->start(40000);
 }
 
 void MainWindow::zaustavi_tajmer_za_spavanje()
 {
     tajmer_za_spavanje->stop();
+    tajmer->start();
 }
 
 void MainWindow::azuriraj_naspavanost()
@@ -183,9 +193,12 @@ MainWindow::~MainWindow()
 {
    // tajmer->quit();
     //delete tajmer;
-    tajmer->terminate();
-    while(!tajmer->isFinished())
-        tajmer->sleep(1);
+    if(tajmer->isRunning())
+   {
+        tajmer->terminate();
+        while(!tajmer->isFinished())
+            tajmer->sleep(1);
+    }
     delete tajmer;
     igra->save();
     delete ui;
@@ -635,6 +648,10 @@ void MainWindow::on_pushButton_kupanje_clicked()
     ljub_kupanje.kupanje();
     ljub->set_cist(ui->CistocaBar->value());
     ui->graphicsView_kupatilo->scene()->removeItem(&sap);
+    ui->graphicsView_kupatilo->scene()->removeItem(&k);
+    ljub_kupanje.setPos(QPointF(245,200));
+    ui->pushButton_kup_1->setEnabled(true);
+    ui->pushButton_kup_2->setEnabled(true);
 }
 
 void MainWindow::on_pushButton_budjenje_clicked()

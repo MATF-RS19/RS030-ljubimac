@@ -8,6 +8,7 @@
 #include "ljubimac_kupanje.h"
 #include "ljubimac_igraonica.h"
 #include "sapunica.h"
+#include "kada.h"
 #include <QTimer>
 #include <QMainWindow>
 #include <QThread>
@@ -126,6 +127,7 @@ private:
     Ljubimac_kupanje ljub_kupanje;
     Ljubimac_igraonica ljub_igraonica;
     Sapunica sap;
+    Kada k;
     GameSLN *igra;
     class Tajmer : public QThread
     {

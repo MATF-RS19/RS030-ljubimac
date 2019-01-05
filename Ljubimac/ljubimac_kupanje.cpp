@@ -3,7 +3,7 @@
 Ljubimac_kupanje::Ljubimac_kupanje(Ui::MainWindow *ui):m_ui(ui)
 {
     setPixmap(QPixmap(":images/kuce2_fliped.png"));
-    setPos(QPointF(250,200));
+    setPos(QPointF(245,200));
 
 }
 

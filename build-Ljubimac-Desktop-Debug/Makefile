@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = Ljubimac1.0.0
-DISTDIR = /home/milica/Desktop/Projekat_2/RS030-ljubimac/build-Ljubimac-Desktop-Debug/.tmp/Ljubimac1.0.0
+DISTDIR = /home/milica/Desktop/Projekat_4/RS030-ljubimac/build-Ljubimac-Desktop-Debug/.tmp/Ljubimac1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -70,7 +70,8 @@ SOURCES       = ../Ljubimac/main.cpp \
 		../Ljubimac/grudva.cpp \
 		../Ljubimac/ljubimac_skijas.cpp \
 		../Ljubimac/ljubimac_igraonica.cpp \
-		../Ljubimac/sapunica.cpp qrc_res.cpp \
+		../Ljubimac/sapunica.cpp \
+		../Ljubimac/kada.cpp qrc_res.cpp \
 		moc_mainwindow.cpp \
 		moc_ljubimac.cpp \
 		moc_dialog.cpp \
@@ -97,6 +98,7 @@ OBJECTS       = main.o \
 		ljubimac_skijas.o \
 		ljubimac_igraonica.o \
 		sapunica.o \
+		kada.o \
 		qrc_res.o \
 		moc_mainwindow.o \
 		moc_ljubimac.o \
@@ -198,7 +200,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../Ljubimac/grudva.h \
 		../Ljubimac/ljubimac_skijas.h \
 		../Ljubimac/ljubimac_igraonica.h \
-		../Ljubimac/sapunica.h ../Ljubimac/main.cpp \
+		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h ../Ljubimac/main.cpp \
 		../Ljubimac/mainwindow.cpp \
 		../Ljubimac/ljubimac.cpp \
 		../Ljubimac/gamesln.cpp \
@@ -218,7 +221,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../Ljubimac/grudva.cpp \
 		../Ljubimac/ljubimac_skijas.cpp \
 		../Ljubimac/ljubimac_igraonica.cpp \
-		../Ljubimac/sapunica.cpp
+		../Ljubimac/sapunica.cpp \
+		../Ljubimac/kada.cpp
 QMAKE_TARGET  = Ljubimac
 DESTDIR       = 
 TARGET        = Ljubimac
@@ -405,8 +409,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../Ljubimac/res.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Ljubimac/mainwindow.h ../Ljubimac/tfj.h ../Ljubimac/ljubimac.h ../Ljubimac/gamesln.h ../Ljubimac/vreme.h ../Ljubimac/dialog.h ../Ljubimac/hrana.h ../Ljubimac/frizider.h ../Ljubimac/prodavnica.h ../Ljubimac/pica.h ../Ljubimac/kobasica.h ../Ljubimac/sunka.h ../Ljubimac/sladoled.h ../Ljubimac/kolac.h ../Ljubimac/hamburger.h ../Ljubimac/ljubimac_spava.h ../Ljubimac/ljubimac_kupanje.h ../Ljubimac/igrica1.h ../Ljubimac/grudva.h ../Ljubimac/ljubimac_skijas.h ../Ljubimac/ljubimac_igraonica.h ../Ljubimac/sapunica.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Ljubimac/main.cpp ../Ljubimac/mainwindow.cpp ../Ljubimac/ljubimac.cpp ../Ljubimac/gamesln.cpp ../Ljubimac/dialog.cpp ../Ljubimac/hrana.cpp ../Ljubimac/frizider.cpp ../Ljubimac/prodavnica.cpp ../Ljubimac/pica.cpp ../Ljubimac/kobasica.cpp ../Ljubimac/sunka.cpp ../Ljubimac/sladoled.cpp ../Ljubimac/kolac.cpp ../Ljubimac/hamburger.cpp ../Ljubimac/ljubimac_spava.cpp ../Ljubimac/ljubimac_kupanje.cpp ../Ljubimac/igrica1.cpp ../Ljubimac/grudva.cpp ../Ljubimac/ljubimac_skijas.cpp ../Ljubimac/ljubimac_igraonica.cpp ../Ljubimac/sapunica.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Ljubimac/mainwindow.h ../Ljubimac/tfj.h ../Ljubimac/ljubimac.h ../Ljubimac/gamesln.h ../Ljubimac/vreme.h ../Ljubimac/dialog.h ../Ljubimac/hrana.h ../Ljubimac/frizider.h ../Ljubimac/prodavnica.h ../Ljubimac/pica.h ../Ljubimac/kobasica.h ../Ljubimac/sunka.h ../Ljubimac/sladoled.h ../Ljubimac/kolac.h ../Ljubimac/hamburger.h ../Ljubimac/ljubimac_spava.h ../Ljubimac/ljubimac_kupanje.h ../Ljubimac/igrica1.h ../Ljubimac/grudva.h ../Ljubimac/ljubimac_skijas.h ../Ljubimac/ljubimac_igraonica.h ../Ljubimac/sapunica.h ../Ljubimac/kada.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Ljubimac/main.cpp ../Ljubimac/mainwindow.cpp ../Ljubimac/ljubimac.cpp ../Ljubimac/gamesln.cpp ../Ljubimac/dialog.cpp ../Ljubimac/hrana.cpp ../Ljubimac/frizider.cpp ../Ljubimac/prodavnica.cpp ../Ljubimac/pica.cpp ../Ljubimac/kobasica.cpp ../Ljubimac/sunka.cpp ../Ljubimac/sladoled.cpp ../Ljubimac/kolac.cpp ../Ljubimac/hamburger.cpp ../Ljubimac/ljubimac_spava.cpp ../Ljubimac/ljubimac_kupanje.cpp ../Ljubimac/igrica1.cpp ../Ljubimac/grudva.cpp ../Ljubimac/ljubimac_skijas.cpp ../Ljubimac/ljubimac_igraonica.cpp ../Ljubimac/sapunica.cpp ../Ljubimac/kada.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Ljubimac/mainwindow.ui ../Ljubimac/dialog.ui $(DISTDIR)/
 
 
@@ -451,6 +455,7 @@ qrc_res.cpp: ../Ljubimac/res.qrc \
 		../Ljubimac/tus2.png \
 		../Ljubimac/kuce_spava2_flip.png \
 		../Ljubimac/grudvica.png \
+		../Ljubimac/kada2.png \
 		../Ljubimac/shop_1.jpg \
 		../Ljubimac/playroom.jpg \
 		../Ljubimac/ljubimac_skijas.png \
@@ -465,6 +470,7 @@ qrc_res.cpp: ../Ljubimac/res.qrc \
 		../Ljubimac/kuce1.png \
 		../Ljubimac/kuce_sa_koskom.png \
 		../Ljubimac/budilnik2.png \
+		../Ljubimac/kada.png \
 		../Ljubimac/kuce_sa_koskom2.png \
 		../Ljubimac/kuce2.png
 	/usr/lib/qt5/bin/rcc -name res ../Ljubimac/res.qrc -o qrc_res.cpp
@@ -490,10 +496,11 @@ moc_mainwindow.cpp: ../Ljubimac/gamesln.h \
 		../Ljubimac/ljubimac_kupanje.h \
 		../Ljubimac/ljubimac_igraonica.h \
 		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h \
 		../Ljubimac/mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_2/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_4/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/mainwindow.h -o moc_mainwindow.cpp
 
 moc_ljubimac.cpp: ../Ljubimac/tfj.h \
 		../Ljubimac/hrana.h \
@@ -501,7 +508,7 @@ moc_ljubimac.cpp: ../Ljubimac/tfj.h \
 		../Ljubimac/ljubimac.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_2/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/ljubimac.h -o moc_ljubimac.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_4/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/ljubimac.h -o moc_ljubimac.cpp
 
 moc_dialog.cpp: ../Ljubimac/mainwindow.h \
 		../Ljubimac/gamesln.h \
@@ -516,22 +523,23 @@ moc_dialog.cpp: ../Ljubimac/mainwindow.h \
 		../Ljubimac/ljubimac_kupanje.h \
 		../Ljubimac/ljubimac_igraonica.h \
 		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h \
 		../Ljubimac/dialog.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_2/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/dialog.h -o moc_dialog.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_4/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/dialog.h -o moc_dialog.cpp
 
 moc_igrica1.cpp: ui_mainwindow.h \
 		../Ljubimac/ljubimac_skijas.h \
 		../Ljubimac/igrica1.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_2/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/igrica1.h -o moc_igrica1.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_4/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/igrica1.h -o moc_igrica1.cpp
 
 moc_grudva.cpp: ../Ljubimac/grudva.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_2/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/grudva.h -o moc_grudva.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/milica/Desktop/Projekat_4/RS030-ljubimac/Ljubimac -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Ljubimac/grudva.h -o moc_grudva.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -569,6 +577,7 @@ main.o: ../Ljubimac/main.cpp ../Ljubimac/mainwindow.h \
 		../Ljubimac/ljubimac_kupanje.h \
 		../Ljubimac/ljubimac_igraonica.h \
 		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h \
 		../Ljubimac/dialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Ljubimac/main.cpp
 
@@ -585,6 +594,7 @@ mainwindow.o: ../Ljubimac/mainwindow.cpp ../Ljubimac/mainwindow.h \
 		../Ljubimac/ljubimac_kupanje.h \
 		../Ljubimac/ljubimac_igraonica.h \
 		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h \
 		../Ljubimac/igrica1.h \
 		../Ljubimac/ljubimac_skijas.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Ljubimac/mainwindow.cpp
@@ -614,6 +624,7 @@ dialog.o: ../Ljubimac/dialog.cpp ../Ljubimac/dialog.h \
 		../Ljubimac/ljubimac_kupanje.h \
 		../Ljubimac/ljubimac_igraonica.h \
 		../Ljubimac/sapunica.h \
+		../Ljubimac/kada.h \
 		ui_dialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dialog.o ../Ljubimac/dialog.cpp
 
@@ -703,6 +714,10 @@ ljubimac_igraonica.o: ../Ljubimac/ljubimac_igraonica.cpp ../Ljubimac/ljubimac_ig
 sapunica.o: ../Ljubimac/sapunica.cpp ../Ljubimac/sapunica.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sapunica.o ../Ljubimac/sapunica.cpp
+
+kada.o: ../Ljubimac/kada.cpp ../Ljubimac/kada.h \
+		ui_mainwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o kada.o ../Ljubimac/kada.cpp
 
 qrc_res.o: qrc_res.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_res.o qrc_res.cpp
