@@ -25,6 +25,8 @@
 #define HR_YP 60
 #define RAZ 50
 #define KOEF 0.11
+#define IGRA_1_VR 10
+
 //novi komentar
 MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     QMainWindow(parent),
@@ -562,13 +564,13 @@ void MainWindow::on_pushButton_igra_1_clicked()
     sc_igra_1_ulaz->setBackgroundBrush(QBrush(QColor(Qt::yellow)));
     ui->grView_tekst->setScene(sc_igra_1_ulaz);
     //provera pre pokretanja igre
-    if(ui->naspavanostBar->value() < 20){
+    if(ui->naspavanostBar->value() < IGRA_1_VR){
         QGraphicsTextItem * text=new QGraphicsTextItem("Nema dovoljno energije\nza pocetak igre!!\nLjubimac mora da spava!!");
         text->setDefaultTextColor(Qt::red);
         text->setFont(QFont("times",16));
         sc_igra_1_ulaz->addItem(text);
         ui->bt_igraj_1->setDisabled(true);        
-    }else if(ui->SnagaBar->value() <20){
+    }else if(ui->SnagaBar->value() < IGRA_1_VR){
         QGraphicsTextItem * text_2=new QGraphicsTextItem("Nema dovoljno energije\nza pocetak igre!!\nLjubimac mora da jede!!");
         text_2->setDefaultTextColor(Qt::red);
         text_2->setFont(QFont("times",16));

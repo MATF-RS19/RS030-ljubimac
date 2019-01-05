@@ -23,6 +23,7 @@ private slots:
     void end_game();
     void napravi_grudvu();
     void bar_smanji();
+    void end_game_energ();
 signals:
     void end();
     void nema_energije();
