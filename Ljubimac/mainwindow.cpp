@@ -46,33 +46,34 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
 
     QRectF sc_velicina=QRectF(0,0,SC_W,SC_H);
 
-    QGraphicsScene *sc_kuh =new QGraphicsScene();
+    QGraphicsScene * sc_kuh =new QGraphicsScene();
     ui->graphicsView_kuhinja->setScene(sc_kuh);
     sc_kuh->setSceneRect(sc_velicina);
     sc_kuh->addItem(ljub);
 
-    QGraphicsScene *sc_kup =new QGraphicsScene();
+    QGraphicsScene * sc_kup =new QGraphicsScene();
     ui->graphicsView_kupatilo->setScene(sc_kup);
     sc_kup->setSceneRect(sc_velicina);
     sc_kup->addItem(&ljub_kupanje);
 
-    QGraphicsScene *sc_spav =new QGraphicsScene();
+    QGraphicsScene * sc_spav =new QGraphicsScene();
     ui->graphicsView_spavaca->setScene(sc_spav);
     sc_spav->setSceneRect(sc_velicina);
     sc_spav->addItem(&ljub_spava);
 
-    QGraphicsScene *sc_igr =new QGraphicsScene();
+    QGraphicsScene * sc_igr =new QGraphicsScene();
     ui->graphicsView_igraonica->setScene(sc_igr);
     sc_igr->setSceneRect(sc_velicina);
     sc_igr->addItem(&ljub_igraonica);
 
-    QGraphicsScene *sc_friz =new QGraphicsScene();
+    QGraphicsScene * sc_friz =new QGraphicsScene();
     ui->graphicsView_friz->setScene(sc_friz);
     sc_friz->setSceneRect(sc_velicina);
 
-    QGraphicsScene *sc_prod =new QGraphicsScene();
+    QGraphicsScene * sc_prod =new QGraphicsScene();
     ui->graphicsView_prodavn->setScene(sc_prod);
     sc_prod->setSceneRect(sc_velicina);
+
     //Podesavanje velicine i polozaja imena sobe i strelica
 
 
@@ -139,22 +140,19 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
 
     ui->bt_budjenje->setDisabled(true);
     ui->bt_kupanje->setDisabled(true);
-    connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_spavaj_clicked()));
-    connect(ui->bt_kupanje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_kupanje_clicked()));
-    connect(ui->sapun,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_sapunjanje_clicked()));
-    connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(on_pushButton_budjenje_clicked()));
-    connect(ui->bt_nazad_igra1_ulaz,SIGNAL(clicked(bool)),this,SLOT(on_bt_igra1_ulaz_clicked()));
+    connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this,SLOT(pushButton_spavaj_clicked()));
+    connect(ui->bt_kupanje,SIGNAL(clicked(bool)),this,SLOT(pushButton_kupanje_clicked()));
+    connect(ui->sapun,SIGNAL(clicked(bool)),this,SLOT(pushButton_sapunjanje_clicked()));
+    connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(pushButton_budjenje_clicked()));
+    connect(ui->bt_nazad_igra1_ulaz,SIGNAL(clicked(bool)),this,SLOT(bt_igra1_ulaz_clicked()));
     connect(ui->bt_igraj_1,SIGNAL(clicked(bool)),this,SLOT(bt_igra_1_clicked()));
     connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this, SLOT(pokreni_tajmer_za_spavanje()));
     connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(zaustavi_tajmer_za_spavanje()));
     connect(tajmer_za_spavanje,SIGNAL(timeout()),this,SLOT(azuriraj_naspavanost()));
 
-
-
-
 }
 
-void MainWindow::on_pushButton_sapunjanje_clicked()
+void MainWindow::pushButton_sapunjanje_clicked()
 {
     ui->pushButton_kup_1->setDisabled(true);
     ui->pushButton_kup_2->setDisabled(true);
@@ -203,6 +201,7 @@ MainWindow::~MainWindow()
     igra->save();
     delete ui;
     delete igra;
+    delete tajmer_za_spavanje;
 }
 
 void MainWindow::pokreni_vreme()
@@ -231,7 +230,7 @@ Frizider *MainWindow::fizider()
 
 
 
-void MainWindow::iscrtaj_friz(QGraphicsScene * scena){
+void MainWindow::iscrtaj_friz(QGraphicsScene * scena) const{
     friz.ispisi_na_gui(friz);
     auto mapa=friz.mapa_frizider();
 
@@ -476,7 +475,7 @@ void MainWindow::on_kupi_6_clicked()
 
 }
 
-void MainWindow::on_bt_igra1_ulaz_clicked() //pre igre deo <
+void MainWindow::bt_igra1_ulaz_clicked() //pre igre deo <
 {
     ui->stackedWidget->setCurrentIndex(2);
 }
@@ -485,12 +484,20 @@ void MainWindow::bt_igra_1_clicked()
 {
     Igrica1 *igra1=new Igrica1(ui);
     igra1->setParent(ui->widget);
-    //u igri1 nazad kad se klikne
+
+    ui->bt_off_1->setParent(ui->stackedWidget->widget(6));
+    ui->bt_on_1->setParent(ui->stackedWidget->widget(6));
+    ui->bt_on_1->setDisabled(true);
+    ui->bt_off_1->setDisabled(false);
+
     connect(ui->pushButton_igra_1_nazad,SIGNAL(clicked(bool)),igra1,SLOT(end_game()));
-   // connect(igra,SIGNAL(nema_energije()),this,SLOT(on_pushButton_igra_1_clicked()));
     connect(igra1,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
+    connect(ui->bt_off_1,SIGNAL(clicked(bool)),igra1,SLOT(iskljuci_zvuk()));
+    connect(ui->bt_on_1,SIGNAL(clicked(bool)),igra1,SLOT(ukljuci_zvuk()));
+
     ui->stackedWidget->setCurrentIndex(6);
 }
+
 
 void MainWindow::uzmi_vrednosti_sa_bar()
 {
@@ -499,7 +506,7 @@ void MainWindow::uzmi_vrednosti_sa_bar()
     ljub->set_naspavanost(ui->naspavanostBar->value());
 }
 
-void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena){
+void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena) const{
     prod.ispisi_na_gui(prod);
     auto vector=prod.vector_prod();
     double trenutni=HR_YP;
@@ -636,12 +643,12 @@ void MainWindow::on_pushButton_igra_4_nazad_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void MainWindow::on_pushButton_spavaj_clicked()
+void MainWindow::pushButton_spavaj_clicked()
 {
    ljub_spava.spavaj();
 }
 
-void MainWindow::on_pushButton_kupanje_clicked()
+void MainWindow::pushButton_kupanje_clicked()
 {
     ui->sapun->setEnabled(true);
     ui->bt_kupanje->setDisabled(true);
@@ -654,7 +661,7 @@ void MainWindow::on_pushButton_kupanje_clicked()
     ui->pushButton_kup_2->setEnabled(true);
 }
 
-void MainWindow::on_pushButton_budjenje_clicked()
+void MainWindow::pushButton_budjenje_clicked()
 {
     ljub_spava.budjenje();
     ljub->set_naspavanost(ui->naspavanostBar->value());

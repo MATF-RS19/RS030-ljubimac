@@ -109,3 +109,19 @@ void Igrica1::end_game_energ()
      m_ui->stackedWidget->setCurrentIndex(2);
      delete this;
 }
+
+
+void Igrica1::iskljuci_zvuk(){
+    qDebug()<<"Iskljuci zvuk";
+    muzika_poz->pause();
+    m_ui->bt_on_1->setDisabled(false);
+    m_ui->bt_off_1->setDisabled(true);
+
+}
+
+void Igrica1::ukljuci_zvuk(){
+    qDebug()<<"Ukljuci zvuk";
+    muzika_poz->play();
+    m_ui->bt_on_1->setDisabled(true);
+    m_ui->bt_off_1->setDisabled(false);
+}

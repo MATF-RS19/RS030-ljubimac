@@ -13,22 +13,24 @@ class Igrica1:public QGraphicsView
 public:
     Igrica1(Ui::MainWindow *ui);
 
-    QGraphicsScene *scene;
-    Ljubimac_skijas *igrac;
     ~Igrica1(){
         delete scene;
         delete muzika_poz;
     }
 
 private:
+    QGraphicsScene *scene;
+    Ljubimac_skijas *igrac;
     QMediaPlayer *muzika_poz;
-    QMediaPlaylist *playlist;
+    QMediaPlaylist playlist;
     Ui::MainWindow *m_ui;
 private slots:
     void end_game();
     void napravi_grudvu();
     void bar_smanji();
     void end_game_energ();
+    void iskljuci_zvuk();
+    void ukljuci_zvuk();
 signals:
     void end();
     void nema_energije();

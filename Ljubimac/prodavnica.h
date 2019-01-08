@@ -8,8 +8,8 @@ class Prodavnica
 public:
     Prodavnica(Ui::MainWindow * ui);
 
-    QVector<Hrana*> vector_prod();
-    void ispisi_na_gui(const Prodavnica& prod);
+    QVector<Hrana*> vector_prod()const;
+    void ispisi_na_gui(const Prodavnica& prod)const;
     ~Prodavnica();
 private:
     QVector<Hrana *> m_prodavnica;

@@ -47,5 +47,5 @@ void Grudva::pomeri(){
    velicina++;
    if(pos().y()>600){
       delete this;
-    }
+   }
 }

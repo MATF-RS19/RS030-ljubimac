@@ -15,9 +15,9 @@ public:
 
     void uzmi_hranu(const Hrana& jelo);
 
-    void ispisi_na_gui(const Frizider& friz);
+    void ispisi_na_gui(const Frizider& friz)const;
 
-    QMap<Hrana*, unsigned> mapa_frizider();
+    QMap<Hrana*, unsigned> mapa_frizider()const;
 
     // TFJ interface
     QJsonObject toJson() const;

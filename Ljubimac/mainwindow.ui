@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -2419,6 +2419,40 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;
         <height>391</height>
        </rect>
       </property>
+      <widget class="QPushButton" name="bt_off_1">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/mute.png);
+background-color: rgb(239, 41, 41);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="bt_on_1">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>20</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/unmute.png);
+background-color: rgb(138, 226, 52);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
      <zorder>widget</zorder>
      <zorder>pushButton_igra_1_nazad</zorder>

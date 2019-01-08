@@ -12,6 +12,7 @@
 #include <QTimer>
 #include <QMainWindow>
 #include <QThread>
+#include <QGraphicsScene>
 namespace Ui {
 class MainWindow;
 }
@@ -23,8 +24,8 @@ public:
 
   //  void povezi(Ljubimac* l);
   //  void pokreni_vreme(Ljubimac *l);
-    void iscrtaj_friz(QGraphicsScene * scena);
-    void iscrtaj_prodavnicu(QGraphicsScene* scena);
+    void iscrtaj_friz(QGraphicsScene * scena)const;
+    void iscrtaj_prodavnicu(QGraphicsScene* scena)const;
     void postavi_igru(GameSLN *i){igra = i;}
     void pokreni_vreme();
     void save(){igra->save();}
@@ -78,13 +79,13 @@ private slots:
 
     void on_pushButton_igra_4_nazad_clicked();
 
-    void on_pushButton_spavaj_clicked();
+    void pushButton_spavaj_clicked();
 
-    void on_pushButton_kupanje_clicked();
+    void pushButton_kupanje_clicked();
 
-    void on_pushButton_sapunjanje_clicked();
+    void pushButton_sapunjanje_clicked();
 
-    void on_pushButton_budjenje_clicked();
+    void pushButton_budjenje_clicked();
 
     void on_timer(int x);
 
@@ -112,7 +113,7 @@ private slots:
 
     void on_kupi_6_clicked();
 
-    void on_bt_igra1_ulaz_clicked();
+    void bt_igra1_ulaz_clicked();
 
     void bt_igra_1_clicked();
 

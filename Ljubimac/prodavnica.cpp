@@ -26,7 +26,7 @@ Prodavnica::Prodavnica(Ui::MainWindow *ui):m_ui(ui)
 
     }
 
-void Prodavnica::ispisi_na_gui(const Prodavnica& prod){
+void Prodavnica::ispisi_na_gui(const Prodavnica& prod) const{
 
 
     int i=0;
@@ -58,7 +58,7 @@ void Prodavnica::ispisi_na_gui(const Prodavnica& prod){
 
 
 
-QVector<Hrana *> Prodavnica::vector_prod()
+QVector<Hrana *> Prodavnica::vector_prod() const
 {
     return m_prodavnica;
 }

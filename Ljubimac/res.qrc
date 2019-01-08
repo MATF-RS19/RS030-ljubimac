@@ -33,6 +33,8 @@
         <file>tus2.png</file>
         <file>kada.png</file>
         <file>kada2.png</file>
+        <file>unmute.png</file>
+        <file>mute.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>muz_pozadina_1.mp3</file>

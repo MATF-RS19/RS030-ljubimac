@@ -12,6 +12,7 @@ public:
     ~Ljubimac_skijas(){
         delete muz_pomeraj;
     }
+
 private:
     QMediaPlayer * muz_pomeraj;
 };

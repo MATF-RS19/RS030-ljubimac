@@ -9,8 +9,7 @@
 
 Frizider::Frizider(Ui::MainWindow * ui):m_ui(ui)
 {
-  //fromJson()
-  //ispisi_na_gui()
+
   kolac * kol=new kolac(150,438,"Kolač");
   hamburger * ham= new hamburger(320, 502, "Hamburger");
   kobasica * kob= new kobasica(265, 321, "Kobasica");
@@ -38,18 +37,18 @@ void Frizider::dodaj_hranu(const Hrana &jelo)
 void Frizider::uzmi_hranu(const Hrana &jelo)
 {
     for(auto i=m_frizider.begin(); i!=m_frizider.end();i++){
-        if(i.key()->naziv()==jelo.naziv())
+        if(i.key()->naziv()==jelo.naziv()){
             if(i.value()!=0)
                 i.value()-=1;
             else
                 i.value()=0;
-
+           }
     }
 
 
 }
 
-void Frizider::ispisi_na_gui(const Frizider &friz)
+void Frizider::ispisi_na_gui(const Frizider &friz) const
 {
     auto i=friz.m_frizider.begin();
     m_ui->fj1_naziv->setText(i.key()->naziv());
@@ -78,7 +77,7 @@ void Frizider::ispisi_na_gui(const Frizider &friz)
 
 }
 
-QMap<Hrana *, unsigned> Frizider::mapa_frizider()
+QMap<Hrana *, unsigned> Frizider::mapa_frizider() const
 {
     return m_frizider;
 }

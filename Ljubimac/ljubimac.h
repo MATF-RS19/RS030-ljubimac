@@ -29,16 +29,15 @@ public:
 
         return out;
     }
-    //metod koji se poziva kad se klikne na jedi
-    void jedi(const Hrana & jelo);
+
     void add_sit(int x){set_sit(x+m_sit);}
     void set_sit(int x);
     void dec_sit(){m_sit--;emit value_changed(m_sit);}
-    int get_sec(){return m_sec;}
+    int get_sec()const{return m_sec;}
     void set_sec(int x){m_sec = x;emit sec_value_changed(m_sec);}
-    int get_sit(){return m_sit;}
-    QString get_ime(){return m_ime;}
-    unsigned get_novac(){return m_novac;}
+    int get_sit()const{return m_sit;}
+    QString get_ime()const{return m_ime;}
+    unsigned get_novac()const{return m_novac;}
     void set_novac(unsigned cena){ m_novac=cena;}
     void set_ime(QString ime){m_ime = ime;}
     void set_naspavanost(int x){m_naspavan = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_naspavanost(m_naspavan));}
