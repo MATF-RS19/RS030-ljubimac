@@ -41,9 +41,14 @@
         <file>j4.png</file>
         <file>jungle.jpg</file>
         <file>j5.png</file>
+        <file>kucica.jpg</file>
+        <file>bomb.png</file>
+        <file>lopta.png</file>
+        <file>novac.jpeg</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>muz_pozadina_1.mp3</file>
         <file>ski_sound_kraci.wav</file>
+        <file>muzika_za_igricu3.mp3</file>
     </qresource>
 </RCC>

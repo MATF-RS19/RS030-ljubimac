@@ -22,15 +22,15 @@
      <rect>
       <x>0</x>
       <y>50</y>
-      <width>671</width>
-      <height>391</height>
+      <width>681</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>11</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -40,7 +40,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-10</y>
+        <y>0</y>
         <width>691</width>
         <height>391</height>
        </rect>
@@ -2477,18 +2477,28 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="page_igra_3">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>681</width>
+        <height>381</height>
+       </rect>
+      </property>
+     </widget>
      <widget class="QPushButton" name="pushButton_igra_3_nazad">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>30</y>
+        <x>30</x>
+        <y>20</y>
         <width>89</width>
         <height>25</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(186, 189, 182);
-font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
+       <string notr="true">background-color: rgb(64, 175, 191);
+font: 75 italic 15pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
        <string>&lt;</string>
@@ -2558,21 +2568,76 @@ font: 75 italic 17pt &quot;Ubuntu Mono&quot;;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page_igra3_ulaz">
+     <widget class="QPushButton" name="bt_igraj_3">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>280</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 175, 191);
+font: 75 italic 15pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>IGRAJ</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bt_nazad_igra3_ulaz">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(64, 175, 191);
+font: 75 italic 15pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="grView_tekst_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>271</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QProgressBar" name="SnagaBar">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>400</x>
       <y>20</y>
       <width>111</width>
-      <height>20</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
+     <string notr="true">background-color: rgb(252, 233, 79);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="value">
@@ -2582,14 +2647,14 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>400</x>
       <y>0</y>
       <width>67</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(74, 172, 136);
+     <string notr="true">background-color: rgb(196, 160, 0);
 font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
@@ -2602,14 +2667,14 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="tajmer">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>70</x>
       <y>20</y>
-      <width>61</width>
+      <width>51</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
+     <string notr="true">background-color: rgb(186, 189, 182);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
@@ -2622,9 +2687,9 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>20</y>
-      <width>67</width>
+      <width>61</width>
       <height>21</height>
      </rect>
     </property>
@@ -2642,10 +2707,10 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="ime">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>0</y>
-      <width>121</width>
-      <height>21</height>
+      <width>111</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -2663,13 +2728,13 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>20</y>
+      <y>10</y>
       <width>51</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
+     <string notr="true">background-color: rgb(148, 203, 152);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
@@ -2682,18 +2747,18 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="fj1_naziv_3">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>20</y>
-      <width>61</width>
-      <height>21</height>
+      <x>520</x>
+      <y>0</y>
+      <width>81</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(74, 172, 136);
-font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
+     <string notr="true">image: url(:/images/novac.jpeg);
+font: 75 italic 15pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
-     <string>Novac:</string>
+     <string>       :</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2705,14 +2770,14 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QProgressBar" name="CistocaBar">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>270</x>
       <y>20</y>
       <width>118</width>
-      <height>20</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
+     <string notr="true">background-color: rgb(106, 221, 134);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="value">
@@ -2722,14 +2787,14 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>270</x>
       <y>0</y>
       <width>67</width>
-      <height>16</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(74, 172, 136);
+     <string notr="true">background-color: rgb(78, 154, 6);
 font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
@@ -2742,14 +2807,14 @@ font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QProgressBar" name="naspavanostBar">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>140</x>
       <y>20</y>
       <width>118</width>
-      <height>23</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(211, 215, 207);
+     <string notr="true">background-color: rgb(226, 177, 177);
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="value">
@@ -2759,18 +2824,21 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>140</x>
       <y>0</y>
       <width>101</width>
-      <height>17</height>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(74, 172, 136);
+     <string notr="true">background-color: rgb(173, 102, 132);
 font: 75 italic 13pt &quot;Ubuntu Mono&quot;;</string>
     </property>
     <property name="text">
-     <string>Naspavanost</string>
+     <string>Naspavanost:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

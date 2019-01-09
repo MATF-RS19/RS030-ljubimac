@@ -49,7 +49,11 @@ SOURCES += \
     kada.cpp \
     game.cpp \
     player.cpp \
-    myrect.cpp
+    myrect.cpp \
+    bomba.cpp \
+    lopta.cpp \
+    igrica3.cpp \
+    ljubimac_bomba.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -77,7 +81,11 @@ HEADERS += \
     kada.h \
     game.h \
     player.h \
-    myrect.h
+    myrect.h \
+    bomba.h \
+    lopta.h \
+    igrica3.h \
+    ljubimac_bomba.h
 
 FORMS += \
         mainwindow.ui \

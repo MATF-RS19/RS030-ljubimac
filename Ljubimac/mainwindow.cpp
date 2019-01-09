@@ -13,6 +13,7 @@
 #include <QPushButton>
 #include <iostream>
 #include "igrica1.h"
+#include "igrica3.h"
 #include "ljubimac.h"
 #include "vreme.h"
 #include "game.h"
@@ -150,6 +151,8 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     connect(ui->bt_spavaj,SIGNAL(clicked(bool)),this, SLOT(pokreni_tajmer_za_spavanje()));
     connect(ui->bt_budjenje,SIGNAL(clicked(bool)),this,SLOT(zaustavi_tajmer_za_spavanje()));
     connect(tajmer_za_spavanje,SIGNAL(timeout()),this,SLOT(azuriraj_naspavanost()));
+    connect(ui->bt_nazad_igra3_ulaz,SIGNAL(clicked(bool)),this,SLOT(bt_igra3_ulaz_clicked()));
+    connect(ui->bt_igraj_3,SIGNAL(clicked(bool)),this,SLOT(bt_igra_3_clicked()));
 
 }
 
@@ -504,6 +507,21 @@ void MainWindow::bt_igra_1_clicked()
     ui->stackedWidget->setCurrentIndex(6);
 }
 
+void MainWindow:: bt_igra3_ulaz_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::bt_igra_3_clicked()
+{
+    Igrica3 *igra=new Igrica3(ui);
+    igra->setParent(ui->widget_2);
+    connect(ui->pushButton_igra_3_nazad,SIGNAL(clicked(bool)),igra,SLOT(end_game()));
+    connect(igra,SIGNAL(end()),this,SLOT(uzmi_vrednosti_sa_bar()));
+    ui->stackedWidget->setCurrentIndex(8);
+
+}
+
 
 void MainWindow::uzmi_vrednosti_sa_bar()
 {
@@ -625,8 +643,34 @@ void MainWindow::on_pushButton_igra_2_clicked()
 
 void MainWindow::on_pushButton_igra_3_clicked()
 {
-    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
-    ui->stackedWidget->setCurrentIndex(8);
+        if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
+        QGraphicsScene *sc_igra_3_ulaz=new QGraphicsScene();
+        sc_igra_3_ulaz->setBackgroundBrush(QBrush(QColor(Qt::cyan)));
+        ui->grView_tekst_3->setScene(sc_igra_3_ulaz);
+        //provera pre pokretanja igre
+        if(ui->naspavanostBar->value() < 20){
+            QGraphicsTextItem * text=new QGraphicsTextItem("Nema dovoljno energije\nza početak igre!\nLjubimac mora da spava!");
+            text->setDefaultTextColor(Qt:: blue);
+            text->setFont(QFont("times",16));
+            sc_igra_3_ulaz->addItem(text);
+            ui->bt_igraj_3->setDisabled(true);
+        }else if(ui->SnagaBar->value() <20){
+            QGraphicsTextItem * text_2=new QGraphicsTextItem("Nema dovoljno energije\nza početak igre!\nLjubimac mora da jede!");
+            text_2->setDefaultTextColor(Qt::blue);
+            text_2->setFont(QFont("times",16));
+            sc_igra_3_ulaz->addItem(text_2);
+            ui->bt_igraj_3->setDisabled(true);
+        }
+        else{
+            QGraphicsTextItem * text_3=new QGraphicsTextItem("Dobrodošli u igricu Bomba! \n Izbegavajte bombe koje\n nailaze pomerajući se levo\n i desno. Trudite se da uhvatite\n što više loptica, jer Vam one\n donose novac.\n         Srećno! :)      ");
+            text_3->setDefaultTextColor(Qt::blue);
+            text_3->setFont(QFont("times",16));
+            sc_igra_3_ulaz->addItem(text_3);
+            ui->bt_igraj_3->setDisabled(false);
+        }
+        ui->stackedWidget->setCurrentIndex(11);
+
+
 }
 
 void MainWindow::on_pushButton_igra_4_clicked()
