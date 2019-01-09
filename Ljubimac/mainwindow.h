@@ -32,7 +32,7 @@ public:
     Frizider* fizider();
     ~MainWindow();
 private slots:
-
+    void set_novac(int x);
     void pokreni_tajmer_za_spavanje();
 
     void zaustavi_tajmer_za_spavanje();

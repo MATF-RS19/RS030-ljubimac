@@ -15,6 +15,7 @@
 #include "igrica1.h"
 #include "ljubimac.h"
 #include "vreme.h"
+#include "game.h"
 #define SC_W 678
 #define SC_H 388
 #define BT_L_TOP 15
@@ -204,12 +205,17 @@ MainWindow::~MainWindow()
     delete tajmer_za_spavanje;
 }
 
+void MainWindow::set_novac(int x)
+{
+    ui->l_kol_novca->setText(QString::number(x));
+}
+
 void MainWindow::pokreni_vreme()
 {
     connect(ljub, SIGNAL(value_changed(int)), ui->SnagaBar, SLOT(setValue(int)));
     connect(ljub, SIGNAL(value_changed_cist(int)), ui->CistocaBar, SLOT(setValue(int)));
     connect(ljub, SIGNAL(value_changed_naspavanost(int)), ui->naspavanostBar, SLOT(setValue(int)));
-
+    connect(ljub, SIGNAL(value_changed_novac(int)), this, SLOT(set_novac(int)));
     tajmer->ljubimac = ljub;
     connect(tajmer->ljubimac, SIGNAL(sec_value_changed(int)), this, SLOT(on_timer(int)));
     tajmer->start();
@@ -550,11 +556,13 @@ void MainWindow::on_pushButton_spav_1_clicked()
 
 void MainWindow::on_pushButton_igraon_2_clicked()
 {
+    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
     ui->stackedWidget->setCurrentIndex(3);
 }
 
 void MainWindow::on_pushButton_igraon_1_clicked()
 {
+    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
     ui->stackedWidget->setCurrentIndex(1);
 }
 
@@ -580,6 +588,7 @@ void MainWindow::on_pushButton_prod_nazad_clicked()
 
 void MainWindow::on_pushButton_igra_1_clicked()
 {
+    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
     QGraphicsScene *sc_igra_1_ulaz=new QGraphicsScene();
     sc_igra_1_ulaz->setBackgroundBrush(QBrush(QColor(Qt::yellow)));
     ui->grView_tekst->setScene(sc_igra_1_ulaz);
@@ -609,16 +618,20 @@ void MainWindow::on_pushButton_igra_1_clicked()
 
 void MainWindow::on_pushButton_igra_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(7);
+  //  ui->stackedWidget->setCurrentIndex(7);
+    if(!Game::exist)
+    Game* game = new Game();
 }
 
 void MainWindow::on_pushButton_igra_3_clicked()
 {
+    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
     ui->stackedWidget->setCurrentIndex(8);
 }
 
 void MainWindow::on_pushButton_igra_4_clicked()
 {
+    if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
     ui->stackedWidget->setCurrentIndex(9);
 }
 

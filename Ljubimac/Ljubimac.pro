@@ -46,7 +46,10 @@ SOURCES += \
     ljubimac_skijas.cpp \
     ljubimac_igraonica.cpp \
     sapunica.cpp \
-    kada.cpp
+    kada.cpp \
+    game.cpp \
+    player.cpp \
+    myrect.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -71,7 +74,10 @@ HEADERS += \
     ljubimac_skijas.h \
     ljubimac_igraonica.h \
     sapunica.h \
-    kada.h
+    kada.h \
+    game.h \
+    player.h \
+    myrect.h
 
 FORMS += \
         mainwindow.ui \

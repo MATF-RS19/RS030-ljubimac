@@ -1,11 +1,22 @@
 #ifndef MYRECT_H
 #define MYRECT_H
-
-
-class MyRect
+#include <QGraphicsRectItem>
+class MyRect : public QGraphicsRectItem
 {
 public:
-    MyRect();
+    MyRect(int x, int y);
+    static int duz;
+    static int adv;
+    static int random;
+    static int* curr;
+ //   static MyRect *cur;
+    // QGraphicsItem interface
+public:
+    void advance(int phase);
+    void setDefault();
 };
+//MyRect* MyRect::cur = nullptr;
+
+
 
 #endif // MYRECT_H

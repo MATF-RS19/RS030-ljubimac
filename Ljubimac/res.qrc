@@ -35,6 +35,12 @@
         <file>kada2.png</file>
         <file>unmute.png</file>
         <file>mute.png</file>
+        <file>j1.png</file>
+        <file>j2.png</file>
+        <file>j3.png</file>
+        <file>j4.png</file>
+        <file>jungle.jpg</file>
+        <file>j5.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>muz_pozadina_1.mp3</file>

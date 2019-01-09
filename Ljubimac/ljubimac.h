@@ -38,7 +38,8 @@ public:
     int get_sit()const{return m_sit;}
     QString get_ime()const{return m_ime;}
     unsigned get_novac()const{return m_novac;}
-    void set_novac(unsigned cena){ m_novac=cena;}
+    void set_novac(unsigned cena){ m_novac=cena; emit value_changed_novac(m_novac);}
+    void add_novac(unsigned cena){set_novac(m_novac+cena);}
     void set_ime(QString ime){m_ime = ime;}
     void set_naspavanost(int x){m_naspavan = x > 100 ? 100 : x < 0 ? 0 : x;emit(value_changed_naspavanost(m_naspavan));}
     int get_naspavanost()const{return m_naspavan;}
@@ -50,6 +51,7 @@ public:
     void dec_cist(){set_cist(m_cist-1);}
     void dec_naspavanost(){set_naspavanost(m_naspavan-1);}
 signals:
+    void value_changed_novac(int x);
     void value_changed(int x);
     void value_changed_cist(int x);
     void value_changed_naspavanost(int x);
