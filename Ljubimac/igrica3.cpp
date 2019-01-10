@@ -23,6 +23,7 @@ Igrica3::Igrica3(Ui::MainWindow *ui):m_ui(ui)
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(W,H);
 
+    lj=Ljubimac::singleton();
     igrac = new Ljubimac_bomba();
     igrac->setPos(400,280);
 
@@ -99,8 +100,9 @@ void Igrica3:: dodaj(){
 
 void Igrica3::bar_smanji()
 {
-    m_ui->SnagaBar->setValue(m_ui->SnagaBar->value()-1);
-    m_ui->naspavanostBar->setValue(m_ui->naspavanostBar->value()-1);
+    lj->set_sit(lj->get_sit()-1);
+    lj->set_cist(lj->get_cist()-1);
+    lj->set_naspavanost(lj->get_naspavanost()-1);
 }
 
 void Igrica3::end_game_energ()

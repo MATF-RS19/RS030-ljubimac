@@ -6,6 +6,7 @@
 #include <QMediaPlaylist>
 #include "ui_mainwindow.h"
 #include "ljubimac_bomba.h"
+#include "ljubimac.h"
 
 class Igrica3:public QGraphicsView
 {
@@ -24,6 +25,7 @@ private:
     QMediaPlayer *muzika;
     QMediaPlaylist *playlist;
     Ui::MainWindow *m_ui;
+    Ljubimac *lj;
 private slots:
     void end_game();
     void napravi_bombu();
