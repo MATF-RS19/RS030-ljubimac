@@ -6,7 +6,7 @@
 #define W 671
 #define H 391
 #define T_GRUDVA 1500
-#define T_ADD 9000
+#define T_ADD 10000
 #define T_WAIT 1300
 #define VR_IGRE 10
 
@@ -92,6 +92,7 @@ void Igrica1::bar_smanji()
 {
     m_ui->SnagaBar->setValue(m_ui->SnagaBar->value()-1);
     m_ui->naspavanostBar->setValue(m_ui->naspavanostBar->value()-1);
+    m_ui->CistocaBar->setValue(m_ui->CistocaBar->value()-1);
 }
 
 void Igrica1::end_game_energ()

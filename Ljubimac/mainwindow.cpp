@@ -493,6 +493,7 @@ void MainWindow::bt_igra1_ulaz_clicked() //pre igre deo <
 
 void MainWindow::bt_igra_1_clicked()
 {
+    tajmer->terminate();
     Igrica1 *igra1=new Igrica1(ui);
     igra1->setParent(ui->widget);
 
@@ -527,6 +528,7 @@ void MainWindow::bt_igra_3_clicked()
 
 void MainWindow::uzmi_vrednosti_sa_bar()
 {
+    tajmer->start();
     ljub->set_novac(ui->l_kol_novca->text().toInt());
     ljub->set_sit(ui->SnagaBar->value());
     ljub->set_naspavanost(ui->naspavanostBar->value());
