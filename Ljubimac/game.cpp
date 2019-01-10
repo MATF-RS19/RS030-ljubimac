@@ -116,6 +116,11 @@ Game::~Game()
     delete scene;
 }
 
+void Game::ugasi()
+{
+   this->close();
+}
+
 void Game::closeEvent(QCloseEvent *)
 {
     exist = false;

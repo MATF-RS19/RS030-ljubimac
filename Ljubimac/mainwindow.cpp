@@ -201,7 +201,9 @@ MainWindow::~MainWindow()
         while(!tajmer->isFinished())
             tajmer->sleep(1);
     }
+    qDebug() << "dovde\n";
     delete tajmer;
+    if(igra)
     igra->save();
     delete ui;
     delete igra;
@@ -530,6 +532,13 @@ void MainWindow::uzmi_vrednosti_sa_bar()
     ljub->set_naspavanost(ui->naspavanostBar->value());
 }
 
+void MainWindow::closeEvent(QCloseEvent *e)
+{
+   QWidget::closeEvent(e);
+   if(Game::exist)
+   game->ugasi();
+}
+
 void MainWindow::iscrtaj_prodavnicu(QGraphicsScene * scena) const{
     prod.ispisi_na_gui(prod);
     auto vector=prod.vector_prod();
@@ -638,7 +647,7 @@ void MainWindow::on_pushButton_igra_2_clicked()
 {
   //  ui->stackedWidget->setCurrentIndex(7);
     if(!Game::exist)
-    Game* game = new Game();
+    game = new Game();
 }
 
 void MainWindow::on_pushButton_igra_3_clicked()

@@ -13,6 +13,7 @@
 #include <QMainWindow>
 #include <QThread>
 #include <QGraphicsScene>
+class Game;
 namespace Ui {
 class MainWindow;
 }
@@ -133,7 +134,8 @@ private:
     Ljubimac_igraonica ljub_igraonica;
     Sapunica sap;
     Kada k;
-    GameSLN *igra;
+    GameSLN *igra = nullptr;
+    Game* game = nullptr;
     class Tajmer : public QThread
     {
     public:
@@ -143,6 +145,10 @@ private:
     };
     Tajmer* tajmer = new Tajmer;
     QTimer *tajmer_za_spavanje = new QTimer();
+
+    // QWidget interface
+protected:
+    void closeEvent(QCloseEvent *);
 };
 
 #endif // MAINWINDOW_H

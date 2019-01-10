@@ -26,6 +26,7 @@ public:
     QLabel* skor;
     static bool exist;
     ~Game();
+    void ugasi();
 
     // QWidget interface
 protected:

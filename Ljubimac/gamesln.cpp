@@ -7,6 +7,19 @@
 #include <QDebug>
 #include <string>
 #include "gamesln.h"
+void GameSLN::encrypt(QByteArray &array, std::string key)const
+{
+    int i = 0, size = key.size();
+    for(auto it = array.begin(), kraj = array.end(); it != kraj; ++it)
+        *it  += key[i++%size];
+}
+
+void GameSLN::decrypt(QByteArray &array, std::string key)const
+{
+    int i = 0, size = key.size();
+    for(auto it = array.begin(), kraj = array.end(); it != kraj; ++it)
+        *it  -= key[i++%size];
+}
 
 GameSLN::GameSLN(QString ime, TFJ** p, int n) : ime_fajla(ime), podaci(p), m_n(n)
 {
@@ -33,7 +46,9 @@ bool GameSLN::save()const
 
 
     QJsonDocument saveData(json);
-    saveFile.write(saveData.toJson());
+    QByteArray s = saveData.toBinaryData();
+    encrypt(s, "lala");
+    saveFile.write(s);//toJson
     saveFile.close();
 
     return true;
@@ -69,8 +84,8 @@ bool GameSLN::load()
     QJsonObject json;
 
     QByteArray saveData = saveFile.readAll();
-    json = QJsonDocument::fromJson(saveData).object();
-
+    decrypt(saveData,"lala");
+    json = QJsonDocument::fromBinaryData(saveData).object(); // fromJson
     for(int i = 0; i < m_n; i++)
     {
          std::string pom =typeid(*podaci[i]).name();

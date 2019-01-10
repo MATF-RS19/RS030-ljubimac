@@ -1,5 +1,5 @@
 #include <QString>
-
+#include <QFileDialog>
 
 #include "dialog.h"
 #include "ui_dialog.h"
@@ -12,6 +12,7 @@ Dialog::Dialog(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->loadPB, SIGNAL(clicked(bool)), this, SLOT(on_load()));
     connect(ui->newPB, SIGNAL(clicked(bool)), this, SLOT(on_new()));
+    ui->lineLoad->setVisible(false);
 }
 
 Dialog::~Dialog()
@@ -26,9 +27,12 @@ void Dialog::on_load()
     niz[0] = l;
     niz[1] = main->fizider();
     igra->postavi_podatke(niz, 2);
-    igra->postavi_ime(ui->lineLoad->text());
+    //igra->postavi_ime(ui->lineLoad->text());
+    QString file_name = QFileDialog::getOpenFileName(this, "Open a file", "/");
+    if(file_name == QString::fromStdString(""))return;
+    igra->postavi_ime(file_name);
 
-    igra->load();
+    if(!igra->load())return;
    // main = new MainWindow();
     //main->povezi(l);
     main->postavi_igru(igra);
