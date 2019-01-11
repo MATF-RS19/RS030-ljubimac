@@ -12,7 +12,6 @@
 
 Igrica1::Igrica1(Ui::MainWindow *ui):m_ui(ui)
 {
-    qDebug()<<"Nova igra1";
     scene=new QGraphicsScene();
     setSceneRect(0,0,W,H);
     setBackgroundBrush(QBrush(QImage(":/images/mount.png").scaled(W,H)));
@@ -62,7 +61,6 @@ Igrica1::Igrica1(Ui::MainWindow *ui):m_ui(ui)
 }
 
 void Igrica1::end_game(){
-    qDebug()<<"Izbrisao igru 1";
 
     muzika_poz->stop();
 
@@ -97,7 +95,6 @@ void Igrica1::bar_smanji()
 
 void Igrica1::end_game_energ()
 {
-     qDebug()<<"Izbrisao igru 1,zbog energije";
 
      muzika_poz->stop();
 
@@ -113,7 +110,6 @@ void Igrica1::end_game_energ()
 
 
 void Igrica1::iskljuci_zvuk(){
-    qDebug()<<"Iskljuci zvuk";
     muzika_poz->pause();
     m_ui->bt_on_1->setDisabled(false);
     m_ui->bt_off_1->setDisabled(true);
@@ -121,7 +117,6 @@ void Igrica1::iskljuci_zvuk(){
 }
 
 void Igrica1::ukljuci_zvuk(){
-    qDebug()<<"Ukljuci zvuk";
     muzika_poz->play();
     m_ui->bt_on_1->setDisabled(true);
     m_ui->bt_off_1->setDisabled(false);

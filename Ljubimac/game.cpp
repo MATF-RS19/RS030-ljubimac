@@ -26,7 +26,6 @@ void Game::changeTime()
 
 void Game::load()
 {
-    QMessageBox::information(this,"Introduction Window", "Nagore strelica i spejs\nKoliko skora osvojite toliko para dobijete :)\nDa bi igrali mora da imate snagu > 20\nI gubite 1 Snagu sa svakim igranjem :(");
     if(l->get_sit() <= 20)
     {
         QMessageBox::information(this,"Warning", "Nemate dovoljno snage");
@@ -109,6 +108,7 @@ Game::Game(QWidget* parent) : QGraphicsView(parent)
     */
     connect(dugme, SIGNAL(clicked(bool)), this, SLOT(load()));
     connect(&timer,SIGNAL(timeout()), this, SLOT(changeTime()));
+    QMessageBox::information(this,"Introduction Window", "Nagore strelica i spejs\nKoliko skora osvojite toliko para dobijete :)\nDa bi igrali mora da imate snagu > 20\nI gubite 1 Snagu sa svakim igranjem :(");
 }
 
 Game::~Game()

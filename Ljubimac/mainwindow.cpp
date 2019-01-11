@@ -38,7 +38,6 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
 
     ljub = Ljubimac::singleton();
     ui->setupUi(this);
-
     setWindowTitle("Ljubimac");
     setFixedSize(672,457);
 
@@ -156,6 +155,11 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     connect(ui->bt_igraj_3,SIGNAL(clicked(bool)),this,SLOT(bt_igra_3_clicked()));
     connect(ui->pushButton_igra4_poruka, SIGNAL(clicked(bool)), this, SLOT(bt_igra4_clicked()));
 
+
+
+
+    ui->tajmer->setVisible(false);
+    ui->label_3->setVisible(false);
 }
 
 void MainWindow::pushButton_sapunjanje_clicked()
@@ -203,7 +207,6 @@ MainWindow::~MainWindow()
         while(!tajmer->isFinished())
             tajmer->sleep(1);
     }
-    qDebug() << "dovde\n";
     delete tajmer;
     if(igra)
     igra->save();
