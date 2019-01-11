@@ -168,7 +168,6 @@ void MainWindow::pushButton_sapunjanje_clicked()
     ui->pushButton_kup_2->setDisabled(true);
     ui->sapun->setDisabled(true);
     ui->bt_kupanje->setEnabled(true);
-    //sap = new Sapunica(ui);
     ljub_kupanje.setPos(QPointF(245,130));
     ui->graphicsView_kupatilo->scene()->addItem(&k);
     ui->graphicsView_kupatilo->scene()->addItem(&sap);
@@ -177,7 +176,7 @@ void MainWindow::pushButton_sapunjanje_clicked()
 
 void MainWindow::pokreni_tajmer_za_spavanje()
 {
-    //tajmer_za_spavanje = new QTimer();
+
     tajmer->terminate();
     while(!tajmer->isFinished())
         tajmer->sleep(1);

@@ -18,10 +18,6 @@ void Ljubimac_spava::spavaj()
     m_ui->pushButton_spav_1->setDisabled(true);
     m_ui->pushButton_spav_2->setDisabled(true);
 
-    //pocetno = new QTime();
-    //*pocetno = pocetno->currentTime();
-
-    //m_ui->naspavanostBar->setValue(m_ui->naspavanostBar->value()+1);
 
 
 }
@@ -38,9 +34,6 @@ void Ljubimac_spava::budjenje()
     setScale(1);
     m_ui->pushButton_spav_1->setDisabled(false);
     m_ui->pushButton_spav_2->setDisabled(false);
-    //zavrsno = new QTime();
-    //*zavrsno = zavrsno->currentTime();
-    //m_ui->naspavanostBar->setValue(m_ui->naspavanostBar->value()+pocetno->secsTo(*zavrsno)/20);
 
 }
 

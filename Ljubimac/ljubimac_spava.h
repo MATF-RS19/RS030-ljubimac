@@ -17,8 +17,6 @@ public:
 
 private:
     Ui::MainWindow * m_ui;
-    //QTime *pocetno;
-    //QTime *zavrsno;
 
 
 };

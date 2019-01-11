@@ -19,7 +19,6 @@ private:
     Ui::MainWindow *m_ui;
     QGraphicsScene *scena;
     int brojac_okrenutih;
-    //Kartica *k0, *k1/*,*k2, *k3, *k4, *k5, *k6, *k7, *k8, *k9, *k10, *k11, *k12, *k13, *k14, *k15, *k16, *k17, *k18, *k19*/;
     QVector<Kartica *> kartice;
     QVector<QString> slike = {":/images/hamburger_memory.png",
                               ":/images/jelka_memory.png",

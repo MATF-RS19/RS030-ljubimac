@@ -15,7 +15,7 @@ public:
     int get_indeks();
     void set_indeks(int i);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
-    //void mouseReleaseEvent(QMouseEvent *event);
+
 
 private:
     bool na_gore;
