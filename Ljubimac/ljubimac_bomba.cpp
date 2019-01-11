@@ -11,7 +11,7 @@ void Ljubimac_bomba::keyPressEvent(QKeyEvent *event)
        // pomeraj desno
        if (event->key() == Qt::Key_Right){
            poz = pos();
-           if(pos().x()+100<660){
+           if(pos().x()<560){
            int xPos = x() + 40;
            int yPos = y();
            setPos(xPos,yPos);

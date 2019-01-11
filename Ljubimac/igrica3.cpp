@@ -9,7 +9,7 @@
 #define T_BOMBA 4000
 #define T_LOPTA 8000
 #define T_ADD 6000
-#define T_WAIT 1300
+#define T_WAIT 1000
 Igrica3::Igrica3(Ui::MainWindow *ui):m_ui(ui)
 {
 
@@ -100,9 +100,9 @@ void Igrica3:: dodaj(){
 
 void Igrica3::bar_smanji()
 {
-    lj->set_sit(lj->get_sit()-1);
-    lj->set_cist(lj->get_cist()-1);
-    lj->set_naspavanost(lj->get_naspavanost()-1);
+    lj->set_sit(lj->get_sit()-3);
+    lj->set_cist(lj->get_cist()-3);
+    lj->set_naspavanost(lj->get_naspavanost()-3);
 }
 
 void Igrica3::end_game_energ()

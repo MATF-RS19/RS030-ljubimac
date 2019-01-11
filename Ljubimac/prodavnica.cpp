@@ -66,8 +66,7 @@ QVector<Hrana *> Prodavnica::vector_prod() const
 
 Prodavnica::~Prodavnica()
 {
-  //  delete m_ui;//greska
-   //m_prodavnica.QVector::~QVector();//ne znam zasto je greska
+
     for(auto i :m_prodavnica)
         delete i;
 }
