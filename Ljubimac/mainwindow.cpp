@@ -14,6 +14,7 @@
 #include <iostream>
 #include "igrica1.h"
 #include "igrica3.h"
+#include "igrica4.h"
 #include "ljubimac.h"
 #include "vreme.h"
 #include "game.h"
@@ -153,6 +154,7 @@ MainWindow::MainWindow(/*Ljubimac *l,*/ QWidget *parent) :
     connect(tajmer_za_spavanje,SIGNAL(timeout()),this,SLOT(azuriraj_naspavanost()));
     connect(ui->bt_nazad_igra3_ulaz,SIGNAL(clicked(bool)),this,SLOT(bt_igra3_ulaz_clicked()));
     connect(ui->bt_igraj_3,SIGNAL(clicked(bool)),this,SLOT(bt_igra_3_clicked()));
+    connect(ui->pushButton_igra4_poruka, SIGNAL(clicked(bool)), this, SLOT(bt_igra4_clicked()));
 
 }
 
@@ -176,7 +178,7 @@ void MainWindow::pokreni_tajmer_za_spavanje()
     while(!tajmer->isFinished())
         tajmer->sleep(1);
 
-    tajmer_za_spavanje->start(40000);
+    tajmer_za_spavanje->start(5000);
 }
 
 void MainWindow::zaustavi_tajmer_za_spavanje()
@@ -525,6 +527,17 @@ void MainWindow::bt_igra_3_clicked()
 
 }
 
+void MainWindow::bt_igra4_clicked()
+{
+    ljub->set_sit(ui->SnagaBar->value() - 2);
+    ljub->set_naspavanost(ui->naspavanostBar->value() - 2);
+    Igrica4 *igrica = new Igrica4(ui);
+    igrica->setParent(ui->widget_igra4_igraj);
+    connect(ui->pushButton_igra4_prekini,SIGNAL(clicked(bool)),igrica,SLOT(izadji()));
+    ui->stackedWidget->setCurrentIndex(12);
+
+}
+
 
 void MainWindow::uzmi_vrednosti_sa_bar()
 {
@@ -687,7 +700,31 @@ void MainWindow::on_pushButton_igra_3_clicked()
 void MainWindow::on_pushButton_igra_4_clicked()
 {
     if(Game::exist)return;//ostaviti da ako postoji moja igra ne rad dugmici na glavnom prozoru (djordje)
+
+    QGraphicsScene * sc_igra4_poruka = new QGraphicsScene();
+    sc_igra4_poruka->setBackgroundBrush(QBrush(QColor(Qt::darkMagenta)));
+    ui->graphicsView_igra4_poruka->setScene(sc_igra4_poruka);
+
+    if(ui->SnagaBar->value() < 2 || ui->naspavanostBar->value() < 2)
+    {
+        QGraphicsTextItem *poruka1 = new QGraphicsTextItem(" Ljubimac nema dovoljno \n energije i koncentracije \n za igru.");
+        poruka1->setDefaultTextColor(Qt::yellow);
+        poruka1->setFont(QFont("times", 16, QFont::Bold));
+        sc_igra4_poruka->addItem(poruka1);
+        ui->pushButton_igra4_poruka->setDisabled(true);
+    }
+
+    else
+    {
+        QGraphicsTextItem *poruka2 = new QGraphicsTextItem(" IGRA MEMORIJE \n Pokusajte da pronadjete \n sve parove kartica. \n ");
+        poruka2->setDefaultTextColor(Qt::yellow);
+        poruka2->setFont(QFont("times", 16, QFont::Bold));
+        sc_igra4_poruka->addItem(poruka2);
+        ui->pushButton_igra4_poruka->setEnabled(true);
+    }
+
     ui->stackedWidget->setCurrentIndex(9);
+
 }
 
 void MainWindow::on_pushButton_igra_1_nazad_clicked() //u igri 1 <

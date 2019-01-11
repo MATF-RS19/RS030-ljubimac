@@ -45,6 +45,19 @@
         <file>bomb.png</file>
         <file>lopta.png</file>
         <file>novac.jpeg</file>
+        <file>igra_memorije.png</file>
+        <file>paw.jpg</file>
+        <file>purple.png</file>
+        <file>hamburger_memory.png</file>
+        <file>jelka_memory.png</file>
+        <file>kobasica_memory.png</file>
+        <file>kuce3_memory.png</file>
+        <file>kuce_sa_koskom_memory.png</file>
+        <file>medenjak_memory.png</file>
+        <file>pizza_memory.png</file>
+        <file>kolac_memory.png</file>
+        <file>sladoled_memory.png</file>
+        <file>sunka_memory.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>muz_pozadina_1.mp3</file>

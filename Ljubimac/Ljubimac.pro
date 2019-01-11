@@ -53,7 +53,9 @@ SOURCES += \
     bomba.cpp \
     lopta.cpp \
     igrica3.cpp \
-    ljubimac_bomba.cpp
+    ljubimac_bomba.cpp \
+    kartica.cpp \
+    igrica4.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -85,7 +87,9 @@ HEADERS += \
     bomba.h \
     lopta.h \
     igrica3.h \
-    ljubimac_bomba.h
+    ljubimac_bomba.h \
+    kartica.h \
+    igrica4.h
 
 FORMS += \
         mainwindow.ui \

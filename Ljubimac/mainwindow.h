@@ -122,6 +122,8 @@ private slots:
 
     void bt_igra_3_clicked();
 
+    void bt_igra4_clicked();
+
     void uzmi_vrednosti_sa_bar();
 
 private:
