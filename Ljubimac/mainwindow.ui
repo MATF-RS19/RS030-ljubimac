@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>11</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_kuhinja">
      <property name="styleSheet">
@@ -1340,7 +1340,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>RDS</string>
+       <string>RSD</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1958,7 +1958,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QPushButton" name="jedi_2">
@@ -1975,7 +1975,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QPushButton" name="jedi_3">
@@ -1992,7 +1992,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QPushButton" name="jedi_4">
@@ -2009,7 +2009,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QPushButton" name="jedi_5">
@@ -2026,7 +2026,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QLabel" name="vr_kol_3">
@@ -2367,7 +2367,7 @@ font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
 font: 75 italic 12pt &quot;Ubuntu Mono&quot;;</string>
       </property>
       <property name="text">
-       <string>Jedi</string>
+       <string>Nahrani</string>
       </property>
      </widget>
      <widget class="QLabel" name="lab_kcal2">
